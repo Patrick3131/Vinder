@@ -15,6 +15,8 @@
 		CD6554BB2351B91B00E6498A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD6554B92351B91B00E6498A /* LaunchScreen.storyboard */; };
 		CD6554C62351B91B00E6498A /* VinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554C52351B91B00E6498A /* VinderTests.swift */; };
 		CD6554D12351B91B00E6498A /* VinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554D02351B91B00E6498A /* VinderUITests.swift */; };
+		CD6554E42351D9CF00E6498A /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554E32351D9CF00E6498A /* ProfilView.swift */; };
+		CD6554E623524D7C00E6498A /* ImageGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554E523524D7C00E6498A /* ImageGallery.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		CD6554CC2351B91B00E6498A /* VinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6554D02351B91B00E6498A /* VinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinderUITests.swift; sourceTree = "<group>"; };
 		CD6554D22351B91B00E6498A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD6554E32351D9CF00E6498A /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
+		CD6554E523524D7C00E6498A /* ImageGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGallery.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +103,8 @@
 		CD6554AD2351B91900E6498A /* Vinder */ = {
 			isa = PBXGroup;
 			children = (
-				CD6554AE2351B91900E6498A /* AppDelegate.swift */,
-				CD6554B02351B91900E6498A /* SceneDelegate.swift */,
+				CD6554DF2351D5AF00E6498A /* Views */,
+				CD6554DE2351D5A200E6498A /* Launch */,
 				CD6554B22351B91900E6498A /* ContentView.swift */,
 				CD6554B42351B91B00E6498A /* Assets.xcassets */,
 				CD6554B92351B91B00E6498A /* LaunchScreen.storyboard */,
@@ -134,6 +138,48 @@
 				CD6554D22351B91B00E6498A /* Info.plist */,
 			);
 			path = VinderUITests;
+			sourceTree = "<group>";
+		};
+		CD6554DE2351D5A200E6498A /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				CD6554AE2351B91900E6498A /* AppDelegate.swift */,
+				CD6554B02351B91900E6498A /* SceneDelegate.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		CD6554DF2351D5AF00E6498A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD6554E22351D5F300E6498A /* Shared */,
+				CD6554E12351D5C800E6498A /* modifiers */,
+				CD6554E02351D5BC00E6498A /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD6554E02351D5BC00E6498A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CD6554E32351D9CF00E6498A /* ProfilView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		CD6554E12351D5C800E6498A /* modifiers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = modifiers;
+			sourceTree = "<group>";
+		};
+		CD6554E22351D5F300E6498A /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CD6554E523524D7C00E6498A /* ImageGallery.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +314,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */,
+				CD6554E623524D7C00E6498A /* ImageGallery.swift in Sources */,
 				CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */,
+				CD6554E42351D9CF00E6498A /* ProfilView.swift in Sources */,
 				CD6554B32351B91900E6498A /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
