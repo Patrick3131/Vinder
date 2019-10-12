@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554AE2351B91900E6498A /* AppDelegate.swift */; };
+		CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B02351B91900E6498A /* SceneDelegate.swift */; };
+		CD6554B32351B91900E6498A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B22351B91900E6498A /* ContentView.swift */; };
+		CD6554B52351B91B00E6498A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD6554B42351B91B00E6498A /* Assets.xcassets */; };
+		CD6554B82351B91B00E6498A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD6554B72351B91B00E6498A /* Preview Assets.xcassets */; };
+		CD6554BB2351B91B00E6498A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD6554B92351B91B00E6498A /* LaunchScreen.storyboard */; };
+		CD6554C62351B91B00E6498A /* VinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554C52351B91B00E6498A /* VinderTests.swift */; };
+		CD6554D12351B91B00E6498A /* VinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554D02351B91B00E6498A /* VinderUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD6554C22351B91B00E6498A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD6554A32351B91900E6498A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD6554AA2351B91900E6498A;
+			remoteInfo = Vinder;
+		};
+		CD6554CD2351B91B00E6498A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD6554A32351B91900E6498A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD6554AA2351B91900E6498A;
+			remoteInfo = Vinder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD6554AB2351B91900E6498A /* Vinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD6554AE2351B91900E6498A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD6554B02351B91900E6498A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CD6554B22351B91900E6498A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CD6554B42351B91B00E6498A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD6554B72351B91B00E6498A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CD6554BA2351B91B00E6498A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD6554BC2351B91B00E6498A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD6554C12351B91B00E6498A /* VinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD6554C52351B91B00E6498A /* VinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinderTests.swift; sourceTree = "<group>"; };
+		CD6554C72351B91B00E6498A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD6554CC2351B91B00E6498A /* VinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD6554D02351B91B00E6498A /* VinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VinderUITests.swift; sourceTree = "<group>"; };
+		CD6554D22351B91B00E6498A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD6554A82351B91900E6498A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD6554BE2351B91B00E6498A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD6554C92351B91B00E6498A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD6554A22351B91900E6498A = {
+			isa = PBXGroup;
+			children = (
+				CD6554AD2351B91900E6498A /* Vinder */,
+				CD6554C42351B91B00E6498A /* VinderTests */,
+				CD6554CF2351B91B00E6498A /* VinderUITests */,
+				CD6554AC2351B91900E6498A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD6554AC2351B91900E6498A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD6554AB2351B91900E6498A /* Vinder.app */,
+				CD6554C12351B91B00E6498A /* VinderTests.xctest */,
+				CD6554CC2351B91B00E6498A /* VinderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD6554AD2351B91900E6498A /* Vinder */ = {
+			isa = PBXGroup;
+			children = (
+				CD6554AE2351B91900E6498A /* AppDelegate.swift */,
+				CD6554B02351B91900E6498A /* SceneDelegate.swift */,
+				CD6554B22351B91900E6498A /* ContentView.swift */,
+				CD6554B42351B91B00E6498A /* Assets.xcassets */,
+				CD6554B92351B91B00E6498A /* LaunchScreen.storyboard */,
+				CD6554BC2351B91B00E6498A /* Info.plist */,
+				CD6554B62351B91B00E6498A /* Preview Content */,
+			);
+			path = Vinder;
+			sourceTree = "<group>";
+		};
+		CD6554B62351B91B00E6498A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CD6554B72351B91B00E6498A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CD6554C42351B91B00E6498A /* VinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD6554C52351B91B00E6498A /* VinderTests.swift */,
+				CD6554C72351B91B00E6498A /* Info.plist */,
+			);
+			path = VinderTests;
+			sourceTree = "<group>";
+		};
+		CD6554CF2351B91B00E6498A /* VinderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD6554D02351B91B00E6498A /* VinderUITests.swift */,
+				CD6554D22351B91B00E6498A /* Info.plist */,
+			);
+			path = VinderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD6554AA2351B91900E6498A /* Vinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD6554D52351B91B00E6498A /* Build configuration list for PBXNativeTarget "Vinder" */;
+			buildPhases = (
+				CD6554A72351B91900E6498A /* Sources */,
+				CD6554A82351B91900E6498A /* Frameworks */,
+				CD6554A92351B91900E6498A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Vinder;
+			productName = Vinder;
+			productReference = CD6554AB2351B91900E6498A /* Vinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD6554C02351B91B00E6498A /* VinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD6554D82351B91B00E6498A /* Build configuration list for PBXNativeTarget "VinderTests" */;
+			buildPhases = (
+				CD6554BD2351B91B00E6498A /* Sources */,
+				CD6554BE2351B91B00E6498A /* Frameworks */,
+				CD6554BF2351B91B00E6498A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD6554C32351B91B00E6498A /* PBXTargetDependency */,
+			);
+			name = VinderTests;
+			productName = VinderTests;
+			productReference = CD6554C12351B91B00E6498A /* VinderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD6554CB2351B91B00E6498A /* VinderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD6554DB2351B91B00E6498A /* Build configuration list for PBXNativeTarget "VinderUITests" */;
+			buildPhases = (
+				CD6554C82351B91B00E6498A /* Sources */,
+				CD6554C92351B91B00E6498A /* Frameworks */,
+				CD6554CA2351B91B00E6498A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD6554CE2351B91B00E6498A /* PBXTargetDependency */,
+			);
+			name = VinderUITests;
+			productName = VinderUITests;
+			productReference = CD6554CC2351B91B00E6498A /* VinderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD6554A32351B91900E6498A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Patrick Fischer";
+				TargetAttributes = {
+					CD6554AA2351B91900E6498A = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					CD6554C02351B91B00E6498A = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = CD6554AA2351B91900E6498A;
+					};
+					CD6554CB2351B91B00E6498A = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = CD6554AA2351B91900E6498A;
+					};
+				};
+			};
+			buildConfigurationList = CD6554A62351B91900E6498A /* Build configuration list for PBXProject "Vinder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD6554A22351B91900E6498A;
+			productRefGroup = CD6554AC2351B91900E6498A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD6554AA2351B91900E6498A /* Vinder */,
+				CD6554C02351B91B00E6498A /* VinderTests */,
+				CD6554CB2351B91B00E6498A /* VinderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD6554A92351B91900E6498A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD6554BB2351B91B00E6498A /* LaunchScreen.storyboard in Resources */,
+				CD6554B82351B91B00E6498A /* Preview Assets.xcassets in Resources */,
+				CD6554B52351B91B00E6498A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD6554BF2351B91B00E6498A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD6554CA2351B91B00E6498A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD6554A72351B91900E6498A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */,
+				CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */,
+				CD6554B32351B91900E6498A /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD6554BD2351B91B00E6498A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD6554C62351B91B00E6498A /* VinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD6554C82351B91B00E6498A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD6554D12351B91B00E6498A /* VinderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD6554C32351B91B00E6498A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD6554AA2351B91900E6498A /* Vinder */;
+			targetProxy = CD6554C22351B91B00E6498A /* PBXContainerItemProxy */;
+		};
+		CD6554CE2351B91B00E6498A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD6554AA2351B91900E6498A /* Vinder */;
+			targetProxy = CD6554CD2351B91B00E6498A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD6554B92351B91B00E6498A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD6554BA2351B91B00E6498A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD6554D32351B91B00E6498A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD6554D42351B91B00E6498A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD6554D62351B91B00E6498A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Vinder/Preview Content\"";
+				DEVELOPMENT_TEAM = E9D9FQMNFD;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Vinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Patrick.Fischer.Vinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD6554D72351B91B00E6498A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Vinder/Preview Content\"";
+				DEVELOPMENT_TEAM = E9D9FQMNFD;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Vinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Patrick.Fischer.Vinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CD6554D92351B91B00E6498A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E9D9FQMNFD;
+				INFOPLIST_FILE = VinderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Patrick.Fischer.VinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vinder.app/Vinder";
+			};
+			name = Debug;
+		};
+		CD6554DA2351B91B00E6498A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E9D9FQMNFD;
+				INFOPLIST_FILE = VinderTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Patrick.Fischer.VinderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vinder.app/Vinder";
+			};
+			name = Release;
+		};
+		CD6554DC2351B91B00E6498A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E9D9FQMNFD;
+				INFOPLIST_FILE = VinderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Patrick.Fischer.VinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Vinder;
+			};
+			name = Debug;
+		};
+		CD6554DD2351B91B00E6498A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = E9D9FQMNFD;
+				INFOPLIST_FILE = VinderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Patrick.Fischer.VinderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Vinder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD6554A62351B91900E6498A /* Build configuration list for PBXProject "Vinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD6554D32351B91B00E6498A /* Debug */,
+				CD6554D42351B91B00E6498A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD6554D52351B91B00E6498A /* Build configuration list for PBXNativeTarget "Vinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD6554D62351B91B00E6498A /* Debug */,
+				CD6554D72351B91B00E6498A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD6554D82351B91B00E6498A /* Build configuration list for PBXNativeTarget "VinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD6554D92351B91B00E6498A /* Debug */,
+				CD6554DA2351B91B00E6498A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD6554DB2351B91B00E6498A /* Build configuration list for PBXNativeTarget "VinderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD6554DC2351B91B00E6498A /* Debug */,
+				CD6554DD2351B91B00E6498A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD6554A32351B91900E6498A /* Project object */;
+}
