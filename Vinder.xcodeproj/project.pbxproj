@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD24420E235327AC00C357EE /* SwiftUIFlux in Frameworks */ = {isa = PBXBuildFile; productRef = CD24420D235327AC00C357EE /* SwiftUIFlux */; };
 		CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554AE2351B91900E6498A /* AppDelegate.swift */; };
 		CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B02351B91900E6498A /* SceneDelegate.swift */; };
 		CD6554B32351B91900E6498A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B22351B91900E6498A /* ContentView.swift */; };
@@ -17,6 +18,10 @@
 		CD6554D12351B91B00E6498A /* VinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554D02351B91B00E6498A /* VinderUITests.swift */; };
 		CD6554E42351D9CF00E6498A /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554E32351D9CF00E6498A /* ProfilView.swift */; };
 		CD6554E623524D7C00E6498A /* ImageGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554E523524D7C00E6498A /* ImageGallery.swift */; };
+		CD6554E82352533F00E6498A /* MatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554E72352533F00E6498A /* MatchesView.swift */; };
+		CD6554EA235256F900E6498A /* ConversationPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554E9235256F900E6498A /* ConversationPreview.swift */; };
+		CD6554EC235258C900E6498A /* MatchesHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554EB235258C900E6498A /* MatchesHome.swift */; };
+		CD6554EE23525C5300E6498A /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554ED23525C5300E6498A /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,10 @@
 		CD6554D22351B91B00E6498A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD6554E32351D9CF00E6498A /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
 		CD6554E523524D7C00E6498A /* ImageGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGallery.swift; sourceTree = "<group>"; };
+		CD6554E72352533F00E6498A /* MatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesView.swift; sourceTree = "<group>"; };
+		CD6554E9235256F900E6498A /* ConversationPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationPreview.swift; sourceTree = "<group>"; };
+		CD6554EB235258C900E6498A /* MatchesHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesHome.swift; sourceTree = "<group>"; };
+		CD6554ED23525C5300E6498A /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD24420E235327AC00C357EE /* SwiftUIFlux in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +173,9 @@
 			isa = PBXGroup;
 			children = (
 				CD6554E32351D9CF00E6498A /* ProfilView.swift */,
+				CD6554E72352533F00E6498A /* MatchesView.swift */,
+				CD6554E9235256F900E6498A /* ConversationPreview.swift */,
+				CD6554EB235258C900E6498A /* MatchesHome.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -178,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				CD6554E523524D7C00E6498A /* ImageGallery.swift */,
+				CD6554ED23525C5300E6498A /* SearchBar.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -198,6 +212,9 @@
 			dependencies = (
 			);
 			name = Vinder;
+			packageProductDependencies = (
+				CD24420D235327AC00C357EE /* SwiftUIFlux */,
+			);
 			productName = Vinder;
 			productReference = CD6554AB2351B91900E6498A /* Vinder.app */;
 			productType = "com.apple.product-type.application";
@@ -270,6 +287,9 @@
 				Base,
 			);
 			mainGroup = CD6554A22351B91900E6498A;
+			packageReferences = (
+				CD24420C235327AC00C357EE /* XCRemoteSwiftPackageReference "SwiftUIFlux" */,
+			);
 			productRefGroup = CD6554AC2351B91900E6498A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -315,8 +335,12 @@
 			files = (
 				CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */,
 				CD6554E623524D7C00E6498A /* ImageGallery.swift in Sources */,
+				CD6554EC235258C900E6498A /* MatchesHome.swift in Sources */,
 				CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */,
+				CD6554EA235256F900E6498A /* ConversationPreview.swift in Sources */,
+				CD6554EE23525C5300E6498A /* SearchBar.swift in Sources */,
 				CD6554E42351D9CF00E6498A /* ProfilView.swift in Sources */,
+				CD6554E82352533F00E6498A /* MatchesView.swift in Sources */,
 				CD6554B32351B91900E6498A /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -642,6 +666,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CD24420C235327AC00C357EE /* XCRemoteSwiftPackageReference "SwiftUIFlux" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Dimillian/SwiftUIFlux";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CD24420D235327AC00C357EE /* SwiftUIFlux */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD24420C235327AC00C357EE /* XCRemoteSwiftPackageReference "SwiftUIFlux" */;
+			productName = SwiftUIFlux;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CD6554A32351B91900E6498A /* Project object */;
 }
