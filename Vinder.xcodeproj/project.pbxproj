@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD24420E235327AC00C357EE /* SwiftUIFlux in Frameworks */ = {isa = PBXBuildFile; productRef = CD24420D235327AC00C357EE /* SwiftUIFlux */; };
+		8B8D3A8596240DE7DD6A2D8E /* Pods_Vinder_VinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACC75685B6651D22C36B66D /* Pods_Vinder_VinderUITests.framework */; };
+		BE8F7D6903D2C3656310EC1E /* Pods_VinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182CEF2F6483381EE7ECA33C /* Pods_VinderTests.framework */; };
+		C3530AD12A5B4174A991C067 /* Pods_Vinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC214EDC9725446E99F97732 /* Pods_Vinder.framework */; };
+		CD24420E235327AC00C357EE /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD24420D235327AC00C357EE /* SwiftPackageProductDependency */; };
+		CD24421223532D2800C357EE /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD24421123532D2800C357EE /* GoogleService-Info-2.plist */; };
+		CD24421323532D2800C357EE /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD24421123532D2800C357EE /* GoogleService-Info-2.plist */; };
+		CD24421423532D2800C357EE /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD24421123532D2800C357EE /* GoogleService-Info-2.plist */; };
 		CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554AE2351B91900E6498A /* AppDelegate.swift */; };
 		CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B02351B91900E6498A /* SceneDelegate.swift */; };
 		CD6554B32351B91900E6498A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B22351B91900E6498A /* ContentView.swift */; };
@@ -42,6 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0285C5D141556E7D0906529C /* Pods-Vinder-VinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vinder-VinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0BB4BDA681FB042E1838F992 /* Pods-VinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinderTests.debug.xcconfig"; path = "Target Support Files/Pods-VinderTests/Pods-VinderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		182CEF2F6483381EE7ECA33C /* Pods_VinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ACC75685B6651D22C36B66D /* Pods_Vinder_VinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vinder_VinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59CCEF8BD81E25EA9263963F /* Pods-Vinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vinder.release.xcconfig"; path = "Target Support Files/Pods-Vinder/Pods-Vinder.release.xcconfig"; sourceTree = "<group>"; };
+		971FBF70B77F9A2E127214AF /* Pods-Vinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vinder.debug.xcconfig"; path = "Target Support Files/Pods-Vinder/Pods-Vinder.debug.xcconfig"; sourceTree = "<group>"; };
+		CD24421123532D2800C357EE /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-2.plist"; path = "../../../../../../Downloads/GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		CD6554AB2351B91900E6498A /* Vinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6554AE2351B91900E6498A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD6554B02351B91900E6498A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +75,9 @@
 		CD6554E9235256F900E6498A /* ConversationPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationPreview.swift; sourceTree = "<group>"; };
 		CD6554EB235258C900E6498A /* MatchesHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesHome.swift; sourceTree = "<group>"; };
 		CD6554ED23525C5300E6498A /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		D5B2104FB81B44AA9396BC23 /* Pods-VinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinderTests.release.xcconfig"; path = "Target Support Files/Pods-VinderTests/Pods-VinderTests.release.xcconfig"; sourceTree = "<group>"; };
+		FC214EDC9725446E99F97732 /* Pods_Vinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE1603D1A3108BED9EAD8F7B /* Pods-Vinder-VinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vinder-VinderUITests.release.xcconfig"; path = "Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD24420E235327AC00C357EE /* SwiftUIFlux in Frameworks */,
+				CD24420E235327AC00C357EE /* BuildFile in Frameworks */,
+				C3530AD12A5B4174A991C067 /* Pods_Vinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE8F7D6903D2C3656310EC1E /* Pods_VinderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,12 +102,52 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B8D3A8596240DE7DD6A2D8E /* Pods_Vinder_VinderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BE3B2F1498C5868CFB5BE79 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				971FBF70B77F9A2E127214AF /* Pods-Vinder.debug.xcconfig */,
+				59CCEF8BD81E25EA9263963F /* Pods-Vinder.release.xcconfig */,
+				0285C5D141556E7D0906529C /* Pods-Vinder-VinderUITests.debug.xcconfig */,
+				FE1603D1A3108BED9EAD8F7B /* Pods-Vinder-VinderUITests.release.xcconfig */,
+				0BB4BDA681FB042E1838F992 /* Pods-VinderTests.debug.xcconfig */,
+				D5B2104FB81B44AA9396BC23 /* Pods-VinderTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		67E147F2D273F3634F6745EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC214EDC9725446E99F97732 /* Pods_Vinder.framework */,
+				4ACC75685B6651D22C36B66D /* Pods_Vinder_VinderUITests.framework */,
+				182CEF2F6483381EE7ECA33C /* Pods_VinderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD24420F235328EA00C357EE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CD24421023532D1700C357EE /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				CD24421123532D2800C357EE /* GoogleService-Info-2.plist */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 		CD6554A22351B91900E6498A = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +155,8 @@
 				CD6554C42351B91B00E6498A /* VinderTests */,
 				CD6554CF2351B91B00E6498A /* VinderUITests */,
 				CD6554AC2351B91900E6498A /* Products */,
+				1BE3B2F1498C5868CFB5BE79 /* Pods */,
+				67E147F2D273F3634F6745EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +173,8 @@
 		CD6554AD2351B91900E6498A /* Vinder */ = {
 			isa = PBXGroup;
 			children = (
+				CD24421023532D1700C357EE /* Firebase */,
+				CD24420F235328EA00C357EE /* Services */,
 				CD6554DF2351D5AF00E6498A /* Views */,
 				CD6554DE2351D5A200E6498A /* Launch */,
 				CD6554B22351B91900E6498A /* ContentView.swift */,
@@ -203,9 +265,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD6554D52351B91B00E6498A /* Build configuration list for PBXNativeTarget "Vinder" */;
 			buildPhases = (
+				99CB7989A0AAF89FDD5B3FD1 /* [CP] Check Pods Manifest.lock */,
 				CD6554A72351B91900E6498A /* Sources */,
 				CD6554A82351B91900E6498A /* Frameworks */,
 				CD6554A92351B91900E6498A /* Resources */,
+				15AFB0B9A7EF8E4CFF6B697C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,7 +277,7 @@
 			);
 			name = Vinder;
 			packageProductDependencies = (
-				CD24420D235327AC00C357EE /* SwiftUIFlux */,
+				CD24420D235327AC00C357EE /* SwiftPackageProductDependency */,
 			);
 			productName = Vinder;
 			productReference = CD6554AB2351B91900E6498A /* Vinder.app */;
@@ -223,6 +287,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD6554D82351B91B00E6498A /* Build configuration list for PBXNativeTarget "VinderTests" */;
 			buildPhases = (
+				56782AC7E190B1A2A7C58E16 /* [CP] Check Pods Manifest.lock */,
 				CD6554BD2351B91B00E6498A /* Sources */,
 				CD6554BE2351B91B00E6498A /* Frameworks */,
 				CD6554BF2351B91B00E6498A /* Resources */,
@@ -241,9 +306,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD6554DB2351B91B00E6498A /* Build configuration list for PBXNativeTarget "VinderUITests" */;
 			buildPhases = (
+				886646C458F9B26D66837CA7 /* [CP] Check Pods Manifest.lock */,
 				CD6554C82351B91B00E6498A /* Sources */,
 				CD6554C92351B91B00E6498A /* Frameworks */,
 				CD6554CA2351B91B00E6498A /* Resources */,
+				F91631A6E4E6BC8EF986E9EA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,7 +355,7 @@
 			);
 			mainGroup = CD6554A22351B91900E6498A;
 			packageReferences = (
-				CD24420C235327AC00C357EE /* XCRemoteSwiftPackageReference "SwiftUIFlux" */,
+				CD24420C235327AC00C357EE /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = CD6554AC2351B91900E6498A /* Products */;
 			projectDirPath = "";
@@ -308,6 +375,7 @@
 			files = (
 				CD6554BB2351B91B00E6498A /* LaunchScreen.storyboard in Resources */,
 				CD6554B82351B91B00E6498A /* Preview Assets.xcassets in Resources */,
+				CD24421223532D2800C357EE /* GoogleService-Info-2.plist in Resources */,
 				CD6554B52351B91B00E6498A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD24421323532D2800C357EE /* GoogleService-Info-2.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,10 +392,114 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD24421423532D2800C357EE /* GoogleService-Info-2.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15AFB0B9A7EF8E4CFF6B697C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vinder/Pods-Vinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vinder/Pods-Vinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vinder/Pods-Vinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		56782AC7E190B1A2A7C58E16 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VinderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		886646C458F9B26D66837CA7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vinder-VinderUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99CB7989A0AAF89FDD5B3FD1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Vinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F91631A6E4E6BC8EF986E9EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD6554A72351B91900E6498A /* Sources */ = {
@@ -504,6 +677,7 @@
 		};
 		CD6554D62351B91B00E6498A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 971FBF70B77F9A2E127214AF /* Pods-Vinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -524,6 +698,7 @@
 		};
 		CD6554D72351B91B00E6498A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59CCEF8BD81E25EA9263963F /* Pods-Vinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -544,6 +719,7 @@
 		};
 		CD6554D92351B91B00E6498A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BB4BDA681FB042E1838F992 /* Pods-VinderTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -566,6 +742,7 @@
 		};
 		CD6554DA2351B91B00E6498A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5B2104FB81B44AA9396BC23 /* Pods-VinderTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -588,6 +765,7 @@
 		};
 		CD6554DC2351B91B00E6498A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0285C5D141556E7D0906529C /* Pods-Vinder-VinderUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -608,6 +786,7 @@
 		};
 		CD6554DD2351B91B00E6498A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE1603D1A3108BED9EAD8F7B /* Pods-Vinder-VinderUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -668,7 +847,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CD24420C235327AC00C357EE /* XCRemoteSwiftPackageReference "SwiftUIFlux" */ = {
+		CD24420C235327AC00C357EE /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Dimillian/SwiftUIFlux";
 			requirement = {
@@ -679,9 +858,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CD24420D235327AC00C357EE /* SwiftUIFlux */ = {
+		CD24420D235327AC00C357EE /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD24420C235327AC00C357EE /* XCRemoteSwiftPackageReference "SwiftUIFlux" */;
+			package = CD24420C235327AC00C357EE /* RemoteSwiftPackageReference */;
 			productName = SwiftUIFlux;
 		};
 /* End XCSwiftPackageProductDependency section */
