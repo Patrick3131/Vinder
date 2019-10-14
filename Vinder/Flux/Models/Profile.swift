@@ -14,6 +14,7 @@ struct Profile: Identifiable {
     var age: Date
     var gender: Gender
     var preference: Preference
+    
     enum Gender {
         case female
         case male

@@ -12,4 +12,11 @@ struct MatchProfile {
     var profile: Profile
     var startedConversation: Bool = false
     var conversations: Conversation?
+    
+    enum Status {
+        case new
+        case thisProfilLikesOwner
+        case likedByOwner
+        case match
+    }
 }
