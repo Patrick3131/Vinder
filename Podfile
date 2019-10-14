@@ -9,6 +9,7 @@ target 'Vinder' do
 pod "Firebase/Core"
 pod "Firebase/Firestore"
 pod "Firebase/Analytics"
+pod "Firebase/Storage"
   target 'VinderTests' do
     inherit! :search_paths
     # Pods for testing

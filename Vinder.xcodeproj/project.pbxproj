@@ -22,6 +22,7 @@
 		CD2442232354976300C357EE /* MatchProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2442222354976300C357EE /* MatchProfile.swift */; };
 		CD2442252354997400C357EE /* Swiping.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2442242354997400C357EE /* Swiping.swift */; };
 		CD24422823549C1300C357EE /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24422723549C1300C357EE /* AudioRecorder.swift */; };
+		CD24422A2354E33100C357EE /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2442292354E33100C357EE /* ImageService.swift */; };
 		CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554AE2351B91900E6498A /* AppDelegate.swift */; };
 		CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B02351B91900E6498A /* SceneDelegate.swift */; };
 		CD6554B32351B91900E6498A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B22351B91900E6498A /* ContentView.swift */; };
@@ -71,6 +72,7 @@
 		CD2442222354976300C357EE /* MatchProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchProfile.swift; sourceTree = "<group>"; };
 		CD2442242354997400C357EE /* Swiping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swiping.swift; sourceTree = "<group>"; };
 		CD24422723549C1300C357EE /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		CD2442292354E33100C357EE /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		CD6554AB2351B91900E6498A /* Vinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6554AE2351B91900E6498A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD6554B02351B91900E6498A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			children = (
 				CD24421623547FD600C357EE /* CRDMessage.swift */,
 				CD2442242354997400C357EE /* Swiping.swift */,
+				CD2442292354E33100C357EE /* ImageService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				CD6554EE23525C5300E6498A /* SearchBar.swift in Sources */,
 				CD2442252354997400C357EE /* Swiping.swift in Sources */,
 				CD24422823549C1300C357EE /* AudioRecorder.swift in Sources */,
+				CD24422A2354E33100C357EE /* ImageService.swift in Sources */,
 				CD6554E42351D9CF00E6498A /* ProfilView.swift in Sources */,
 				CD6554E82352533F00E6498A /* MatchesView.swift in Sources */,
 				CD6554B32351B91900E6498A /* ContentView.swift in Sources */,
