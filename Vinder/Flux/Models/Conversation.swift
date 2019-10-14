@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct Conversation {
+struct Conversation: Identifiable {
+    var id: Int
     var lastContact: Date
     var messagesRecieved: [Message]
     var messagesSent: [Message]
