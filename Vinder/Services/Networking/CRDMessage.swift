@@ -38,7 +38,7 @@ struct Networking: CRUD {
 }
 
 protocol ImageNetworking {
-    func create(_ image: UIImage, completion: @escaping (_ hasFinished: Bool, _ url: String) -> Void)
+    func create(_ image: UIImage, profil: Profile, completion: @escaping (_ hasFinished: Bool, _ url: String) -> Void)
     func delete(_ url: String)
     func read(_ urls: [String], completion: @escaping ([UIImage]) -> Void)
 }
