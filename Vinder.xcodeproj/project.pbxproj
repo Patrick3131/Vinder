@@ -14,7 +14,7 @@
 		CD24421223532D2800C357EE /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD24421123532D2800C357EE /* GoogleService-Info-2.plist */; };
 		CD24421323532D2800C357EE /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD24421123532D2800C357EE /* GoogleService-Info-2.plist */; };
 		CD24421423532D2800C357EE /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD24421123532D2800C357EE /* GoogleService-Info-2.plist */; };
-		CD24421723547FD600C357EE /* CRDMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24421623547FD600C357EE /* CRDMessage.swift */; };
+		CD24421723547FD600C357EE /* CRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24421623547FD600C357EE /* CRUD.swift */; };
 		CD24421B2354801C00C357EE /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24421A2354801C00C357EE /* Account.swift */; };
 		CD24421D2354802B00C357EE /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24421C2354802B00C357EE /* Profile.swift */; };
 		CD24421F2354803900C357EE /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24421E2354803900C357EE /* Conversation.swift */; };
@@ -37,6 +37,7 @@
 		CD6554EA235256F900E6498A /* ConversationPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554E9235256F900E6498A /* ConversationPreview.swift */; };
 		CD6554EC235258C900E6498A /* MatchesHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554EB235258C900E6498A /* MatchesHome.swift */; };
 		CD6554EE23525C5300E6498A /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554ED23525C5300E6498A /* SearchBar.swift */; };
+		CDD7BDA823551EE100F28C23 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDA723551EE100F28C23 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +65,7 @@
 		59CCEF8BD81E25EA9263963F /* Pods-Vinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vinder.release.xcconfig"; path = "Target Support Files/Pods-Vinder/Pods-Vinder.release.xcconfig"; sourceTree = "<group>"; };
 		971FBF70B77F9A2E127214AF /* Pods-Vinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vinder.debug.xcconfig"; path = "Target Support Files/Pods-Vinder/Pods-Vinder.debug.xcconfig"; sourceTree = "<group>"; };
 		CD24421123532D2800C357EE /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-2.plist"; path = "../../../../../../Downloads/GoogleService-Info-2.plist"; sourceTree = "<group>"; };
-		CD24421623547FD600C357EE /* CRDMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRDMessage.swift; sourceTree = "<group>"; };
+		CD24421623547FD600C357EE /* CRUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUD.swift; sourceTree = "<group>"; };
 		CD24421A2354801C00C357EE /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		CD24421C2354802B00C357EE /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		CD24421E2354803900C357EE /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		CD6554E9235256F900E6498A /* ConversationPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationPreview.swift; sourceTree = "<group>"; };
 		CD6554EB235258C900E6498A /* MatchesHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesHome.swift; sourceTree = "<group>"; };
 		CD6554ED23525C5300E6498A /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		CDD7BDA723551EE100F28C23 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		D5B2104FB81B44AA9396BC23 /* Pods-VinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinderTests.release.xcconfig"; path = "Target Support Files/Pods-VinderTests/Pods-VinderTests.release.xcconfig"; sourceTree = "<group>"; };
 		FC214EDC9725446E99F97732 /* Pods_Vinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1603D1A3108BED9EAD8F7B /* Pods-Vinder-VinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vinder-VinderUITests.release.xcconfig"; path = "Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,9 +172,10 @@
 		CD24421523547FA700C357EE /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				CD24421623547FD600C357EE /* CRDMessage.swift */,
+				CD24421623547FD600C357EE /* CRUD.swift */,
 				CD2442242354997400C357EE /* Swiping.swift */,
 				CD2442292354E33100C357EE /* ImageService.swift */,
+				CDD7BDA723551EE100F28C23 /* DataService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -566,10 +569,11 @@
 			files = (
 				CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */,
 				CD24421B2354801C00C357EE /* Account.swift in Sources */,
-				CD24421723547FD600C357EE /* CRDMessage.swift in Sources */,
+				CD24421723547FD600C357EE /* CRUD.swift in Sources */,
 				CD6554E623524D7C00E6498A /* ImageGallery.swift in Sources */,
 				CD6554EC235258C900E6498A /* MatchesHome.swift in Sources */,
 				CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */,
+				CDD7BDA823551EE100F28C23 /* DataService.swift in Sources */,
 				CD6554EA235256F900E6498A /* ConversationPreview.swift in Sources */,
 				CD24421D2354802B00C357EE /* Profile.swift in Sources */,
 				CD6554EE23525C5300E6498A /* SearchBar.swift in Sources */,
