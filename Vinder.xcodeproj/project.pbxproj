@@ -10,10 +10,18 @@
 		8B8D3A8596240DE7DD6A2D8E /* Pods_Vinder_VinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACC75685B6651D22C36B66D /* Pods_Vinder_VinderUITests.framework */; };
 		BE8F7D6903D2C3656310EC1E /* Pods_VinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182CEF2F6483381EE7ECA33C /* Pods_VinderTests.framework */; };
 		C3530AD12A5B4174A991C067 /* Pods_Vinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC214EDC9725446E99F97732 /* Pods_Vinder.framework */; };
-		CD24420E235327AC00C357EE /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CD24420D235327AC00C357EE /* SwiftPackageProductDependency */; };
+		CD24420E235327AC00C357EE /* SwiftUIFlux in Frameworks */ = {isa = PBXBuildFile; productRef = CD24420D235327AC00C357EE /* SwiftUIFlux */; };
 		CD24421223532D2800C357EE /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD24421123532D2800C357EE /* GoogleService-Info-2.plist */; };
 		CD24421323532D2800C357EE /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD24421123532D2800C357EE /* GoogleService-Info-2.plist */; };
 		CD24421423532D2800C357EE /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD24421123532D2800C357EE /* GoogleService-Info-2.plist */; };
+		CD24421723547FD600C357EE /* CRDMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24421623547FD600C357EE /* CRDMessage.swift */; };
+		CD24421B2354801C00C357EE /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24421A2354801C00C357EE /* Account.swift */; };
+		CD24421D2354802B00C357EE /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24421C2354802B00C357EE /* Profile.swift */; };
+		CD24421F2354803900C357EE /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24421E2354803900C357EE /* Conversation.swift */; };
+		CD2442212354804700C357EE /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2442202354804700C357EE /* Message.swift */; };
+		CD2442232354976300C357EE /* MatchProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2442222354976300C357EE /* MatchProfile.swift */; };
+		CD2442252354997400C357EE /* Swiping.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2442242354997400C357EE /* Swiping.swift */; };
+		CD24422823549C1300C357EE /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24422723549C1300C357EE /* AudioRecorder.swift */; };
 		CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554AE2351B91900E6498A /* AppDelegate.swift */; };
 		CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B02351B91900E6498A /* SceneDelegate.swift */; };
 		CD6554B32351B91900E6498A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B22351B91900E6498A /* ContentView.swift */; };
@@ -55,6 +63,14 @@
 		59CCEF8BD81E25EA9263963F /* Pods-Vinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vinder.release.xcconfig"; path = "Target Support Files/Pods-Vinder/Pods-Vinder.release.xcconfig"; sourceTree = "<group>"; };
 		971FBF70B77F9A2E127214AF /* Pods-Vinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vinder.debug.xcconfig"; path = "Target Support Files/Pods-Vinder/Pods-Vinder.debug.xcconfig"; sourceTree = "<group>"; };
 		CD24421123532D2800C357EE /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-2.plist"; path = "../../../../../../Downloads/GoogleService-Info-2.plist"; sourceTree = "<group>"; };
+		CD24421623547FD600C357EE /* CRDMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRDMessage.swift; sourceTree = "<group>"; };
+		CD24421A2354801C00C357EE /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		CD24421C2354802B00C357EE /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		CD24421E2354803900C357EE /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		CD2442202354804700C357EE /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		CD2442222354976300C357EE /* MatchProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchProfile.swift; sourceTree = "<group>"; };
+		CD2442242354997400C357EE /* Swiping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swiping.swift; sourceTree = "<group>"; };
+		CD24422723549C1300C357EE /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		CD6554AB2351B91900E6498A /* Vinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6554AE2351B91900E6498A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD6554B02351B91900E6498A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD24420E235327AC00C357EE /* BuildFile in Frameworks */,
+				CD24420E235327AC00C357EE /* SwiftUIFlux in Frameworks */,
 				C3530AD12A5B4174A991C067 /* Pods_Vinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,7 +135,6 @@
 				0BB4BDA681FB042E1838F992 /* Pods-VinderTests.debug.xcconfig */,
 				D5B2104FB81B44AA9396BC23 /* Pods-VinderTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -136,6 +151,8 @@
 		CD24420F235328EA00C357EE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CD24422623549BF700C357EE /* AudioRecording */,
+				CD24421523547FA700C357EE /* Networking */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -146,6 +163,43 @@
 				CD24421123532D2800C357EE /* GoogleService-Info-2.plist */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		CD24421523547FA700C357EE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CD24421623547FD600C357EE /* CRDMessage.swift */,
+				CD2442242354997400C357EE /* Swiping.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		CD2442182354800000C357EE /* Flux */ = {
+			isa = PBXGroup;
+			children = (
+				CD2442192354800700C357EE /* Models */,
+			);
+			path = Flux;
+			sourceTree = "<group>";
+		};
+		CD2442192354800700C357EE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD24421A2354801C00C357EE /* Account.swift */,
+				CD24421C2354802B00C357EE /* Profile.swift */,
+				CD24421E2354803900C357EE /* Conversation.swift */,
+				CD2442222354976300C357EE /* MatchProfile.swift */,
+				CD2442202354804700C357EE /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD24422623549BF700C357EE /* AudioRecording */ = {
+			isa = PBXGroup;
+			children = (
+				CD24422723549C1300C357EE /* AudioRecorder.swift */,
+			);
+			path = AudioRecording;
 			sourceTree = "<group>";
 		};
 		CD6554A22351B91900E6498A = {
@@ -173,6 +227,7 @@
 		CD6554AD2351B91900E6498A /* Vinder */ = {
 			isa = PBXGroup;
 			children = (
+				CD2442182354800000C357EE /* Flux */,
 				CD24421023532D1700C357EE /* Firebase */,
 				CD24420F235328EA00C357EE /* Services */,
 				CD6554DF2351D5AF00E6498A /* Views */,
@@ -277,7 +332,7 @@
 			);
 			name = Vinder;
 			packageProductDependencies = (
-				CD24420D235327AC00C357EE /* SwiftPackageProductDependency */,
+				CD24420D235327AC00C357EE /* SwiftUIFlux */,
 			);
 			productName = Vinder;
 			productReference = CD6554AB2351B91900E6498A /* Vinder.app */;
@@ -355,7 +410,7 @@
 			);
 			mainGroup = CD6554A22351B91900E6498A;
 			packageReferences = (
-				CD24420C235327AC00C357EE /* RemoteSwiftPackageReference */,
+				CD24420C235327AC00C357EE /* XCRemoteSwiftPackageReference "SwiftUIFlux" */,
 			);
 			productRefGroup = CD6554AC2351B91900E6498A /* Products */;
 			projectDirPath = "";
@@ -507,14 +562,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */,
+				CD24421B2354801C00C357EE /* Account.swift in Sources */,
+				CD24421723547FD600C357EE /* CRDMessage.swift in Sources */,
 				CD6554E623524D7C00E6498A /* ImageGallery.swift in Sources */,
 				CD6554EC235258C900E6498A /* MatchesHome.swift in Sources */,
 				CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */,
 				CD6554EA235256F900E6498A /* ConversationPreview.swift in Sources */,
+				CD24421D2354802B00C357EE /* Profile.swift in Sources */,
 				CD6554EE23525C5300E6498A /* SearchBar.swift in Sources */,
+				CD2442252354997400C357EE /* Swiping.swift in Sources */,
+				CD24422823549C1300C357EE /* AudioRecorder.swift in Sources */,
 				CD6554E42351D9CF00E6498A /* ProfilView.swift in Sources */,
 				CD6554E82352533F00E6498A /* MatchesView.swift in Sources */,
 				CD6554B32351B91900E6498A /* ContentView.swift in Sources */,
+				CD24421F2354803900C357EE /* Conversation.swift in Sources */,
+				CD2442212354804700C357EE /* Message.swift in Sources */,
+				CD2442232354976300C357EE /* MatchProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -847,7 +910,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CD24420C235327AC00C357EE /* RemoteSwiftPackageReference */ = {
+		CD24420C235327AC00C357EE /* XCRemoteSwiftPackageReference "SwiftUIFlux" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Dimillian/SwiftUIFlux";
 			requirement = {
@@ -858,9 +921,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CD24420D235327AC00C357EE /* SwiftPackageProductDependency */ = {
+		CD24420D235327AC00C357EE /* SwiftUIFlux */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CD24420C235327AC00C357EE /* RemoteSwiftPackageReference */;
+			package = CD24420C235327AC00C357EE /* XCRemoteSwiftPackageReference "SwiftUIFlux" */;
 			productName = SwiftUIFlux;
 		};
 /* End XCSwiftPackageProductDependency section */
