@@ -40,6 +40,8 @@
 		CDD7BDA823551EE100F28C23 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDA723551EE100F28C23 /* DataService.swift */; };
 		CDD7BDAA2355202000F28C23 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDA92355202000F28C23 /* AudioService.swift */; };
 		CDD7BDAC2358610500F28C23 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CDD7BDAB2358610500F28C23 /* README.md */; };
+		CDD7BDAE235864EE00F28C23 /* SwipingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDAD235864EE00F28C23 /* SwipingView.swift */; };
+		CDD7BDB023586C0400F28C23 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDAF23586C0400F28C23 /* TabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,8 @@
 		CDD7BDA723551EE100F28C23 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		CDD7BDA92355202000F28C23 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
 		CDD7BDAB2358610500F28C23 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CDD7BDAD235864EE00F28C23 /* SwipingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingView.swift; sourceTree = "<group>"; };
+		CDD7BDAF23586C0400F28C23 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		D5B2104FB81B44AA9396BC23 /* Pods-VinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinderTests.release.xcconfig"; path = "Target Support Files/Pods-VinderTests/Pods-VinderTests.release.xcconfig"; sourceTree = "<group>"; };
 		FC214EDC9725446E99F97732 /* Pods_Vinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1603D1A3108BED9EAD8F7B /* Pods-Vinder-VinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vinder-VinderUITests.release.xcconfig"; path = "Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -302,9 +306,11 @@
 			isa = PBXGroup;
 			children = (
 				CD6554E32351D9CF00E6498A /* ProfilView.swift */,
+				CDD7BDAD235864EE00F28C23 /* SwipingView.swift */,
 				CD6554E72352533F00E6498A /* MatchesView.swift */,
 				CD6554E9235256F900E6498A /* ConversationPreview.swift */,
 				CD6554EB235258C900E6498A /* MatchesHome.swift */,
+				CDD7BDAF23586C0400F28C23 /* TabBarView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -585,6 +591,8 @@
 				CD6554EA235256F900E6498A /* ConversationPreview.swift in Sources */,
 				CD24421D2354802B00C357EE /* Profile.swift in Sources */,
 				CD6554EE23525C5300E6498A /* SearchBar.swift in Sources */,
+				CDD7BDAE235864EE00F28C23 /* SwipingView.swift in Sources */,
+				CDD7BDB023586C0400F28C23 /* TabBarView.swift in Sources */,
 				CD2442252354997400C357EE /* Swiping.swift in Sources */,
 				CD24422823549C1300C357EE /* AudioRecorder.swift in Sources */,
 				CD24422A2354E33100C357EE /* ImageService.swift in Sources */,
