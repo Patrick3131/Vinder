@@ -12,8 +12,7 @@ import FirebaseStorage
 
 
 struct ImageService: ImageNetworking {
-    
-    let storage = Storage.storage()
+
     var dataService: DataService
     
     func create(_ image: UIImage, profil: Profile, completion: @escaping (_ hasFinished: Bool, _ url: String) -> Void) {
