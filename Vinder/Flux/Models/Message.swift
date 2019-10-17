@@ -21,5 +21,6 @@ struct Message: Identifiable {
         case failed
         case sent
         case recording
+        case listend
     }
 }

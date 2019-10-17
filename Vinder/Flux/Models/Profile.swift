@@ -15,6 +15,7 @@ struct Profile: Identifiable {
     var gender: Gender
     var preference: Preference
     var pictureUrl: [URL]
+//    var biography: VoiceMessage
     
     enum Gender {
         case female
