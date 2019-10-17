@@ -11,9 +11,6 @@
 		BE8F7D6903D2C3656310EC1E /* Pods_VinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182CEF2F6483381EE7ECA33C /* Pods_VinderTests.framework */; };
 		C3530AD12A5B4174A991C067 /* Pods_Vinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC214EDC9725446E99F97732 /* Pods_Vinder.framework */; };
 		CD24420E235327AC00C357EE /* SwiftUIFlux in Frameworks */ = {isa = PBXBuildFile; productRef = CD24420D235327AC00C357EE /* SwiftUIFlux */; };
-		CD24421223532D2800C357EE /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD24421123532D2800C357EE /* GoogleService-Info-2.plist */; };
-		CD24421323532D2800C357EE /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD24421123532D2800C357EE /* GoogleService-Info-2.plist */; };
-		CD24421423532D2800C357EE /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD24421123532D2800C357EE /* GoogleService-Info-2.plist */; };
 		CD24421723547FD600C357EE /* CRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24421623547FD600C357EE /* CRUD.swift */; };
 		CD24421B2354801C00C357EE /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24421A2354801C00C357EE /* Account.swift */; };
 		CD24421D2354802B00C357EE /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24421C2354802B00C357EE /* Profile.swift */; };
@@ -42,6 +39,9 @@
 		CDD7BDAC2358610500F28C23 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CDD7BDAB2358610500F28C23 /* README.md */; };
 		CDD7BDAE235864EE00F28C23 /* SwipingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDAD235864EE00F28C23 /* SwipingView.swift */; };
 		CDD7BDB023586C0400F28C23 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDAF23586C0400F28C23 /* TabBarView.swift */; };
+		CDD7BDB223588B5C00F28C23 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDB123588B5C00F28C23 /* Authentication.swift */; };
+		CDD7BDB423588C9300F28C23 /* FirebaseAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDB323588C9300F28C23 /* FirebaseAuthentication.swift */; };
+		CDD7BDB6235891D300F28C23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDD7BDB5235891D300F28C23 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +68,6 @@
 		4ACC75685B6651D22C36B66D /* Pods_Vinder_VinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vinder_VinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59CCEF8BD81E25EA9263963F /* Pods-Vinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vinder.release.xcconfig"; path = "Target Support Files/Pods-Vinder/Pods-Vinder.release.xcconfig"; sourceTree = "<group>"; };
 		971FBF70B77F9A2E127214AF /* Pods-Vinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vinder.debug.xcconfig"; path = "Target Support Files/Pods-Vinder/Pods-Vinder.debug.xcconfig"; sourceTree = "<group>"; };
-		CD24421123532D2800C357EE /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info-2.plist"; path = "../../../../../../Downloads/GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		CD24421623547FD600C357EE /* CRUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUD.swift; sourceTree = "<group>"; };
 		CD24421A2354801C00C357EE /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		CD24421C2354802B00C357EE /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -103,6 +102,9 @@
 		CDD7BDAB2358610500F28C23 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CDD7BDAD235864EE00F28C23 /* SwipingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingView.swift; sourceTree = "<group>"; };
 		CDD7BDAF23586C0400F28C23 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		CDD7BDB123588B5C00F28C23 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		CDD7BDB323588C9300F28C23 /* FirebaseAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentication.swift; sourceTree = "<group>"; };
+		CDD7BDB5235891D300F28C23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D5B2104FB81B44AA9396BC23 /* Pods-VinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinderTests.release.xcconfig"; path = "Target Support Files/Pods-VinderTests/Pods-VinderTests.release.xcconfig"; sourceTree = "<group>"; };
 		FC214EDC9725446E99F97732 /* Pods_Vinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1603D1A3108BED9EAD8F7B /* Pods-Vinder-VinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vinder-VinderUITests.release.xcconfig"; path = "Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,7 +174,9 @@
 		CD24421023532D1700C357EE /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				CD24421123532D2800C357EE /* GoogleService-Info-2.plist */,
+				CDD7BDB5235891D300F28C23 /* GoogleService-Info.plist */,
+				CDD7BDB123588B5C00F28C23 /* Authentication.swift */,
+				CDD7BDB323588C9300F28C23 /* FirebaseAuthentication.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -448,8 +452,8 @@
 			files = (
 				CDD7BDAC2358610500F28C23 /* README.md in Resources */,
 				CD6554BB2351B91B00E6498A /* LaunchScreen.storyboard in Resources */,
+				CDD7BDB6235891D300F28C23 /* GoogleService-Info.plist in Resources */,
 				CD6554B82351B91B00E6498A /* Preview Assets.xcassets in Resources */,
-				CD24421223532D2800C357EE /* GoogleService-Info-2.plist in Resources */,
 				CD6554B52351B91B00E6498A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,7 +462,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD24421323532D2800C357EE /* GoogleService-Info-2.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,7 +469,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD24421423532D2800C357EE /* GoogleService-Info-2.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +590,8 @@
 				CD6554EC235258C900E6498A /* MatchesHome.swift in Sources */,
 				CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */,
 				CDD7BDA823551EE100F28C23 /* DataService.swift in Sources */,
+				CDD7BDB423588C9300F28C23 /* FirebaseAuthentication.swift in Sources */,
+				CDD7BDB223588B5C00F28C23 /* Authentication.swift in Sources */,
 				CD6554EA235256F900E6498A /* ConversationPreview.swift in Sources */,
 				CD24421D2354802B00C357EE /* Profile.swift in Sources */,
 				CD6554EE23525C5300E6498A /* SearchBar.swift in Sources */,
