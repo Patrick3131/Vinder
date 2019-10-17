@@ -22,6 +22,12 @@ struct FirebaseAuthentication: Authentication {
         }
     }
     
+    func resetPassword(email: String, completion: @escaping (Error?) -> Void) {
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            completion(error)
+        }
+    }
+
     func logout(completion: @escaping (Bool, Error?) -> Void) {
         do {
             try Auth.auth().signOut()
@@ -37,6 +43,4 @@ struct FirebaseAuthentication: Authentication {
             completion(error)
         }
     }
-    
-    
 }
