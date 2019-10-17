@@ -216,6 +216,7 @@
 		CD6554A22351B91900E6498A = {
 			isa = PBXGroup;
 			children = (
+				CDD7BDAB2358610500F28C23 /* README.md */,
 				CD6554AD2351B91900E6498A /* Vinder */,
 				CD6554C42351B91B00E6498A /* VinderTests */,
 				CD6554CF2351B91B00E6498A /* VinderUITests */,
@@ -248,7 +249,6 @@
 				CD6554B92351B91B00E6498A /* LaunchScreen.storyboard */,
 				CD6554BC2351B91B00E6498A /* Info.plist */,
 				CD6554B62351B91B00E6498A /* Preview Content */,
-				CDD7BDAB2358610500F28C23 /* README.md */,
 			);
 			path = Vinder;
 			sourceTree = "<group>";
