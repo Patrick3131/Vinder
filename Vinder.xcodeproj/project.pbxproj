@@ -20,6 +20,8 @@
 		CD2442252354997400C357EE /* Swiping.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2442242354997400C357EE /* Swiping.swift */; };
 		CD24422823549C1300C357EE /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD24422723549C1300C357EE /* AudioRecorder.swift */; };
 		CD24422A2354E33100C357EE /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2442292354E33100C357EE /* ImageService.swift */; };
+		CD27F65F2358AEA1005224C9 /* FUIAuthBaseViewControllerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27F65E2358AEA1005224C9 /* FUIAuthBaseViewControllerWrapper.swift */; };
+		CD27F661235903F3005224C9 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27F660235903F3005224C9 /* SessionStore.swift */; };
 		CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554AE2351B91900E6498A /* AppDelegate.swift */; };
 		CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B02351B91900E6498A /* SceneDelegate.swift */; };
 		CD6554B32351B91900E6498A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B22351B91900E6498A /* ContentView.swift */; };
@@ -78,6 +80,8 @@
 		CD2442242354997400C357EE /* Swiping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swiping.swift; sourceTree = "<group>"; };
 		CD24422723549C1300C357EE /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		CD2442292354E33100C357EE /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		CD27F65E2358AEA1005224C9 /* FUIAuthBaseViewControllerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUIAuthBaseViewControllerWrapper.swift; sourceTree = "<group>"; };
+		CD27F660235903F3005224C9 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
 		CD6554AB2351B91900E6498A /* Vinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6554AE2351B91900E6498A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD6554B02351B91900E6498A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -178,6 +182,8 @@
 			children = (
 				CDD7BDB5235891D300F28C23 /* GoogleService-Info.plist */,
 				CDD7BDB123588B5C00F28C23 /* Authentication.swift */,
+				CD27F660235903F3005224C9 /* SessionStore.swift */,
+				CD27F65E2358AEA1005224C9 /* FUIAuthBaseViewControllerWrapper.swift */,
 				CDD7BDB323588C9300F28C23 /* FirebaseAuthentication.swift */,
 			);
 			path = Firebase;
@@ -350,6 +356,7 @@
 				CD6554A82351B91900E6498A /* Frameworks */,
 				CD6554A92351B91900E6498A /* Resources */,
 				15AFB0B9A7EF8E4CFF6B697C /* [CP] Embed Pods Frameworks */,
+				F7959D3BFC6D54033FA1A51C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -391,6 +398,7 @@
 				CD6554C92351B91B00E6498A /* Frameworks */,
 				CD6554CA2351B91B00E6498A /* Resources */,
 				F91631A6E4E6BC8EF986E9EA /* [CP] Embed Pods Frameworks */,
+				60AA4DB496E66353DFFC1AC9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -517,6 +525,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		60AA4DB496E66353DFFC1AC9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		886646C458F9B26D66837CA7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -561,6 +586,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F7959D3BFC6D54033FA1A51C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vinder/Pods-Vinder-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Vinder/Pods-Vinder-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vinder/Pods-Vinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F91631A6E4E6BC8EF986E9EA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -587,8 +629,10 @@
 			files = (
 				CDD7BDAA2355202000F28C23 /* AudioService.swift in Sources */,
 				CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */,
+				CD27F65F2358AEA1005224C9 /* FUIAuthBaseViewControllerWrapper.swift in Sources */,
 				CD24421B2354801C00C357EE /* Account.swift in Sources */,
 				CD24421723547FD600C357EE /* CRUD.swift in Sources */,
+				CD27F661235903F3005224C9 /* SessionStore.swift in Sources */,
 				CD6554E623524D7C00E6498A /* ImageGallery.swift in Sources */,
 				CD6554EC235258C900E6498A /* MatchesHome.swift in Sources */,
 				CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */,

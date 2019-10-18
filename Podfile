@@ -11,6 +11,8 @@ pod "Firebase/Firestore"
 pod "Firebase/Analytics"
 pod "Firebase/Storage"
 pod "Firebase/Auth"
+pod "FirebaseUI/Auth"
+pod "FirebaseUI/Email"
   target 'VinderTests' do
     inherit! :search_paths
     # Pods for testing
