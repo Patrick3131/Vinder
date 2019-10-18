@@ -9,17 +9,25 @@
 import SwiftUI
 
 struct TabBarView: View {
-    @State var selectedTab = Tab.swiping
+    @EnvironmentObject var sessionStore: SessionStore
+    @State private var selectedTab = Tab.swiping
+    
     enum Tab: Int {
         case swiping, matches, profil
     }
+    
     var body: some View {
-        TabView(selection: $selectedTab) {
-            SwipingView().tabItem {
-                TabBarItem(text: "Text", image: "pause.circle")
-            }.tag(Tab.swiping)
-            
-        }
+        Group {
+            if (sessionStore.session != nil) {
+                         TabView(selection: $selectedTab) {
+                            SwipingView().tabItem {
+                                TabBarItem(text: "Text", image: "pause.circle")
+                            }.tag(Tab.swiping)
+                        }
+                    } else {
+                        LoginView()
+                    }
+        }.onAppear(perform: sessionStore.listen).onDisappear(perform: sessionStore.stopListen)
     }
 }
 
@@ -37,6 +45,6 @@ struct TabBarItem: View {
 
 struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarView()
+        TabBarView().environmentObject(SessionStore())
     }
 }
