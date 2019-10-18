@@ -19,4 +19,6 @@ struct MatchProfile {
         case likedByOwner
         case match
     }
+    
+    static var preDataAccount: MatchProfile = MatchProfile(profile: Profile.preDataAccount)
 }

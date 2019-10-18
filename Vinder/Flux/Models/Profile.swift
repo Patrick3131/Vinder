@@ -9,7 +9,7 @@
 import Foundation
 
 struct Profile: Identifiable {
-    var id: Int
+    var id: String
     var name: String
     var age: Date
     var gender: Gender
@@ -28,4 +28,6 @@ struct Profile: Identifiable {
         case bi
         case friendship
     }
+    
+    static var preDataAccount: Profile = Profile(id: "1", name: "Patrick", age: Date(), gender: .male, preference: .hetero, pictureUrl: [URL]())
 }
