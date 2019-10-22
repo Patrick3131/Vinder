@@ -45,6 +45,10 @@
 		CDD7BDB423588C9300F28C23 /* FirebaseAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDB323588C9300F28C23 /* FirebaseAuthentication.swift */; };
 		CDD7BDB6235891D300F28C23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDD7BDB5235891D300F28C23 /* GoogleService-Info.plist */; };
 		CDD7BDB82358960500F28C23 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDB72358960500F28C23 /* LoginView.swift */; };
+		CDFA9C3A235F9BF10069C341 /* SwipingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C39235F9BF10069C341 /* SwipingViewModel.swift */; };
+		CDFA9C3C235F9C050069C341 /* SwipingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C3B235F9C050069C341 /* SwipingProvider.swift */; };
+		CDFA9C3E235FA0AC0069C341 /* Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C3D235FA0AC0069C341 /* Draggable.swift */; };
+		CDFA9C40235FA0ED0069C341 /* View+Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C3F235FA0ED0069C341 /* View+Draggable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +115,10 @@
 		CDD7BDB323588C9300F28C23 /* FirebaseAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentication.swift; sourceTree = "<group>"; };
 		CDD7BDB5235891D300F28C23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CDD7BDB72358960500F28C23 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CDFA9C39235F9BF10069C341 /* SwipingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingViewModel.swift; sourceTree = "<group>"; };
+		CDFA9C3B235F9C050069C341 /* SwipingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingProvider.swift; sourceTree = "<group>"; };
+		CDFA9C3D235FA0AC0069C341 /* Draggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draggable.swift; sourceTree = "<group>"; };
+		CDFA9C3F235FA0ED0069C341 /* View+Draggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Draggable.swift"; sourceTree = "<group>"; };
 		D5B2104FB81B44AA9396BC23 /* Pods-VinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinderTests.release.xcconfig"; path = "Target Support Files/Pods-VinderTests/Pods-VinderTests.release.xcconfig"; sourceTree = "<group>"; };
 		FC214EDC9725446E99F97732 /* Pods_Vinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1603D1A3108BED9EAD8F7B /* Pods-Vinder-VinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vinder-VinderUITests.release.xcconfig"; path = "Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +212,9 @@
 		CD2442182354800000C357EE /* Flux */ = {
 			isa = PBXGroup;
 			children = (
+				CD8C21DE2359EA6F0036A11F /* reducers */,
+				CD8C21DD2359EA3F0036A11F /* actions */,
+				CD8C21DC2359EA360036A11F /* state */,
 				CD2442192354800700C357EE /* Models */,
 			);
 			path = Flux;
@@ -318,7 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				CD6554E32351D9CF00E6498A /* ProfilView.swift */,
-				CDD7BDAD235864EE00F28C23 /* SwipingView.swift */,
+				CDFA9C38235F9BD50069C341 /* Swiping */,
 				CD6554E72352533F00E6498A /* MatchesView.swift */,
 				CD6554E9235256F900E6498A /* ConversationPreview.swift */,
 				CD6554EB235258C900E6498A /* MatchesHome.swift */,
@@ -331,6 +342,7 @@
 		CD6554E12351D5C800E6498A /* modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				CDFA9C41235FA0FE0069C341 /* Draggable */,
 			);
 			path = modifiers;
 			sourceTree = "<group>";
@@ -342,6 +354,46 @@
 				CD6554ED23525C5300E6498A /* SearchBar.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		CD8C21DC2359EA360036A11F /* state */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = state;
+			sourceTree = "<group>";
+		};
+		CD8C21DD2359EA3F0036A11F /* actions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = actions;
+			sourceTree = "<group>";
+		};
+		CD8C21DE2359EA6F0036A11F /* reducers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = reducers;
+			sourceTree = "<group>";
+		};
+		CDFA9C38235F9BD50069C341 /* Swiping */ = {
+			isa = PBXGroup;
+			children = (
+				CDD7BDAD235864EE00F28C23 /* SwipingView.swift */,
+				CDFA9C39235F9BF10069C341 /* SwipingViewModel.swift */,
+				CDFA9C3B235F9C050069C341 /* SwipingProvider.swift */,
+			);
+			path = Swiping;
+			sourceTree = "<group>";
+		};
+		CDFA9C41235FA0FE0069C341 /* Draggable */ = {
+			isa = PBXGroup;
+			children = (
+				CDFA9C3D235FA0AC0069C341 /* Draggable.swift */,
+				CDFA9C3F235FA0ED0069C341 /* View+Draggable.swift */,
+			);
+			path = Draggable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -628,12 +680,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDD7BDAA2355202000F28C23 /* AudioService.swift in Sources */,
+				CDFA9C40235FA0ED0069C341 /* View+Draggable.swift in Sources */,
 				CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */,
 				CD27F65F2358AEA1005224C9 /* FUIAuthBaseViewControllerWrapper.swift in Sources */,
 				CD24421B2354801C00C357EE /* Account.swift in Sources */,
 				CD24421723547FD600C357EE /* CRUD.swift in Sources */,
 				CD27F661235903F3005224C9 /* SessionStore.swift in Sources */,
 				CD6554E623524D7C00E6498A /* ImageGallery.swift in Sources */,
+				CDFA9C3C235F9C050069C341 /* SwipingProvider.swift in Sources */,
 				CD6554EC235258C900E6498A /* MatchesHome.swift in Sources */,
 				CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */,
 				CDD7BDA823551EE100F28C23 /* DataService.swift in Sources */,
@@ -645,6 +699,7 @@
 				CDD7BDB82358960500F28C23 /* LoginView.swift in Sources */,
 				CDD7BDAE235864EE00F28C23 /* SwipingView.swift in Sources */,
 				CDD7BDB023586C0400F28C23 /* TabBarView.swift in Sources */,
+				CDFA9C3A235F9BF10069C341 /* SwipingViewModel.swift in Sources */,
 				CD2442252354997400C357EE /* Swiping.swift in Sources */,
 				CD24422823549C1300C357EE /* AudioRecorder.swift in Sources */,
 				CD24422A2354E33100C357EE /* ImageService.swift in Sources */,
@@ -652,6 +707,7 @@
 				CD6554E82352533F00E6498A /* MatchesView.swift in Sources */,
 				CD6554B32351B91900E6498A /* ContentView.swift in Sources */,
 				CD24421F2354803900C357EE /* Conversation.swift in Sources */,
+				CDFA9C3E235FA0AC0069C341 /* Draggable.swift in Sources */,
 				CD2442212354804700C357EE /* Message.swift in Sources */,
 				CD2442232354976300C357EE /* MatchProfile.swift in Sources */,
 			);
