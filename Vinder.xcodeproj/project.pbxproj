@@ -49,6 +49,10 @@
 		CDFA9C3C235F9C050069C341 /* SwipingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C3B235F9C050069C341 /* SwipingProvider.swift */; };
 		CDFA9C3E235FA0AC0069C341 /* Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C3D235FA0AC0069C341 /* Draggable.swift */; };
 		CDFA9C40235FA0ED0069C341 /* View+Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C3F235FA0ED0069C341 /* View+Draggable.swift */; };
+		CDFA9C432360A2F60069C341 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C422360A2F60069C341 /* CardView.swift */; };
+		CDFA9C452360A5DE0069C341 /* ProfilInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C442360A5DE0069C341 /* ProfilInfoView.swift */; };
+		CDFA9C472360AA3A0069C341 /* ProfilInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C462360AA3A0069C341 /* ProfilInfoViewModel.swift */; };
+		CDFA9C4A2360C2150069C341 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C492360C2150069C341 /* ViewBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +123,10 @@
 		CDFA9C3B235F9C050069C341 /* SwipingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingProvider.swift; sourceTree = "<group>"; };
 		CDFA9C3D235FA0AC0069C341 /* Draggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draggable.swift; sourceTree = "<group>"; };
 		CDFA9C3F235FA0ED0069C341 /* View+Draggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Draggable.swift"; sourceTree = "<group>"; };
+		CDFA9C422360A2F60069C341 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		CDFA9C442360A5DE0069C341 /* ProfilInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilInfoView.swift; sourceTree = "<group>"; };
+		CDFA9C462360AA3A0069C341 /* ProfilInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilInfoViewModel.swift; sourceTree = "<group>"; };
+		CDFA9C492360C2150069C341 /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
 		D5B2104FB81B44AA9396BC23 /* Pods-VinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinderTests.release.xcconfig"; path = "Target Support Files/Pods-VinderTests/Pods-VinderTests.release.xcconfig"; sourceTree = "<group>"; };
 		FC214EDC9725446E99F97732 /* Pods_Vinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1603D1A3108BED9EAD8F7B /* Pods-Vinder-VinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vinder-VinderUITests.release.xcconfig"; path = "Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -318,6 +326,7 @@
 		CD6554DF2351D5AF00E6498A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CDFA9C492360C2150069C341 /* ViewBuilder.swift */,
 				CD6554E22351D5F300E6498A /* Shared */,
 				CD6554E12351D5C800E6498A /* modifiers */,
 				CD6554E02351D5BC00E6498A /* Components */,
@@ -352,6 +361,7 @@
 			children = (
 				CD6554E523524D7C00E6498A /* ImageGallery.swift */,
 				CD6554ED23525C5300E6498A /* SearchBar.swift */,
+				CDFA9C482360AA420069C341 /* ProfilInfo */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -383,6 +393,7 @@
 				CDD7BDAD235864EE00F28C23 /* SwipingView.swift */,
 				CDFA9C39235F9BF10069C341 /* SwipingViewModel.swift */,
 				CDFA9C3B235F9C050069C341 /* SwipingProvider.swift */,
+				CDFA9C422360A2F60069C341 /* CardView.swift */,
 			);
 			path = Swiping;
 			sourceTree = "<group>";
@@ -394,6 +405,15 @@
 				CDFA9C3F235FA0ED0069C341 /* View+Draggable.swift */,
 			);
 			path = Draggable;
+			sourceTree = "<group>";
+		};
+		CDFA9C482360AA420069C341 /* ProfilInfo */ = {
+			isa = PBXGroup;
+			children = (
+				CDFA9C442360A5DE0069C341 /* ProfilInfoView.swift */,
+				CDFA9C462360AA3A0069C341 /* ProfilInfoViewModel.swift */,
+			);
+			path = ProfilInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -691,6 +711,8 @@
 				CD6554EC235258C900E6498A /* MatchesHome.swift in Sources */,
 				CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */,
 				CDD7BDA823551EE100F28C23 /* DataService.swift in Sources */,
+				CDFA9C472360AA3A0069C341 /* ProfilInfoViewModel.swift in Sources */,
+				CDFA9C4A2360C2150069C341 /* ViewBuilder.swift in Sources */,
 				CDD7BDB423588C9300F28C23 /* FirebaseAuthentication.swift in Sources */,
 				CDD7BDB223588B5C00F28C23 /* Authentication.swift in Sources */,
 				CD6554EA235256F900E6498A /* ConversationPreview.swift in Sources */,
@@ -709,6 +731,8 @@
 				CD24421F2354803900C357EE /* Conversation.swift in Sources */,
 				CDFA9C3E235FA0AC0069C341 /* Draggable.swift in Sources */,
 				CD2442212354804700C357EE /* Message.swift in Sources */,
+				CDFA9C432360A2F60069C341 /* CardView.swift in Sources */,
+				CDFA9C452360A5DE0069C341 /* ProfilInfoView.swift in Sources */,
 				CD2442232354976300C357EE /* MatchProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
