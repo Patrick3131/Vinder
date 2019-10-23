@@ -6,16 +6,30 @@
 //  Copyright © 2019 Patrick Fischer. All rights reserved.
 //
 
-import SwiftUI
+import Combine
 
-struct ProfilInfoViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello World!"/*@END_MENU_TOKEN@*/)
+
+class ProfilInfoViewModel: ObservableObject {
+    @Published var isPlaying: Bool = false
+    private var profile: Profile
+    
+    init(profile: Profile) {
+        self.profile = profile
     }
-}
-
-struct ProfilInfoViewModel_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfilInfoViewModel()
+    
+    var name: String {
+        return profile.name
+    }
+    
+    var age: String {
+        return ("12")
+    }
+    
+    var cityName: String {
+        return "München"
+    }
+    
+    var distance: String {
+        return "24km"
     }
 }

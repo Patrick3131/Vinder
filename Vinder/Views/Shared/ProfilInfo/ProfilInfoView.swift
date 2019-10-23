@@ -9,21 +9,21 @@
 import SwiftUI
 
 struct ProfilInfoView: View {
-    @State var isPlaying = false
+    @ObservedObject var viewModel: ProfilInfoViewModel
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Jessy, 21")
+            Text(viewModel.name + ", " + viewModel.age)
                 .font(.title)
                 .multilineTextAlignment(.center)
                 .padding(.leading)
                 .padding(.trailing)
-            Text("München, 24km")
+            Text(viewModel.cityName + ", " + viewModel.distance)
                 .padding(.leading)
                 .padding(.trailing)
             Button(action: {
-                self.isPlaying.toggle()
+                self.viewModel.isPlaying.toggle()
             }) {
-                Image(systemName: (isPlaying ? "pause.circle" : "play.circle"))
+                Image(systemName: (viewModel.isPlaying ? "pause.circle" : "play.circle"))
                     .padding(.leading)
             }
         }
@@ -32,6 +32,6 @@ struct ProfilInfoView: View {
 
 struct ProfilInfo_Previews: PreviewProvider {
     static var previews: some View {
-        ProfilInfoView()
+        ProfilInfoView(viewModel: ProfilInfoViewModel(profile: Profile.preDataAccount))
     }
 }
