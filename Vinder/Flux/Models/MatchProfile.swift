@@ -11,7 +11,8 @@ import Foundation
 struct MatchProfile {
     var profile: Profile
     var startedConversation: Bool = false
-    var conversations: Conversation?
+    var conversation: Conversation?
+    var status: Status = .new
     
     enum Status {
         case new

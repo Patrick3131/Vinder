@@ -18,3 +18,5 @@ struct Account {
     
     static var preData: Account = Account(profile: Profile.preDataAccount, loggedIn: false, matches: [MatchProfile.preDataAccount], profilesToSwipe: [MatchProfile.preDataAccount])
 }
+
+
