@@ -25,6 +25,8 @@
 		CD2A6D9A23637CB600EEDDA5 /* AuthentificationActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2A6D9923637CB600EEDDA5 /* AuthentificationActions.swift */; };
 		CD2A6D9C23645CE900EEDDA5 /* AuthenticationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2A6D9B23645CE900EEDDA5 /* AuthenticationReducer.swift */; };
 		CD2A6D9F236466A200EEDDA5 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2A6D9E236466A200EEDDA5 /* Store.swift */; };
+		CD2A6DA22364A5D500EEDDA5 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2A6DA12364A5D500EEDDA5 /* TabBarItem.swift */; };
+		CD2A6DA42364A64600EEDDA5 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2A6DA32364A64600EEDDA5 /* TabBarViewModel.swift */; };
 		CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554AE2351B91900E6498A /* AppDelegate.swift */; };
 		CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B02351B91900E6498A /* SceneDelegate.swift */; };
 		CD6554B32351B91900E6498A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B22351B91900E6498A /* ContentView.swift */; };
@@ -106,6 +108,8 @@
 		CD2A6D9923637CB600EEDDA5 /* AuthentificationActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationActions.swift; sourceTree = "<group>"; };
 		CD2A6D9B23645CE900EEDDA5 /* AuthenticationReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationReducer.swift; sourceTree = "<group>"; };
 		CD2A6D9E236466A200EEDDA5 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		CD2A6DA12364A5D500EEDDA5 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		CD2A6DA32364A64600EEDDA5 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		CD6554AB2351B91900E6498A /* Vinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6554AE2351B91900E6498A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD6554B02351B91900E6498A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -281,6 +285,16 @@
 			path = Archiv;
 			sourceTree = "<group>";
 		};
+		CD2A6DA02364A5BC00EEDDA5 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CD2A6DA32364A64600EEDDA5 /* TabBarViewModel.swift */,
+				CDD7BDAF23586C0400F28C23 /* TabBarView.swift */,
+				CD2A6DA12364A5D500EEDDA5 /* TabBarItem.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 		CD6554A22351B91900E6498A = {
 			isa = PBXGroup;
 			children = (
@@ -376,7 +390,7 @@
 				CD6554E72352533F00E6498A /* MatchesView.swift */,
 				CD6554E9235256F900E6498A /* ConversationPreview.swift */,
 				CD6554EB235258C900E6498A /* MatchesHome.swift */,
-				CDD7BDAF23586C0400F28C23 /* TabBarView.swift */,
+				CD2A6DA02364A5BC00EEDDA5 /* TabBar */,
 				CDD7BDB72358960500F28C23 /* LoginView.swift */,
 			);
 			path = Components;
@@ -771,6 +785,7 @@
 				CD92B2FB23630135006F0190 /* AppReducer.swift in Sources */,
 				CDD7BDB423588C9300F28C23 /* FirebaseAuthentication.swift in Sources */,
 				CDD7BDB223588B5C00F28C23 /* Authentication.swift in Sources */,
+				CD2A6DA22364A5D500EEDDA5 /* TabBarItem.swift in Sources */,
 				CD6554EA235256F900E6498A /* ConversationPreview.swift in Sources */,
 				CD24421D2354802B00C357EE /* Profile.swift in Sources */,
 				CD6554EE23525C5300E6498A /* SearchBar.swift in Sources */,
@@ -791,6 +806,7 @@
 				CD6554E82352533F00E6498A /* MatchesView.swift in Sources */,
 				CD2A6D9C23645CE900EEDDA5 /* AuthenticationReducer.swift in Sources */,
 				CD6554B32351B91900E6498A /* ContentView.swift in Sources */,
+				CD2A6DA42364A64600EEDDA5 /* TabBarViewModel.swift in Sources */,
 				CD24421F2354803900C357EE /* Conversation.swift in Sources */,
 				CDFA9C3E235FA0AC0069C341 /* Draggable.swift in Sources */,
 				CD2442212354804700C357EE /* Message.swift in Sources */,

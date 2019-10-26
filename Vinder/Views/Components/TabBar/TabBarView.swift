@@ -9,62 +9,44 @@
 import SwiftUI
 import SwiftUIFlux
 
-
 struct TabBarView: ConnectedView {
     
     struct Props {
-        let isLoggedIn: Bool
-        let dispatch: DispatchFunction
-        let profile: Profile?
-        let userUID: String?
+        let viewModel: TabBarViewModel
     }
     
     @State private var selectedTab = Tab.swiping
-    
     
     enum Tab: Int {
         case swiping, matches, profil
     }
     func map(state: AppState, dispatch: @escaping DispatchFunction) -> Props {
         let props = Props(
-            isLoggedIn: state.accountState.loggedIn,
-            dispatch: dispatch,
-            profile: state.accountState.profile,
-            userUID: state.accountState.userUID
+            viewModel: TabBarViewModel(state: state, dispatch: dispatch)
         )
         return props
     }
     
-    func authenticate() {
-        store.dispatch(action: AuthentificationActions.Listen())
+    func authenticate(props: Props) {
+        props.viewModel.authenticate()
     }
     
     func body(props:Props) -> some View {
         Group {
-            if props.isLoggedIn && (props.profile != nil) {
+            if props.viewModel.showTabView {
                 TabView(selection: $selectedTab) {
-                    Text(props.profile!.name).tabItem {
+                    Text(props.viewModel.profile!.name).tabItem {
                         TabBarItem(text: "Text", image: "pause.circle")
                     }.tag(Tab.swiping)
                 }
             } else {
                 LoginView()
             }
-        }.onAppear { self.authenticate() }
+        }.onAppear { self.authenticate(props: props) }
     }
 }
 
-struct TabBarItem: View {
-    var text: String
-    var image: String
-    var body: some View {
-        VStack {
-            Image(systemName: image)
-                .imageScale(.large)
-            Text(text)
-        }
-    }
-}
+
 
 struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
