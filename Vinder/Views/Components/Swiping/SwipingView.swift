@@ -9,17 +9,28 @@
 import SwiftUI
 
 struct SwipingView: View {
+    @EnvironmentObject var viewModel: SwipingViewModel
     var body: some View {
-        VStack {
-             Text("Text")
-            CardView()
+        Group {
+            if viewModel.areThereAnyProfilesToSwipe {
+                VStack {
+                     Text("Text")
+                    CardView()
+                }
+            } else {
+                Text("No profiles to swipe, consider changing your settings")
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 40)
+            }
+            
         }
+        
        
     }
 }
 
 struct SwipingView_Previews: PreviewProvider {
     static var previews: some View {
-        SwipingView()
+        SwipingView().environmentObject(SwipingViewModel(profilesToSwipe: [MatchProfile.preDataAccount]))
     }
 }
