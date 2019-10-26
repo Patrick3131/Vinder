@@ -10,6 +10,7 @@ import UIKit
 import SwiftUI
 import Firebase
 import FirebaseUI
+import SwiftUIFlux
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -25,10 +26,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         FirebaseApp.configure()
         
+        let controller = UIHostingController(rootView:
+            StoreProvider(store: store) {
+                ContentView()
+            }
+        )
+        
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: TabBarView().environmentObject(SessionStore()))
+            window.rootViewController = controller
             self.window = window
             window.makeKeyAndVisible()
         }
@@ -64,6 +71,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
+
+
 
 extension SceneDelegate: FUIAuthDelegate {
     
