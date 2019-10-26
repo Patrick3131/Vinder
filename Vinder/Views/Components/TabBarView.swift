@@ -7,27 +7,50 @@
 //
 
 import SwiftUI
+import SwiftUIFlux
 
-struct TabBarView: View {
-    @EnvironmentObject var sessionStore: SessionStore
+
+struct TabBarView: ConnectedView {
+    
+    struct Props {
+        let isLoggedIn: Bool
+        let dispatch: DispatchFunction
+        let profile: Profile?
+        let userUID: String?
+    }
+    
     @State private var selectedTab = Tab.swiping
+    
     
     enum Tab: Int {
         case swiping, matches, profil
     }
+    func map(state: AppState, dispatch: @escaping DispatchFunction) -> Props {
+        let props = Props(
+            isLoggedIn: state.accountState.loggedIn,
+            dispatch: dispatch,
+            profile: state.accountState.profile,
+            userUID: state.accountState.userUID
+        )
+        return props
+    }
     
-    var body: some View {
+    func authenticate() {
+        store.dispatch(action: AuthentificationActions.Listen())
+    }
+    
+    func body(props:Props) -> some View {
         Group {
-            if (sessionStore.session != nil) {
-                         TabView(selection: $selectedTab) {
-                            SwipingView().tabItem {
-                                TabBarItem(text: "Text", image: "pause.circle")
-                            }.tag(Tab.swiping)
-                        }
-                    } else {
-                        LoginView()
-                    }
-        }.onAppear(perform: sessionStore.listen).onDisappear(perform: sessionStore.stopListen)
+            if props.isLoggedIn && (props.profile != nil) {
+                TabView(selection: $selectedTab) {
+                    Text(props.profile!.name).tabItem {
+                        TabBarItem(text: "Text", image: "pause.circle")
+                    }.tag(Tab.swiping)
+                }
+            } else {
+                LoginView()
+            }
+        }.onAppear { self.authenticate() }
     }
 }
 
@@ -45,6 +68,6 @@ struct TabBarItem: View {
 
 struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarView().environmentObject(SessionStore())
+        TabBarView().environmentObject(store)
     }
 }
