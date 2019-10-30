@@ -11,7 +11,7 @@ import SwiftUIFlux
 
 
 struct SwipingViewModel {
-    let profilesToSwipe: [MatchProfile]
+    let profilesToSwipe: [Int]
     
     var areThereAnyProfilesToSwipe: Bool {
         return !profilesToSwipe.isEmpty
@@ -47,24 +47,28 @@ struct SwipingView: ConnectedView {
     func body(props: Props) -> some View {
         GeometryReader { geometry in
             Group {
-                if !props.viewModel.areThereAnyProfilesToSwipe {
+                if props.viewModel.areThereAnyProfilesToSwipe {
                     VStack {
-                        SwipeableView(
-                            gestureViewState: self.$draggedViewState,
-                            onTabGesture: {
-                                print("123")
-                        },
-                            willEndGesture: { position in
-                                print(position)
-                        },
-                            endGestureHandler: { handler in
-                                self.draggableCardViewEndGestureHandler(props: props, handler: handler)
-                        },
-                            viewBuilder: {
-                                CardView()
-                        })
-                        .frame(width: geometry.size.width * 0.6, height: geometry.size.height * 0.6)
-                            .padding([.horizontal,.top])
+                        ZStack {
+                            ForEach(props.viewModel.profilesToSwipe, id: \.self) { id in
+                                SwipeableView(
+                                    gestureViewState: self.$draggedViewState,
+                                    onTabGesture: {
+                                        print("123")
+                                },
+                                    willEndGesture: { position in
+                                        print(position)
+                                },
+                                    endGestureHandler: { handler in
+                                        self.draggableCardViewEndGestureHandler(props: props, handler: handler)
+                                },
+                                    viewBuilder: {
+                                        CardView(profilID: id)
+                                })
+                                .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.8)
+                                    .padding([.horizontal,.top])
+                            }
+                        }
                         SwipingIconView()
                         .padding()
                     }

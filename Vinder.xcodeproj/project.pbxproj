@@ -53,6 +53,7 @@
 		CD92B30123630C03006F0190 /* AccountReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92B30023630C03006F0190 /* AccountReducer.swift */; };
 		CD92B30423630DEA006F0190 /* LoggingMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92B30323630DEA006F0190 /* LoggingMiddleware.swift */; };
 		CD92B3062363116D006F0190 /* AccountActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92B3052363116D006F0190 /* AccountActions.swift */; };
+		CDCF3EDF2369AC77005C876A /* AnimatedPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */; };
 		CDD7BDA823551EE100F28C23 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDA723551EE100F28C23 /* DataService.swift */; };
 		CDD7BDAA2355202000F28C23 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDA92355202000F28C23 /* AudioService.swift */; };
 		CDD7BDAC2358610500F28C23 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CDD7BDAB2358610500F28C23 /* README.md */; };
@@ -146,6 +147,7 @@
 		CD92B30023630C03006F0190 /* AccountReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountReducer.swift; sourceTree = "<group>"; };
 		CD92B30323630DEA006F0190 /* LoggingMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingMiddleware.swift; sourceTree = "<group>"; };
 		CD92B3052363116D006F0190 /* AccountActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountActions.swift; sourceTree = "<group>"; };
+		CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedPlaceholder.swift; sourceTree = "<group>"; };
 		CDD7BDA723551EE100F28C23 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		CDD7BDA92355202000F28C23 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
 		CDD7BDAB2358610500F28C23 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -426,6 +428,7 @@
 				CD6554E523524D7C00E6498A /* ImageGallery.swift */,
 				CD6554ED23525C5300E6498A /* SearchBar.swift */,
 				CDFA9C482360AA420069C341 /* ProfilInfo */,
+				CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -804,6 +807,7 @@
 				CD2A6DA62364B1DA00EEDDA5 /* SwipingState.swift in Sources */,
 				CD92B3062363116D006F0190 /* AccountActions.swift in Sources */,
 				CD92B2FB23630135006F0190 /* AppReducer.swift in Sources */,
+				CDCF3EDF2369AC77005C876A /* AnimatedPlaceholder.swift in Sources */,
 				CDD7BDB423588C9300F28C23 /* FirebaseAuthentication.swift in Sources */,
 				CDD7BDB223588B5C00F28C23 /* Authentication.swift in Sources */,
 				CD2A6DA22364A5D500EEDDA5 /* TabBarItem.swift in Sources */,

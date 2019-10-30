@@ -179,7 +179,7 @@ struct SwipeableView_Previews: PreviewProvider {
                 
         },
             viewBuilder: {
-                CardView()
+                CardView(profilID: 1)
         })
     }
 }

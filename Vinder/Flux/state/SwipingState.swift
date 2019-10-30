@@ -21,4 +21,8 @@ struct SwipingState: FluxState {
             return nil
         }
     }
+    
+    init() {
+        profilesToSwipe = [0,1,2,3]
+    }
 }
