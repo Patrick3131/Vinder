@@ -7,10 +7,18 @@
 //
 
 import SwiftUI
+import SwiftUIFlux
 
-struct SwipingIconView: View {
+struct SwipingIconView: ConnectedView {
+    struct Props {
+        
+    }
     
-    var body: some View {
+    func map(state: AppState, dispatch: @escaping DispatchFunction) -> Props {
+        return Props()
+    }
+    
+    func body(props: Props) -> some View {
         HStack(spacing: 50) {
             Button(action: {}) {
                 Image(systemName: "xmark.circle")

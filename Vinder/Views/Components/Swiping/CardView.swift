@@ -7,14 +7,23 @@
 //
 
 import SwiftUI
+import SwiftUIFlux
 
-struct CardView: View {
-    var body: some View {
+
+struct CardView: ConnectedView {
+    struct Props {
+        let viewModel: ProfilInfoProtocol
+    }
+    
+    func map(state: AppState, dispatch: @escaping DispatchFunction) -> CardView.Props {
+        return Props(viewModel: ProfilInfoViewModel(appstate: state, dispatch: dispatch))
+    }
+    
+    func body(props: CardView.Props) -> some View {
         ZStack(alignment: .bottomLeading) {
-            Gallery().padding(.top)
-            ViewBuilder.profilInfoBuilder(profile: Profile.preDataAccount)
-                .padding(.bottom)
-        }
+            Gallery()
+            ProfilInfoView3(viewModel: .constant(props.viewModel))
+        }.cornerRadius(15)
     }
 }
 
@@ -27,6 +36,6 @@ struct Gallery: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView()
+        CardView().environmentObject(store)
     }
 }

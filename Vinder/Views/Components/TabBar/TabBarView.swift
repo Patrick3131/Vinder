@@ -17,9 +17,10 @@ struct TabBarView: ConnectedView {
     
     @State private var selectedTab = Tab.swiping
     
-    enum Tab: Int {
+    private enum Tab: Int {
         case swiping, matches, profil
     }
+    
     func map(state: AppState, dispatch: @escaping DispatchFunction) -> Props {
         let props = Props(
             viewModel: TabBarViewModel(state: state, dispatch: dispatch)
@@ -37,6 +38,9 @@ struct TabBarView: ConnectedView {
                 TabView(selection: $selectedTab) {
                     Text(props.viewModel.profile!.name).tabItem {
                         TabBarItem(text: "Text", image: "pause.circle")
+                    }.tag(Tab.matches)
+                    SwipingView().tabItem {
+                        TabBarItem(text: "Swipe", image: "pause.circle")
                     }.tag(Tab.swiping)
                 }
             } else {
