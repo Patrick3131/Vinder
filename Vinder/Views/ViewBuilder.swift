@@ -8,9 +8,9 @@
 
 import SwiftUI
 
-enum ViewBuilder {
-    static func profilInfoBuilder(profile: Profile) -> some View {
-        let viewModel = ProfilInfoViewModel(profile: profile)
-        return ProfilInfoView(viewModel: viewModel)
-    }
-}
+//enum ViewBuilder {
+//    static func profilInfoBuilder(profile: Profile) -> some View {
+//        let viewModel = ProfilInfoViewModel(profile: profile)
+//        return ProfilInfoView2(viewModel: viewModel)
+//    }
+//}
