@@ -12,10 +12,20 @@ import SwiftUIFlux
 
 struct SwipingViewModel {
     let profilesToSwipe: [Int]
+    let dispatch: DispatchFunction
     
     var areThereAnyProfilesToSwipe: Bool {
         return !profilesToSwipe.isEmpty
     }
+    
+    func swipeLeft() {
+        
+    }
+    
+    func swipeRight() {
+        
+    }
+    
 }
 
 struct SwipingView: ConnectedView {
@@ -29,17 +39,18 @@ struct SwipingView: ConnectedView {
     }
     
     func map(state: AppState, dispatch: @escaping DispatchFunction) -> Props {
-        return Props(viewModel: SwipingViewModel(profilesToSwipe: state.swipingState.profilesToSwipe))
+        return Props(viewModel: SwipingViewModel(profilesToSwipe: state.swipingState.profilesToSwipe, dispatch: dispatch))
     }
     
     private func draggableCardViewEndGestureHandler(props: Props, handler: SwipeableView<CardView>.EndState) {
         if handler == .left || handler == .right {
             if handler == .left {
                 hapticFeedback.impactOccurred(intensity: 0.8)
-                print("left")
+                props.viewModel.swipeLeft()
             } else {
                 print("right")
                 hapticFeedback.impactOccurred(intensity: 0.8)
+                props.viewModel.swipeRight()
             }
         }
     }
@@ -69,13 +80,18 @@ struct SwipingView: ConnectedView {
                                     .padding([.horizontal,.top])
                             }
                         }
-                        SwipingIconView()
+                        SwipingIconView(dislike: {
+                            print("dislike")
+                        }, like: {
+                            print("like")
+                        })
                         .padding()
                     }
                 } else {
-                    Text("No profiles to swipe, consider changing your settings")
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal, 40)
+                    VStack {
+                        AnimatedPlaceholder(image: "latina5", color: .blue)
+                    }
+                    
                 }
             }.frame(width: geometry.size.width, height: geometry.size.height)
         }

@@ -9,24 +9,24 @@
 import SwiftUI
 import SwiftUIFlux
 
-struct SwipingIconView: ConnectedView {
-    struct Props {
-        
-    }
+struct SwipingIconView: View {
     
-    func map(state: AppState, dispatch: @escaping DispatchFunction) -> Props {
-        return Props()
-    }
+    let dislike: () -> Void
+    let like: () -> Void
     
-    func body(props: Props) -> some View {
+    var body: some View {
         HStack(spacing: 50) {
-            Button(action: {}) {
+            Button(action: {
+                self.dislike()
+            }) {
                 Image(systemName: "xmark.circle")
                 .resizable()
                 .foregroundColor(.red)
             }.frame(width: 50, height: 50, alignment: .leading)
             
-            Button(action: {}) {
+            Button(action: {
+                self.like()
+            }) {
                 Image(systemName: "checkmark.circle")
                 .resizable()
                     .foregroundColor(.green)
@@ -37,6 +37,10 @@ struct SwipingIconView: ConnectedView {
 
 struct SwipingIconView_Previews: PreviewProvider {
     static var previews: some View {
-        SwipingIconView()
+        SwipingIconView(dislike: {
+            
+        }, like: {
+            print()
+        })
     }
 }

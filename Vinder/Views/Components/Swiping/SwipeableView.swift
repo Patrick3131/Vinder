@@ -98,52 +98,75 @@ struct SwipeableView<Content:View>: View {
         .interpolatingSpring(mass: 1, stiffness: 150, damping: 15, initialVelocity: 5)
     }
     
+    private func slideOut() {
+        // case left
     
+        // case right
+    }
+    
+    private func slideRight() {
+        
+    }
+    
+    private func slideLeft() {
+        
+    }
+    
+    private func gestureOnChanged() {
+        self.delayedIsActive = true
+        if self.dragState.translation.width == 0.0 {
+            self.hasMoved = false
+            self.gestureViewState = .pressing
+        } else {
+            self.hasMoved = true
+            self.gestureViewState = .dragging(translation: self.dragState.translation, predictedLocation: self.dragState.predictedLocation)
+            print(self.gestureViewState.predictedLocation)
+        }
+    }
+    
+    private func gestureOnEnded() {
+        let endLocation = self.gestureViewState.predictedLocation
+        print(endLocation.x)
+        
+        if endLocation.x < -150 {
+            self.predictedEndLocation = endLocation
+            self.willEndGesture(self.gestureViewState.translation)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                self.endGestureHandler(.right)
+            }
+        } else if endLocation.x > UIScreen.main.bounds.width - 50 {
+            self.predictedEndLocation = endLocation
+            self.willEndGesture(self.gestureViewState.translation)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                self.endGestureHandler(.right)
+            }
+        } else {
+            self.endGestureHandler(.cancelled)
+        }
+        self.gestureViewState = .inactive
+    }
+    
+    private func gestureOnUpdateing(value:SequenceGesture<LongPressGesture, DragGesture>.Value,state: inout SwipeableView<Content>.DragState) {
+        switch value {
+        case .first(true):
+            state = .pressing
+            self.hapticFeedback.selectionChanged()
+        case .second(true, let drag):
+            state = .dragging(translation: drag?.translation ?? .zero, predictedLocation: drag?.predictedEndLocation ?? .zero)
+        default:
+            state = .inactive
+        }
+    }
     
     var body: some View {
         let longPressDrag = LongPressGesture(minimumDuration: minimumLongPressDuration)
             .sequenced(before: DragGesture())
             .updating($dragState) { value, state, transaction in
-                switch value {
-                case .first(true):
-                    state = .pressing
-                    self.hapticFeedback.selectionChanged()
-                case .second(true, let drag):
-                    state = .dragging(translation: drag?.translation ?? .zero, predictedLocation: drag?.predictedEndLocation ?? .zero)
-                default:
-                    state = .inactive
-                }
+                self.gestureOnUpdateing(value: value, state: &state)
         }.onChanged { value in
-            self.delayedIsActive = true
-            if self.dragState.translation.width == 0.0 {
-                self.hasMoved = false
-                self.gestureViewState = .pressing
-            } else {
-                self.hasMoved = true
-                self.gestureViewState = .dragging(translation: self.dragState.translation, predictedLocation: self.dragState.predictedLocation)
-                print(self.gestureViewState.predictedLocation)
-            }
+            self.gestureOnChanged()
         }.onEnded { value in
-            let endLocation = self.gestureViewState.predictedLocation
-            print(endLocation.x)
-            
-            if endLocation.x < -150 {
-                
-                self.predictedEndLocation = endLocation
-                self.willEndGesture(self.gestureViewState.translation)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                    self.endGestureHandler(.right)
-                }
-            } else if endLocation.x > UIScreen.main.bounds.width - 50 {
-                self.predictedEndLocation = endLocation
-                self.willEndGesture(self.gestureViewState.translation)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                    self.endGestureHandler(.right)
-                }
-            } else {
-                self.endGestureHandler(.cancelled)
-            }
-            self.gestureViewState = .inactive
+            self.gestureOnEnded()
         }
         return viewBuilder()
         .offset(computedOffSet())
