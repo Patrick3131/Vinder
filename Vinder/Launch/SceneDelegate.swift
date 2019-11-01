@@ -11,6 +11,7 @@ import SwiftUI
 import Firebase
 import FirebaseUI
 import SwiftUIFlux
+import CoreLocation
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -39,6 +40,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             self.window = window
             window.makeKeyAndVisible()
         }
+        
+        let firebaseNetworker = FirebaseProfilUpdater()
+        var profile = Profile.preDataAccount
+        profile.location = CLLocation(latitude: CLLocationDegrees(exactly: 23.3)!, longitude: CLLocationDegrees(exactly: 23.3)!)
+        print(profile)
+        
+        firebaseNetworker.profilUpdates(id: "1", updates: [.gender(gender: .female), .name(name: "Tessy")], completionHandler: { completion in
+            print(completion)
+            
+        })
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

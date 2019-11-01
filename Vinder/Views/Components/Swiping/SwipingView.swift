@@ -11,7 +11,7 @@ import SwiftUIFlux
 
 
 struct SwipingViewModel {
-    let profilesToSwipe: [Int]
+    let profilesToSwipe: [String]
     let dispatch: DispatchFunction
     
     var areThereAnyProfilesToSwipe: Bool {
@@ -26,6 +26,16 @@ struct SwipingViewModel {
         
     }
     
+    func popCurrentProfil() {
+        if let first = profilesToSwipe.first {
+            dispatch(SwipingActions.PopFirstProfile(id: first))
+        }
+    }
+    
+    func loadNewMatches() {
+        
+    }
+    
 }
 
 struct SwipingView: ConnectedView {
@@ -33,7 +43,7 @@ struct SwipingView: ConnectedView {
     private let hapticFeedback = UIImpactFeedbackGenerator(style: .soft)
     
     @State private var draggedViewState = SwipeableView<CardView>.DragState.inactive
-    
+    @State private var willEndPosition: CGSize? = nil
     struct Props {
         var viewModel: SwipingViewModel
     }
@@ -48,10 +58,12 @@ struct SwipingView: ConnectedView {
                 hapticFeedback.impactOccurred(intensity: 0.8)
                 props.viewModel.swipeLeft()
             } else {
-                print("right")
                 hapticFeedback.impactOccurred(intensity: 0.8)
                 props.viewModel.swipeRight()
             }
+            props.viewModel.popCurrentProfil()
+            willEndPosition = nil
+            props.viewModel.loadNewMatches()
         }
     }
     
@@ -68,7 +80,7 @@ struct SwipingView: ConnectedView {
                                         print("123")
                                 },
                                     willEndGesture: { position in
-                                        print(position)
+                                        self.willEndPosition = position
                                 },
                                     endGestureHandler: { handler in
                                         self.draggableCardViewEndGestureHandler(props: props, handler: handler)
@@ -80,18 +92,11 @@ struct SwipingView: ConnectedView {
                                     .padding([.horizontal,.top])
                             }
                         }
-                        SwipingIconView(dislike: {
-                            print("dislike")
-                        }, like: {
-                            print("like")
-                        })
-                        .padding()
                     }
                 } else {
                     VStack {
                         AnimatedPlaceholder(image: "latina5", color: .blue)
                     }
-                    
                 }
             }.frame(width: geometry.size.width, height: geometry.size.height)
         }

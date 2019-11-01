@@ -132,7 +132,7 @@ struct SwipeableView<Content:View>: View {
             self.predictedEndLocation = endLocation
             self.willEndGesture(self.gestureViewState.translation)
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                self.endGestureHandler(.right)
+                self.endGestureHandler(.left)
             }
         } else if endLocation.x > UIScreen.main.bounds.width - 50 {
             self.predictedEndLocation = endLocation
@@ -202,7 +202,7 @@ struct SwipeableView_Previews: PreviewProvider {
                 
         },
             viewBuilder: {
-                CardView(profilID: 1)
+                CardView(profilID: "1")
         })
     }
 }

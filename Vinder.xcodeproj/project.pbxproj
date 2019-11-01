@@ -53,6 +53,9 @@
 		CD92B30123630C03006F0190 /* AccountReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92B30023630C03006F0190 /* AccountReducer.swift */; };
 		CD92B30423630DEA006F0190 /* LoggingMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92B30323630DEA006F0190 /* LoggingMiddleware.swift */; };
 		CD92B3062363116D006F0190 /* AccountActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92B3052363116D006F0190 /* AccountActions.swift */; };
+		CD972D0C236C57E90008F022 /* ProfileUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD972D0B236C57E90008F022 /* ProfileUpdate.swift */; };
+		CD972D0E236C580A0008F022 /* ProfilUpdateNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD972D0D236C580A0008F022 /* ProfilUpdateNetworking.swift */; };
+		CD972D10236C58230008F022 /* FirebaseProfilUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD972D0F236C58230008F022 /* FirebaseProfilUpdater.swift */; };
 		CDCF3EDF2369AC77005C876A /* AnimatedPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */; };
 		CDD7BDA823551EE100F28C23 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDA723551EE100F28C23 /* DataService.swift */; };
 		CDD7BDAA2355202000F28C23 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDA92355202000F28C23 /* AudioService.swift */; };
@@ -147,6 +150,9 @@
 		CD92B30023630C03006F0190 /* AccountReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountReducer.swift; sourceTree = "<group>"; };
 		CD92B30323630DEA006F0190 /* LoggingMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingMiddleware.swift; sourceTree = "<group>"; };
 		CD92B3052363116D006F0190 /* AccountActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountActions.swift; sourceTree = "<group>"; };
+		CD972D0B236C57E90008F022 /* ProfileUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdate.swift; sourceTree = "<group>"; };
+		CD972D0D236C580A0008F022 /* ProfilUpdateNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilUpdateNetworking.swift; sourceTree = "<group>"; };
+		CD972D0F236C58230008F022 /* FirebaseProfilUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseProfilUpdater.swift; sourceTree = "<group>"; };
 		CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedPlaceholder.swift; sourceTree = "<group>"; };
 		CDD7BDA723551EE100F28C23 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		CDD7BDA92355202000F28C23 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
@@ -245,6 +251,7 @@
 		CD24421523547FA700C357EE /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				CD972D0A236C57B70008F022 /* ProfileUpdate */,
 				CD24421623547FD600C357EE /* CRUD.swift */,
 				CD2442242354997400C357EE /* Matching.swift */,
 				CD2442292354E33100C357EE /* ImageService.swift */,
@@ -472,6 +479,16 @@
 				CD92B30323630DEA006F0190 /* LoggingMiddleware.swift */,
 			);
 			path = middlewares;
+			sourceTree = "<group>";
+		};
+		CD972D0A236C57B70008F022 /* ProfileUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				CD972D0B236C57E90008F022 /* ProfileUpdate.swift */,
+				CD972D0D236C580A0008F022 /* ProfilUpdateNetworking.swift */,
+				CD972D0F236C58230008F022 /* FirebaseProfilUpdater.swift */,
+			);
+			path = ProfileUpdate;
 			sourceTree = "<group>";
 		};
 		CDFA9C38235F9BD50069C341 /* Swiping */ = {
@@ -816,6 +833,7 @@
 				CD6554EE23525C5300E6498A /* SearchBar.swift in Sources */,
 				CD92B2F523621CF1006F0190 /* Swiping.swift in Sources */,
 				CDD7BDB82358960500F28C23 /* LoginView.swift in Sources */,
+				CD972D0E236C580A0008F022 /* ProfilUpdateNetworking.swift in Sources */,
 				CD92B2F72362F607006F0190 /* AppState.swift in Sources */,
 				CDD7BDAE235864EE00F28C23 /* SwipingView.swift in Sources */,
 				CDD7BDB023586C0400F28C23 /* TabBarView.swift in Sources */,
@@ -836,9 +854,11 @@
 				CD24421F2354803900C357EE /* Conversation.swift in Sources */,
 				CDFA9C3E235FA0AC0069C341 /* Draggable.swift in Sources */,
 				CD3B85E5236860AC0007C0D4 /* SwipeableView.swift in Sources */,
+				CD972D10236C58230008F022 /* FirebaseProfilUpdater.swift in Sources */,
 				CD2442212354804700C357EE /* Message.swift in Sources */,
 				CDFA9C432360A2F60069C341 /* CardView.swift in Sources */,
 				CDFA9C452360A5DE0069C341 /* ProfilInfoView.swift in Sources */,
+				CD972D0C236C57E90008F022 /* ProfileUpdate.swift in Sources */,
 				CD2442232354976300C357EE /* MatchProfile.swift in Sources */,
 				CD2A6DA82364B25B00EEDDA5 /* SwipingReducer.swift in Sources */,
 				CD92B2FD23630986006F0190 /* AccountState.swift in Sources */,

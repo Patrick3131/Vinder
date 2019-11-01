@@ -12,8 +12,8 @@ import SwiftUIFlux
 
 struct SwipingState: FluxState {
     var isPlaying: Bool = true
-    var profiles = [Int:MatchProfile]()
-    var profilesToSwipe = [Int]()
+    var profiles = [String:MatchProfile]()
+    var profilesToSwipe = [String]()
     var firstProfil: MatchProfile? {
         if let first = profilesToSwipe.first {
             return profiles[first]
@@ -23,6 +23,6 @@ struct SwipingState: FluxState {
     }
     
     init() {
-        profilesToSwipe = [0,1,2,3]
+        profilesToSwipe = ["0","1","2","3"]
     }
 }

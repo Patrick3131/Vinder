@@ -14,7 +14,7 @@ struct CardView: ConnectedView {
     struct Props {
         let viewModel: ProfilInfoProtocol
     }
-    var profilID: Int
+    var profilID: String
     
     func map(state: AppState, dispatch: @escaping DispatchFunction) -> CardView.Props {
         return Props(viewModel: ProfilInfoViewModel(appstate: state, dispatch: dispatch, profilID: profilID))
@@ -37,6 +37,6 @@ struct Gallery: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(profilID: 0).environmentObject(store)
+        CardView(profilID: "0").environmentObject(store)
     }
 }
