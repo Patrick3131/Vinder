@@ -28,38 +28,52 @@ struct FirebaseProfileReader: ProfileReading {
                     let decoded = try self.decodeDictionary(document: document)
                     completionHandler(decoded,nil)
                 } catch let error {
+                    
                     print(error.localizedDescription)
                 }
             }
         })
     }
     
-    func profileReads(ids: [String], completionHandler: @escaping (Profile, Error?) -> Void) {
+    func profileReads(ids: [String], completionHandler: @escaping ([Profile], Error?) -> Void) {
         
     }
     
-    enum FirebaseError: String, LocalizedError {
+    enum FirebaseError: LocalizedError {
         case decodingFailed
-        case name = "name decoding failed"
-        case age = "age decoding failed"
-        case gender = "gender decoding failed"
+        case name
+        case age
+        case gender
         case preference
         case picture
-        case biography = "ef"
+        case biography
         case location
-        
         case dataNil
+        
+        var errorDescription: String {
+            let failed = " decoding failed"
+            switch self {
+            case .decodingFailed:
+                return failed
+            case .name:
+                return "name" + failed
+            case .age:
+                return "age" + failed
+            case .gender:
+                return "gender" + failed
+            case .preference:
+                return "preference" + failed
+            case .picture:
+                return "picture" + failed
+            case .biography:
+                return "biography" + failed
+            case .location:
+                return "location" + failed
+            case .dataNil:
+                return "datanil"
+            }
+        }
     }
-    
-//
-//    var id: String
-//    var name: String
-//    var age: Date
-//    var gender: Gender
-//    var preference: Preference
-//    var pictureUrl: [URL]
-//    var biography: URL?
-//    var location: CLLocation?
     
     func decodeDictionary(document: DocumentSnapshot?) throws -> Profile  {
         
@@ -69,9 +83,20 @@ struct FirebaseProfileReader: ProfileReading {
         guard let age = value[Keys.age.rawValue] as? Double else { throw FirebaseError.age}
         guard let gender = value[Keys.gender.rawValue] as? String else { throw FirebaseError.gender}
         guard let preference = value[Keys.preference.rawValue] as? String else { throw FirebaseError.preference}
-        guard let pictureURL = value[Keys.pictureUrls.rawValue] as? [URL]? else { throw FirebaseError.picture}
-        guard let biography = value[Keys.biography.rawValue] as? URL? else { throw FirebaseError.biography}
-        guard let location = value[Keys.location.rawValue] as? GeoPoint else { throw FirebaseError.location }
+        
+        
+        let pictureURL = value[Keys.pictureUrls.rawValue] as? [URL]
+        let location = value[Keys.location.rawValue] as? GeoPoint
+        let biography = value[Keys.biography.rawValue] as? URL
+        
+        
+        /*
+         In Production there should be only user with non nil locations be recieved
+         */
+        var cllocation: CLLocation?
+        if let location = location {
+            cllocation = CLLocation(latitude: location.latitude, longitude: location.longitude)
+        }
         
         let profile = Profile(id: document!.documentID,
                               name: name,
@@ -80,7 +105,7 @@ struct FirebaseProfileReader: ProfileReading {
                               preference: Profile.Preference(rawValue: preference)!,
                               pictureUrl: pictureURL ?? [URL]() ,
                               biography: biography,
-                              location: CLLocation(latitude: CLLocationDegrees(exactly: location.latitude)!, longitude: CLLocationDegrees(exactly: location.longitude)!))
+                              location: cllocation)
         
         return profile
     }

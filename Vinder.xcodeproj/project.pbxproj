@@ -57,6 +57,7 @@
 		CD972D15236C8EB20008F022 /* ProfileReading.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD972D14236C8EB20008F022 /* ProfileReading.swift */; };
 		CD972D17236C8ECD0008F022 /* FirebaseProfileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD972D16236C8ECD0008F022 /* FirebaseProfileReader.swift */; };
 		CD972D1F236DE85A0008F022 /* FirebaseMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD972D1E236DE85A0008F022 /* FirebaseMiddleware.swift */; };
+		CD972D21236E204D0008F022 /* SinglePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD972D20236E204D0008F022 /* SinglePicture.swift */; };
 		CDCF3EDF2369AC77005C876A /* AnimatedPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */; };
 		CDD7BDA823551EE100F28C23 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDA723551EE100F28C23 /* DataService.swift */; };
 		CDD7BDAA2355202000F28C23 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDA92355202000F28C23 /* AudioService.swift */; };
@@ -154,6 +155,7 @@
 		CD972D14236C8EB20008F022 /* ProfileReading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileReading.swift; sourceTree = "<group>"; };
 		CD972D16236C8ECD0008F022 /* FirebaseProfileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseProfileReader.swift; sourceTree = "<group>"; };
 		CD972D1E236DE85A0008F022 /* FirebaseMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMiddleware.swift; sourceTree = "<group>"; };
+		CD972D20236E204D0008F022 /* SinglePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePicture.swift; sourceTree = "<group>"; };
 		CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedPlaceholder.swift; sourceTree = "<group>"; };
 		CDD7BDA723551EE100F28C23 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		CDD7BDA92355202000F28C23 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
@@ -419,6 +421,7 @@
 				CD6554EB235258C900E6498A /* MatchesHome.swift */,
 				CD2A6DA02364A5BC00EEDDA5 /* TabBar */,
 				CDD7BDB72358960500F28C23 /* LoginView.swift */,
+				CD972D20236E204D0008F022 /* SinglePicture.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -838,6 +841,7 @@
 				CD2A6DA22364A5D500EEDDA5 /* TabBarItem.swift in Sources */,
 				CD6554EA235256F900E6498A /* ConversationPreview.swift in Sources */,
 				CD24421D2354802B00C357EE /* Profile.swift in Sources */,
+				CD972D21236E204D0008F022 /* SinglePicture.swift in Sources */,
 				CD6554EE23525C5300E6498A /* SearchBar.swift in Sources */,
 				CD92B2F523621CF1006F0190 /* Swiping.swift in Sources */,
 				CD972D13236C8DBB0008F022 /* FirebaseConstants.swift in Sources */,
