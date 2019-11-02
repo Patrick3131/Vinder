@@ -12,6 +12,6 @@ import SwiftUIFlux
 func appStateReducer(state: AppState, action: Action) -> AppState {
     var state = state
     state.accountState = accountStateReducer(state: state.accountState, action: action)
-    state.authenticationState = authenticationStateReducer(state: state.authenticationState, action: action)
+    state.swipingState = swipingStateReducer(state: state.swipingState, action: action)
     return state
 }

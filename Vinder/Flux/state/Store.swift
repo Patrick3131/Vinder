@@ -10,4 +10,4 @@ import Foundation
 import SwiftUIFlux
 
 
-let store = Store<AppState>(reducer: appStateReducer, middleware:[loggingMiddleware], state: AppState())
+let store = Store<AppState>(reducer: appStateReducer, middleware:[loggingMiddleware,firebaseMiddleware], state: AppState())

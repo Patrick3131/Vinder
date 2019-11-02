@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreLocation
+import FirebaseFirestore
 
 struct Profile: Identifiable {
     var id: String

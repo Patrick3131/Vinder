@@ -41,13 +41,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.makeKeyAndVisible()
         }
         
-        let firebaseNetworker = FirebaseProfilUpdater()
-        var profile = Profile.preDataAccount
-        profile.location = CLLocation(latitude: CLLocationDegrees(exactly: 23.3)!, longitude: CLLocationDegrees(exactly: 23.3)!)
-        print(profile)
+//        let firebaseNetworker = FirebaseProfilUpdater()
+//        var profile = Profile.preDataAccount
+//        profile.location = CLLocation(latitude: CLLocationDegrees(exactly: 23.3)!, longitude: CLLocationDegrees(exactly: 23.3)!)
+//        print(profile)
+//
+//        firebaseNetworker.profilUpdates(id: "1", updates: [.gender(gender: .female), .name(name: "Tessy")], completionHandler: { completion in
+//            print(completion)
+            
+//        })
         
-        firebaseNetworker.profilUpdates(id: "1", updates: [.gender(gender: .female), .name(name: "Tessy")], completionHandler: { completion in
-            print(completion)
+        let firebaseReader = FirebaseProfileReader()
+        firebaseReader.profileRead(id: "1", completionHandler: { _,_  in
+            
             
         })
     }
@@ -81,10 +87,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 
-}
-
-
-
-extension SceneDelegate: FUIAuthDelegate {
-    
 }

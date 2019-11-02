@@ -11,10 +11,14 @@ import SwiftUIFlux
 
 struct AccountActions {
     
+    
+    struct Authenticate: Action {}
+    
     struct AuthentificationAction: AsyncAction {
         let isLoggedIn: Bool
         let userUID: String?
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+            
             dispatch(SetLogin(isLoggedIn: isLoggedIn, userUID: userUID))
         }
     }
@@ -23,6 +27,7 @@ struct AccountActions {
         var isLoggedIn: Bool
         var userUID: String?
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+            
             dispatch(GetPublicProfil(userUID: ""))
         }
         
