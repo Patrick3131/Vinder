@@ -67,8 +67,7 @@
 		CDD7BDB423588C9300F28C23 /* FirebaseAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDB323588C9300F28C23 /* FirebaseAuthentication.swift */; };
 		CDD7BDB6235891D300F28C23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDD7BDB5235891D300F28C23 /* GoogleService-Info.plist */; };
 		CDD7BDB82358960500F28C23 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDB72358960500F28C23 /* LoginView.swift */; };
-		CDFA9C3A235F9BF10069C341 /* SwipingViewModel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C39235F9BF10069C341 /* SwipingViewModel1.swift */; };
-		CDFA9C3C235F9C050069C341 /* SwipingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C3B235F9C050069C341 /* SwipingProvider.swift */; };
+		CDFA9C3A235F9BF10069C341 /* SwipingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C39235F9BF10069C341 /* SwipingViewModel.swift */; };
 		CDFA9C3E235FA0AC0069C341 /* Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C3D235FA0AC0069C341 /* Draggable.swift */; };
 		CDFA9C40235FA0ED0069C341 /* View+Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C3F235FA0ED0069C341 /* View+Draggable.swift */; };
 		CDFA9C432360A2F60069C341 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C422360A2F60069C341 /* CardView.swift */; };
@@ -165,8 +164,7 @@
 		CDD7BDB323588C9300F28C23 /* FirebaseAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentication.swift; sourceTree = "<group>"; };
 		CDD7BDB5235891D300F28C23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CDD7BDB72358960500F28C23 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		CDFA9C39235F9BF10069C341 /* SwipingViewModel1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingViewModel1.swift; sourceTree = "<group>"; };
-		CDFA9C3B235F9C050069C341 /* SwipingProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingProvider.swift; sourceTree = "<group>"; };
+		CDFA9C39235F9BF10069C341 /* SwipingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingViewModel.swift; sourceTree = "<group>"; };
 		CDFA9C3D235FA0AC0069C341 /* Draggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draggable.swift; sourceTree = "<group>"; };
 		CDFA9C3F235FA0ED0069C341 /* View+Draggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Draggable.swift"; sourceTree = "<group>"; };
 		CDFA9C422360A2F60069C341 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -506,8 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				CDD7BDAD235864EE00F28C23 /* SwipingView.swift */,
-				CDFA9C39235F9BF10069C341 /* SwipingViewModel1.swift */,
-				CDFA9C3B235F9C050069C341 /* SwipingProvider.swift */,
+				CDFA9C39235F9BF10069C341 /* SwipingViewModel.swift */,
 				CDFA9C422360A2F60069C341 /* CardView.swift */,
 				CD92B2F0236209A8006F0190 /* SwipingIconView.swift */,
 				CD92B2F423621CF1006F0190 /* Swiping.swift */,
@@ -826,7 +823,6 @@
 				CD24421B2354801C00C357EE /* Account.swift in Sources */,
 				CD24421723547FD600C357EE /* CRUD.swift in Sources */,
 				CD6554E623524D7C00E6498A /* ImageGallery.swift in Sources */,
-				CDFA9C3C235F9C050069C341 /* SwipingProvider.swift in Sources */,
 				CD6554EC235258C900E6498A /* MatchesHome.swift in Sources */,
 				CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */,
 				CD972D17236C8ECD0008F022 /* FirebaseProfileReader.swift in Sources */,
@@ -852,7 +848,7 @@
 				CD92B2F72362F607006F0190 /* AppState.swift in Sources */,
 				CDD7BDAE235864EE00F28C23 /* SwipingView.swift in Sources */,
 				CDD7BDB023586C0400F28C23 /* TabBarView.swift in Sources */,
-				CDFA9C3A235F9BF10069C341 /* SwipingViewModel1.swift in Sources */,
+				CDFA9C3A235F9BF10069C341 /* SwipingViewModel.swift in Sources */,
 				CD2442252354997400C357EE /* Matching.swift in Sources */,
 				CD24422823549C1300C357EE /* AudioRecorder.swift in Sources */,
 				CD2A6DAA2364B2A700EEDDA5 /* SwipingActions.swift in Sources */,

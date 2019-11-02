@@ -9,35 +9,6 @@
 import SwiftUI
 import SwiftUIFlux
 
-
-struct SwipingViewModel {
-    let profilesToSwipe: [String]
-    let dispatch: DispatchFunction
-    
-    var areThereAnyProfilesToSwipe: Bool {
-        return !profilesToSwipe.isEmpty
-    }
-    
-    func swipeLeft() {
-        
-    }
-    
-    func swipeRight() {
-        
-    }
-    
-    func popCurrentProfil() {
-        if let first = profilesToSwipe.first {
-            dispatch(SwipingActions.PopFirstProfile(id: first))
-        }
-    }
-    
-    func loadNewMatches() {
-        
-    }
-    
-}
-
 struct SwipingView: ConnectedView {
  
     private let hapticFeedback = UIImpactFeedbackGenerator(style: .soft)
