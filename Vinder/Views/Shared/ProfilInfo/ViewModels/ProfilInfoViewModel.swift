@@ -80,7 +80,6 @@ struct ProfilInfoViewModel2: ProfilInfoProtocol {
     }
     
     func playButtonTouched() {
-         isPlaying ? dispatch(AuthentificationActions.Listen()) : dispatch(AuthentificationActions.Listen())
     }
     
     var name: String {

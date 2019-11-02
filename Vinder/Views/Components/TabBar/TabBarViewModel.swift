@@ -24,7 +24,8 @@ struct TabBarViewModel {
     }
     
     func authenticate() {
-        dispatch(AuthentificationActions.Listen())
+        
+        dispatch(AccountActions.Authenticate())
     }
     
     var showTabView: Bool {

@@ -89,7 +89,7 @@ struct SwipingView: ConnectedView {
                                         CardView(profilID: id)
                                 })
                                 .frame(width: geometry.size.width * 0.8, height: geometry.size.height * 0.8)
-                                    .padding([.horizontal,.top])
+                                    .padding([.top, .leading, .trailing])
                             }
                         }
                     }

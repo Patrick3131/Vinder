@@ -9,7 +9,11 @@
 import Foundation
 
 
-protocol ProfilUpdateNetworking {
+protocol ProfilUpdating {
     func profilUpdate(id: String, update: ProfileUpdate, completionHandler: @escaping ( _ success: Bool) -> Void)
     func profilUpdates(id: String, updates: [ProfileUpdate], completionHandler: @escaping (Bool) -> Void)
 }
+
+
+
+
