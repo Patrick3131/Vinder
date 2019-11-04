@@ -421,7 +421,7 @@
 				CD6554EB235258C900E6498A /* MatchesHome.swift */,
 				CD2A6DA02364A5BC00EEDDA5 /* TabBar */,
 				CDD7BDB72358960500F28C23 /* LoginView.swift */,
-				CD972D20236E204D0008F022 /* SinglePicture.swift */,
+				CD87E01E236EDE3700F75568 /* AddPicture */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -443,6 +443,14 @@
 				CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		CD87E01E236EDE3700F75568 /* AddPicture */ = {
+			isa = PBXGroup;
+			children = (
+				CD972D20236E204D0008F022 /* SinglePicture.swift */,
+			);
+			path = AddPicture;
 			sourceTree = "<group>";
 		};
 		CD8C21DC2359EA360036A11F /* state */ = {
