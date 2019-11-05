@@ -9,5 +9,5 @@
 import Foundation
 
 protocol Matching {
-    func checkMatchingResults()
+    func checkMatchingResults(_ id: String, completion: @escaping (_ matched: Bool) -> Void)
 }
