@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "SwiftDux",
+        "repositoryURL": "https://github.com/StevenLambion/SwiftDux.git",
+        "state": {
+          "branch": null,
+          "revision": "2d479ad90f9c3cfc8b63ce65066db2c9f7c47685",
+          "version": "0.11.2"
+        }
+      },
+      {
         "package": "SwiftUIFlux",
         "repositoryURL": "https://github.com/Dimillian/SwiftUIFlux",
         "state": {
