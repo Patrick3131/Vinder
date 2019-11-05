@@ -12,8 +12,10 @@ struct Message: Identifiable {
     var id: Int
     var date: Date
     var status: Status
-    var sentByOwner: Bool
+    var senderUser: String
+    var toUser: String
 //    var audio:
+    var audioUrl: URL
     
     enum Status {
         case recieved

@@ -11,7 +11,7 @@ import SwiftUIFlux
 
 
 struct SwipingState: FluxState {
-    var isPlaying: Bool = true
+    var isPlaying: Bool = false
     var profiles = [String:MatchProfile]()
     var profilesToSwipe = [String]()
     var firstProfil: MatchProfile? {

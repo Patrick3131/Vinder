@@ -10,7 +10,14 @@ import Foundation
 
 struct Conversation: Identifiable {
     var id: Int
-    var lastContact: Date
+    var lastContact: Date? {
+        guard (messagesSent.last != nil) && (messagesRecieved.last != nil) else { return nil}
+        return max(messagesSent.last!.date, messagesRecieved.last!.date)
+        
+    }
     var messagesRecieved: [Message]
     var messagesSent: [Message]
 }
+
+
+
