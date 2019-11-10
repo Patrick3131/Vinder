@@ -28,6 +28,9 @@
 		CD2A6DA82364B25B00EEDDA5 /* SwipingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2A6DA72364B25B00EEDDA5 /* SwipingReducer.swift */; };
 		CD2A6DAA2364B2A700EEDDA5 /* SwipingActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2A6DA92364B2A700EEDDA5 /* SwipingActions.swift */; };
 		CD3B85E5236860AC0007C0D4 /* SwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3B85E4236860AC0007C0D4 /* SwipeableView.swift */; };
+		CD4890BA23746B9700AD57CD /* MiddlewareProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890B923746B9700AD57CD /* MiddlewareProvider.swift */; };
+		CD4890BC23746BC400AD57CD /* LocationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890BB23746BC400AD57CD /* LocationAction.swift */; };
+		CD4890BE23746BFB00AD57CD /* VMiddlewareProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890BD23746BFB00AD57CD /* VMiddlewareProvider.swift */; };
 		CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554AE2351B91900E6498A /* AppDelegate.swift */; };
 		CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B02351B91900E6498A /* SceneDelegate.swift */; };
 		CD6554B32351B91900E6498A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B22351B91900E6498A /* ContentView.swift */; };
@@ -49,7 +52,6 @@
 		CD92B2FB23630135006F0190 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92B2FA23630135006F0190 /* AppReducer.swift */; };
 		CD92B2FD23630986006F0190 /* AccountState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92B2FC23630986006F0190 /* AccountState.swift */; };
 		CD92B30123630C03006F0190 /* AccountReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92B30023630C03006F0190 /* AccountReducer.swift */; };
-		CD92B30423630DEA006F0190 /* LoggingMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92B30323630DEA006F0190 /* LoggingMiddleware.swift */; };
 		CD92B3062363116D006F0190 /* AccountActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92B3052363116D006F0190 /* AccountActions.swift */; };
 		CD972D0C236C57E90008F022 /* ProfileUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD972D0B236C57E90008F022 /* ProfileUpdate.swift */; };
 		CD972D0E236C580A0008F022 /* ProfilUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD972D0D236C580A0008F022 /* ProfilUpdating.swift */; };
@@ -123,6 +125,9 @@
 		CD2A6DA72364B25B00EEDDA5 /* SwipingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingReducer.swift; sourceTree = "<group>"; };
 		CD2A6DA92364B2A700EEDDA5 /* SwipingActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingActions.swift; sourceTree = "<group>"; };
 		CD3B85E4236860AC0007C0D4 /* SwipeableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableView.swift; sourceTree = "<group>"; };
+		CD4890B923746B9700AD57CD /* MiddlewareProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewareProvider.swift; sourceTree = "<group>"; };
+		CD4890BB23746BC400AD57CD /* LocationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAction.swift; sourceTree = "<group>"; };
+		CD4890BD23746BFB00AD57CD /* VMiddlewareProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMiddlewareProvider.swift; sourceTree = "<group>"; };
 		CD6554AB2351B91900E6498A /* Vinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6554AE2351B91900E6498A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD6554B02351B91900E6498A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,7 +155,6 @@
 		CD92B2FA23630135006F0190 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 		CD92B2FC23630986006F0190 /* AccountState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountState.swift; sourceTree = "<group>"; };
 		CD92B30023630C03006F0190 /* AccountReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountReducer.swift; sourceTree = "<group>"; };
-		CD92B30323630DEA006F0190 /* LoggingMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingMiddleware.swift; sourceTree = "<group>"; };
 		CD92B3052363116D006F0190 /* AccountActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountActions.swift; sourceTree = "<group>"; };
 		CD972D0B236C57E90008F022 /* ProfileUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdate.swift; sourceTree = "<group>"; };
 		CD972D0D236C580A0008F022 /* ProfilUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilUpdating.swift; sourceTree = "<group>"; };
@@ -410,6 +414,7 @@
 		CD6554DF2351D5AF00E6498A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CDAC6D4123718AE000D68072 /* Containers */,
 				CDFA9C492360C2150069C341 /* ViewBuilder.swift */,
 				CD6554E22351D5F300E6498A /* Shared */,
 				CD6554E12351D5C800E6498A /* modifiers */,
@@ -477,6 +482,7 @@
 			children = (
 				CD92B3052363116D006F0190 /* AccountActions.swift */,
 				CD2A6DA92364B2A700EEDDA5 /* SwipingActions.swift */,
+				CD4890BB23746BC400AD57CD /* LocationAction.swift */,
 			);
 			path = actions;
 			sourceTree = "<group>";
@@ -494,8 +500,9 @@
 		CD92B30223630DD2006F0190 /* middlewares */ = {
 			isa = PBXGroup;
 			children = (
-				CD92B30323630DEA006F0190 /* LoggingMiddleware.swift */,
+				CD4890BD23746BFB00AD57CD /* VMiddlewareProvider.swift */,
 				CD972D1E236DE85A0008F022 /* FirebaseMiddleware.swift */,
+				CD4890B923746B9700AD57CD /* MiddlewareProvider.swift */,
 			);
 			path = middlewares;
 			sourceTree = "<group>";
@@ -517,6 +524,13 @@
 				CD972D16236C8ECD0008F022 /* FirebaseProfileReader.swift */,
 			);
 			path = ProfileReader;
+			sourceTree = "<group>";
+		};
+		CDAC6D4123718AE000D68072 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Containers;
 			sourceTree = "<group>";
 		};
 		CDFA9C38235F9BD50069C341 /* Swiping */ = {
@@ -838,7 +852,6 @@
 				CDD7BDAA2355202000F28C23 /* AudioService.swift in Sources */,
 				CDFA9C40235FA0ED0069C341 /* View+Draggable.swift in Sources */,
 				CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */,
-				CD92B30423630DEA006F0190 /* LoggingMiddleware.swift in Sources */,
 				CD27F65F2358AEA1005224C9 /* FUIAuthBaseViewControllerWrapper.swift in Sources */,
 				CD2A6D9F236466A200EEDDA5 /* Store.swift in Sources */,
 				CD24421B2354801C00C357EE /* Account.swift in Sources */,
@@ -850,6 +863,7 @@
 				CD972D17236C8ECD0008F022 /* FirebaseProfileReader.swift in Sources */,
 				CDD7BDA823551EE100F28C23 /* DataService.swift in Sources */,
 				CDFA9C472360AA3A0069C341 /* ProfilInfoViewModel.swift in Sources */,
+				CD4890BC23746BC400AD57CD /* LocationAction.swift in Sources */,
 				CDFA9C4A2360C2150069C341 /* ViewBuilder.swift in Sources */,
 				CD2A6DA62364B1DA00EEDDA5 /* SwipingState.swift in Sources */,
 				CDCA463F2370653E00E72C6C /* TrackLocation.swift in Sources */,
@@ -873,12 +887,14 @@
 				CDD7BDAE235864EE00F28C23 /* SwipingView.swift in Sources */,
 				CDD7BDB023586C0400F28C23 /* TabBarView.swift in Sources */,
 				CDFA9C3A235F9BF10069C341 /* SwipingViewModel.swift in Sources */,
+				CD4890BE23746BFB00AD57CD /* VMiddlewareProvider.swift in Sources */,
 				CD2442252354997400C357EE /* Matching.swift in Sources */,
 				CD24422823549C1300C357EE /* AudioRecorder.swift in Sources */,
 				CD2A6DAA2364B2A700EEDDA5 /* SwipingActions.swift in Sources */,
 				CD92B2F1236209A8006F0190 /* SwipingIconView.swift in Sources */,
 				CD92B30123630C03006F0190 /* AccountReducer.swift in Sources */,
 				CD24422A2354E33100C357EE /* ImageService.swift in Sources */,
+				CD4890BA23746B9700AD57CD /* MiddlewareProvider.swift in Sources */,
 				CD6554E42351D9CF00E6498A /* ProfilView.swift in Sources */,
 				CD6554E82352533F00E6498A /* MatchesView.swift in Sources */,
 				CD6554B32351B91900E6498A /* ContentView.swift in Sources */,

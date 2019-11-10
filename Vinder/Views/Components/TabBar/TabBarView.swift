@@ -15,7 +15,7 @@ struct TabBarView: ConnectedView {
         let viewModel: TabBarViewModel
     }
     
-    @State private var selectedTab = Tab.swiping
+    @State private var selectedTab = Tab.profil
     
     private enum Tab: Int {
         case swiping, matches, profil
@@ -36,6 +36,13 @@ struct TabBarView: ConnectedView {
         Group {
             if props.viewModel.showTabView {
                 TabView(selection: $selectedTab) {
+                    Button(action: {
+                        props.viewModel.logout()
+                    }, label: {
+                        Text("props.viewModel.profile!.name").foregroundColor(.green)
+                        }).tabItem({
+                            TabBarItem(text: "text", image: "pause.circle")
+                        }).tag(Tab.profil)
                     Text(props.viewModel.profile!.name).tabItem {
                         TabBarItem(text: "Text", image: "pause.circle")
                     }.tag(Tab.matches)

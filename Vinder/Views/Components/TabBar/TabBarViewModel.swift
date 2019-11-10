@@ -32,4 +32,8 @@ struct TabBarViewModel {
         return (isLoggedIn && (profile != nil)) ? true : false
     }
     
+    
+    func logout() {
+        dispatch(AccountActions.Logout())
+    }
 }

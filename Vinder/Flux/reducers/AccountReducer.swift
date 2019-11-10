@@ -18,6 +18,13 @@ func accountStateReducer(state: AccountState, action: Action) -> AccountState {
         state.userUID = action.userUID
     case let action as AccountActions.SetProfil:
         state.profile = action.profil
+    case let action as LocationAction:
+        switch action {
+        case .setLocation(location: let location):
+            state.profile?.location = location
+        default: break
+            
+        }
     default:
         break
     }

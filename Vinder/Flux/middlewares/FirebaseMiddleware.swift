@@ -28,3 +28,4 @@ let firebaseMiddleware: Middleware<AppState> = { dispatch, getState in
         }
     }
 }
+

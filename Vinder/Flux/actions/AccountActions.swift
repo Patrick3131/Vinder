@@ -8,9 +8,15 @@
 
 import Foundation
 import SwiftUIFlux
+import FirebaseAuth
 
 struct AccountActions {
     
+    struct Logout: AsyncAction {
+        func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+            try? Auth.auth().signOut()
+        }
+    }
     
     struct Authenticate: Action {}
     

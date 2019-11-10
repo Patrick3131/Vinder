@@ -17,6 +17,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
+    var store: Store<AppState> {
+        let appdelegate = UIApplication.shared.delegate as! AppDelegate
+        return appdelegate.store
+    }
+    
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -26,6 +32,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        let contentView = ContentView()
 
         FirebaseApp.configure()
+        
+        
         
         let controller = UIHostingController(rootView:
             StoreProvider(store: store) {
@@ -41,21 +49,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.makeKeyAndVisible()
         }
         
-//        let firebaseNetworker = FirebaseProfilUpdater()
-//        var profile = Profile.preDataAccount
-//        profile.location = CLLocation(latitude: CLLocationDegrees(exactly: 23.3)!, longitude: CLLocationDegrees(exactly: 23.3)!)
-//        print(profile)
-//
-//        firebaseNetworker.profilUpdates(id: "1", updates: [.gender(gender: .female), .name(name: "Tessy")], completionHandler: { completion in
-//            print(completion)
-            
-//        })
-        
         let firebaseReader = FirebaseProfileReader()
         firebaseReader.profileRead(id: "1", completionHandler: { _,_  in
             
             
         })
+        store.dispatch(action: LocationAction.trackLocation(userId: "1"))
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

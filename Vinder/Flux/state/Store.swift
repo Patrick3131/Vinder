@@ -8,6 +8,11 @@
 
 import Foundation
 import SwiftUIFlux
+import UIKit
 
 
-let store = Store<AppState>(reducer: appStateReducer, middleware:[loggingMiddleware,firebaseMiddleware], state: AppState())
+
+var store: Store<AppState> {
+    let appdelegate = UIApplication.shared.delegate as! AppDelegate
+    return appdelegate.store
+}

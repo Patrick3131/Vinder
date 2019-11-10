@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import SwiftUIFlux
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    let middlewareProvider = VMiddlewareProvider()
+    lazy var store = Store<AppState>(reducer: appStateReducer, middleware:
+        middlewareProvider.provideMiddleware()
+    , state: AppState())
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
