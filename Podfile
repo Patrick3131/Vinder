@@ -13,12 +13,16 @@ pod "Firebase/Storage"
 pod "Firebase/Auth"
 pod "FirebaseUI/Auth"
 pod "FirebaseUI/Email"
+
+# https://github.com/onevcat/Kingfisher/wiki/SwiftUI-Support
+pod "Kingfisher/SwiftUI"
   target 'VinderTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
   target 'VinderUITests' do
+    inherit! :search_paths
     # Pods for testing
   end
 

@@ -52,8 +52,8 @@ extension ProfilInfoViewModel{
     init(appstate: AppState,dispatch: @escaping DispatchFunction, profilID: String) {
         self.profil = appstate.swipingState.profiles[profilID]?.profile ?? Profile.preDataAccount
         self.isPlaying = appstate.swipingState.isPlaying
-        self.isPlayingA = AccountActions.CreateProfil()
-        self.notPlayingA = AccountActions.CreateProfil()
+        self.isPlayingA = AccountActions.Authenticate()
+        self.notPlayingA = AccountActions.Authenticate()
         self.dispatch = dispatch
     }
 }
@@ -62,8 +62,8 @@ extension ProfilInfoViewModel {
     init(appstate: AppState,dispatch: @escaping DispatchFunction) {
         self.profil = appstate.swipingState.firstProfil?.profile ?? Profile.preDataAccount
         self.isPlaying = appstate.swipingState.isPlaying
-        self.isPlayingA = AccountActions.CreateProfil()
-        self.notPlayingA = AccountActions.CreateProfil()
+        self.isPlayingA = AccountActions.Authenticate()
+        self.notPlayingA = AccountActions.Authenticate()
         self.dispatch = dispatch
     }
 }

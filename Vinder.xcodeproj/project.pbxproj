@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B8D3A8596240DE7DD6A2D8E /* Pods_Vinder_VinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ACC75685B6651D22C36B66D /* Pods_Vinder_VinderUITests.framework */; };
+		855EA65A5CC45EADCD054C28 /* Pods_VinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD972F609C603009BA9AE251 /* Pods_VinderUITests.framework */; };
 		BE8F7D6903D2C3656310EC1E /* Pods_VinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 182CEF2F6483381EE7ECA33C /* Pods_VinderTests.framework */; };
 		C3530AD12A5B4174A991C067 /* Pods_Vinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC214EDC9725446E99F97732 /* Pods_Vinder.framework */; };
 		CD24420E235327AC00C357EE /* SwiftUIFlux in Frameworks */ = {isa = PBXBuildFile; productRef = CD24420D235327AC00C357EE /* SwiftUIFlux */; };
@@ -28,6 +28,10 @@
 		CD2A6DA82364B25B00EEDDA5 /* SwipingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2A6DA72364B25B00EEDDA5 /* SwipingReducer.swift */; };
 		CD2A6DAA2364B2A700EEDDA5 /* SwipingActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2A6DA92364B2A700EEDDA5 /* SwipingActions.swift */; };
 		CD3B85E5236860AC0007C0D4 /* SwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3B85E4236860AC0007C0D4 /* SwipeableView.swift */; };
+		CD472F4F2379A26B00DFCAB7 /* KingfisherBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F4E2379A26B00DFCAB7 /* KingfisherBridge.swift */; };
+		CD472F522379F43D00DFCAB7 /* Extension+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F512379F43D00DFCAB7 /* Extension+Array.swift */; };
+		CD472F542379F89B00DFCAB7 /* ProfilContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F532379F89B00DFCAB7 /* ProfilContainer.swift */; };
+		CD472F562379FFE100DFCAB7 /* AddPictureContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F552379FFE100DFCAB7 /* AddPictureContainer.swift */; };
 		CD4890BA23746B9700AD57CD /* MiddlewareProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890B923746B9700AD57CD /* MiddlewareProvider.swift */; };
 		CD4890BC23746BC400AD57CD /* LocationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890BB23746BC400AD57CD /* LocationAction.swift */; };
 		CD4890BE23746BFB00AD57CD /* VMiddlewareProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890BD23746BFB00AD57CD /* VMiddlewareProvider.swift */; };
@@ -67,13 +71,13 @@
 		CDD7BDA823551EE100F28C23 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDA723551EE100F28C23 /* DataService.swift */; };
 		CDD7BDAA2355202000F28C23 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDA92355202000F28C23 /* AudioService.swift */; };
 		CDD7BDAC2358610500F28C23 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CDD7BDAB2358610500F28C23 /* README.md */; };
-		CDD7BDAE235864EE00F28C23 /* SwipingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDAD235864EE00F28C23 /* SwipingView.swift */; };
+		CDD7BDAE235864EE00F28C23 /* ExplorerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDAD235864EE00F28C23 /* ExplorerContainer.swift */; };
 		CDD7BDB023586C0400F28C23 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDAF23586C0400F28C23 /* TabBarView.swift */; };
 		CDD7BDB223588B5C00F28C23 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDB123588B5C00F28C23 /* Authentication.swift */; };
 		CDD7BDB423588C9300F28C23 /* FirebaseAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDB323588C9300F28C23 /* FirebaseAuthentication.swift */; };
 		CDD7BDB6235891D300F28C23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDD7BDB5235891D300F28C23 /* GoogleService-Info.plist */; };
 		CDD7BDB82358960500F28C23 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDB72358960500F28C23 /* LoginView.swift */; };
-		CDFA9C3A235F9BF10069C341 /* SwipingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C39235F9BF10069C341 /* SwipingViewModel.swift */; };
+		CDFA9C3A235F9BF10069C341 /* ExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C39235F9BF10069C341 /* ExplorerViewModel.swift */; };
 		CDFA9C3E235FA0AC0069C341 /* Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C3D235FA0AC0069C341 /* Draggable.swift */; };
 		CDFA9C40235FA0ED0069C341 /* View+Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C3F235FA0ED0069C341 /* View+Draggable.swift */; };
 		CDFA9C432360A2F60069C341 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C422360A2F60069C341 /* CardView.swift */; };
@@ -103,8 +107,8 @@
 		0285C5D141556E7D0906529C /* Pods-Vinder-VinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vinder-VinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0BB4BDA681FB042E1838F992 /* Pods-VinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinderTests.debug.xcconfig"; path = "Target Support Files/Pods-VinderTests/Pods-VinderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		182CEF2F6483381EE7ECA33C /* Pods_VinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4ACC75685B6651D22C36B66D /* Pods_Vinder_VinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vinder_VinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59CCEF8BD81E25EA9263963F /* Pods-Vinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vinder.release.xcconfig"; path = "Target Support Files/Pods-Vinder/Pods-Vinder.release.xcconfig"; sourceTree = "<group>"; };
+		622929F74ED5DF23F5A6ED66 /* Pods-VinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinderUITests.release.xcconfig"; path = "Target Support Files/Pods-VinderUITests/Pods-VinderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		971FBF70B77F9A2E127214AF /* Pods-Vinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vinder.debug.xcconfig"; path = "Target Support Files/Pods-Vinder/Pods-Vinder.debug.xcconfig"; sourceTree = "<group>"; };
 		CD24421623547FD600C357EE /* CRUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUD.swift; sourceTree = "<group>"; };
 		CD24421A2354801C00C357EE /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -125,6 +129,10 @@
 		CD2A6DA72364B25B00EEDDA5 /* SwipingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingReducer.swift; sourceTree = "<group>"; };
 		CD2A6DA92364B2A700EEDDA5 /* SwipingActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingActions.swift; sourceTree = "<group>"; };
 		CD3B85E4236860AC0007C0D4 /* SwipeableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableView.swift; sourceTree = "<group>"; };
+		CD472F4E2379A26B00DFCAB7 /* KingfisherBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherBridge.swift; sourceTree = "<group>"; };
+		CD472F512379F43D00DFCAB7 /* Extension+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Array.swift"; sourceTree = "<group>"; };
+		CD472F532379F89B00DFCAB7 /* ProfilContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilContainer.swift; sourceTree = "<group>"; };
+		CD472F552379FFE100DFCAB7 /* AddPictureContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPictureContainer.swift; sourceTree = "<group>"; };
 		CD4890B923746B9700AD57CD /* MiddlewareProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewareProvider.swift; sourceTree = "<group>"; };
 		CD4890BB23746BC400AD57CD /* LocationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAction.swift; sourceTree = "<group>"; };
 		CD4890BD23746BFB00AD57CD /* VMiddlewareProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMiddlewareProvider.swift; sourceTree = "<group>"; };
@@ -164,18 +172,19 @@
 		CD972D16236C8ECD0008F022 /* FirebaseProfileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseProfileReader.swift; sourceTree = "<group>"; };
 		CD972D1E236DE85A0008F022 /* FirebaseMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMiddleware.swift; sourceTree = "<group>"; };
 		CD972D20236E204D0008F022 /* SinglePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePicture.swift; sourceTree = "<group>"; };
+		CD972F609C603009BA9AE251 /* Pods_VinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCA463E2370653E00E72C6C /* TrackLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLocation.swift; sourceTree = "<group>"; };
 		CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedPlaceholder.swift; sourceTree = "<group>"; };
 		CDD7BDA723551EE100F28C23 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		CDD7BDA92355202000F28C23 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
 		CDD7BDAB2358610500F28C23 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		CDD7BDAD235864EE00F28C23 /* SwipingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingView.swift; sourceTree = "<group>"; };
+		CDD7BDAD235864EE00F28C23 /* ExplorerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerContainer.swift; sourceTree = "<group>"; };
 		CDD7BDAF23586C0400F28C23 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		CDD7BDB123588B5C00F28C23 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		CDD7BDB323588C9300F28C23 /* FirebaseAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentication.swift; sourceTree = "<group>"; };
 		CDD7BDB5235891D300F28C23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CDD7BDB72358960500F28C23 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		CDFA9C39235F9BF10069C341 /* SwipingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingViewModel.swift; sourceTree = "<group>"; };
+		CDFA9C39235F9BF10069C341 /* ExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerViewModel.swift; sourceTree = "<group>"; };
 		CDFA9C3D235FA0AC0069C341 /* Draggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draggable.swift; sourceTree = "<group>"; };
 		CDFA9C3F235FA0ED0069C341 /* View+Draggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Draggable.swift"; sourceTree = "<group>"; };
 		CDFA9C422360A2F60069C341 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -183,6 +192,7 @@
 		CDFA9C462360AA3A0069C341 /* ProfilInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilInfoViewModel.swift; sourceTree = "<group>"; };
 		CDFA9C492360C2150069C341 /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
 		D5B2104FB81B44AA9396BC23 /* Pods-VinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinderTests.release.xcconfig"; path = "Target Support Files/Pods-VinderTests/Pods-VinderTests.release.xcconfig"; sourceTree = "<group>"; };
+		EAEE466B152FBBBF6388D24D /* Pods-VinderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VinderUITests.debug.xcconfig"; path = "Target Support Files/Pods-VinderUITests/Pods-VinderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC214EDC9725446E99F97732 /* Pods_Vinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1603D1A3108BED9EAD8F7B /* Pods-Vinder-VinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vinder-VinderUITests.release.xcconfig"; path = "Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,7 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B8D3A8596240DE7DD6A2D8E /* Pods_Vinder_VinderUITests.framework in Frameworks */,
+				855EA65A5CC45EADCD054C28 /* Pods_VinderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +236,8 @@
 				FE1603D1A3108BED9EAD8F7B /* Pods-Vinder-VinderUITests.release.xcconfig */,
 				0BB4BDA681FB042E1838F992 /* Pods-VinderTests.debug.xcconfig */,
 				D5B2104FB81B44AA9396BC23 /* Pods-VinderTests.release.xcconfig */,
+				EAEE466B152FBBBF6388D24D /* Pods-VinderUITests.debug.xcconfig */,
+				622929F74ED5DF23F5A6ED66 /* Pods-VinderUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -234,10 +246,38 @@
 			isa = PBXGroup;
 			children = (
 				FC214EDC9725446E99F97732 /* Pods_Vinder.framework */,
-				4ACC75685B6651D22C36B66D /* Pods_Vinder_VinderUITests.framework */,
 				182CEF2F6483381EE7ECA33C /* Pods_VinderTests.framework */,
+				CD972F609C603009BA9AE251 /* Pods_VinderUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD2432A52378728B004C916F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CDFA9C422360A2F60069C341 /* CardView.swift */,
+				CD92B2F0236209A8006F0190 /* SwipingIconView.swift */,
+				CD3B85E4236860AC0007C0D4 /* SwipeableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD2432A623787352004C916F /* ProfilContainer */ = {
+			isa = PBXGroup;
+			children = (
+				CD2432A72378737D004C916F /* Views */,
+				CD472F532379F89B00DFCAB7 /* ProfilContainer.swift */,
+				CD472F552379FFE100DFCAB7 /* AddPictureContainer.swift */,
+			);
+			path = ProfilContainer;
+			sourceTree = "<group>";
+		};
+		CD2432A72378737D004C916F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD87E01E236EDE3700F75568 /* AddPicture */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CD24420F235328EA00C357EE /* Services */ = {
@@ -335,6 +375,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		CD472F502379F40A00DFCAB7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CD472F512379F43D00DFCAB7 /* Extension+Array.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		CD6554A22351B91900E6498A = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +413,7 @@
 				CD24421023532D1700C357EE /* Firebase */,
 				CD24420F235328EA00C357EE /* Services */,
 				CD6554DE2351D5A200E6498A /* Launch */,
+				CD472F502379F40A00DFCAB7 /* Helpers */,
 				CD6554DF2351D5AF00E6498A /* Views */,
 				CD6554B22351B91900E6498A /* ContentView.swift */,
 				CD6554B42351B91B00E6498A /* Assets.xcassets */,
@@ -419,6 +468,7 @@
 				CD6554E22351D5F300E6498A /* Shared */,
 				CD6554E12351D5C800E6498A /* modifiers */,
 				CD6554E02351D5BC00E6498A /* Components */,
+				CD472F4E2379A26B00DFCAB7 /* KingfisherBridge.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -427,13 +477,11 @@
 			isa = PBXGroup;
 			children = (
 				CD6554E32351D9CF00E6498A /* ProfilView.swift */,
-				CDFA9C38235F9BD50069C341 /* Swiping */,
 				CD6554E72352533F00E6498A /* MatchesView.swift */,
 				CD6554E9235256F900E6498A /* ConversationPreview.swift */,
 				CD6554EB235258C900E6498A /* MatchesHome.swift */,
 				CD2A6DA02364A5BC00EEDDA5 /* TabBar */,
 				CDD7BDB72358960500F28C23 /* LoginView.swift */,
-				CD87E01E236EDE3700F75568 /* AddPicture */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -529,21 +577,21 @@
 		CDAC6D4123718AE000D68072 /* Containers */ = {
 			isa = PBXGroup;
 			children = (
+				CD2432A623787352004C916F /* ProfilContainer */,
+				CDFA9C38235F9BD50069C341 /* ExplorerContainer */,
 			);
 			path = Containers;
 			sourceTree = "<group>";
 		};
-		CDFA9C38235F9BD50069C341 /* Swiping */ = {
+		CDFA9C38235F9BD50069C341 /* ExplorerContainer */ = {
 			isa = PBXGroup;
 			children = (
-				CDD7BDAD235864EE00F28C23 /* SwipingView.swift */,
-				CDFA9C39235F9BF10069C341 /* SwipingViewModel.swift */,
-				CDFA9C422360A2F60069C341 /* CardView.swift */,
-				CD92B2F0236209A8006F0190 /* SwipingIconView.swift */,
+				CDD7BDAD235864EE00F28C23 /* ExplorerContainer.swift */,
+				CDFA9C39235F9BF10069C341 /* ExplorerViewModel.swift */,
+				CD2432A52378728B004C916F /* Views */,
 				CD92B2F423621CF1006F0190 /* Swiping.swift */,
-				CD3B85E4236860AC0007C0D4 /* SwipeableView.swift */,
 			);
-			path = Swiping;
+			path = ExplorerContainer;
 			sourceTree = "<group>";
 		};
 		CDFA9C41235FA0FE0069C341 /* Draggable */ = {
@@ -618,8 +666,6 @@
 				CD6554C82351B91B00E6498A /* Sources */,
 				CD6554C92351B91B00E6498A /* Frameworks */,
 				CD6554CA2351B91B00E6498A /* Resources */,
-				F91631A6E4E6BC8EF986E9EA /* [CP] Embed Pods Frameworks */,
-				60AA4DB496E66353DFFC1AC9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -747,23 +793,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		60AA4DB496E66353DFFC1AC9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		886646C458F9B26D66837CA7 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -779,7 +808,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Vinder-VinderUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-VinderUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -825,23 +854,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vinder/Pods-Vinder-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F91631A6E4E6BC8EF986E9EA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Vinder-VinderUITests/Pods-Vinder-VinderUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -875,6 +887,7 @@
 				CD2A6DA22364A5D500EEDDA5 /* TabBarItem.swift in Sources */,
 				CD6554EA235256F900E6498A /* ConversationPreview.swift in Sources */,
 				CD24421D2354802B00C357EE /* Profile.swift in Sources */,
+				CD472F4F2379A26B00DFCAB7 /* KingfisherBridge.swift in Sources */,
 				CD972D21236E204D0008F022 /* SinglePicture.swift in Sources */,
 				CD6554EE23525C5300E6498A /* SearchBar.swift in Sources */,
 				CD92B2F523621CF1006F0190 /* Swiping.swift in Sources */,
@@ -884,9 +897,9 @@
 				CD972D1F236DE85A0008F022 /* FirebaseMiddleware.swift in Sources */,
 				CD972D0E236C580A0008F022 /* ProfilUpdating.swift in Sources */,
 				CD92B2F72362F607006F0190 /* AppState.swift in Sources */,
-				CDD7BDAE235864EE00F28C23 /* SwipingView.swift in Sources */,
+				CDD7BDAE235864EE00F28C23 /* ExplorerContainer.swift in Sources */,
 				CDD7BDB023586C0400F28C23 /* TabBarView.swift in Sources */,
-				CDFA9C3A235F9BF10069C341 /* SwipingViewModel.swift in Sources */,
+				CDFA9C3A235F9BF10069C341 /* ExplorerViewModel.swift in Sources */,
 				CD4890BE23746BFB00AD57CD /* VMiddlewareProvider.swift in Sources */,
 				CD2442252354997400C357EE /* Matching.swift in Sources */,
 				CD24422823549C1300C357EE /* AudioRecorder.swift in Sources */,
@@ -896,6 +909,7 @@
 				CD24422A2354E33100C357EE /* ImageService.swift in Sources */,
 				CD4890BA23746B9700AD57CD /* MiddlewareProvider.swift in Sources */,
 				CD6554E42351D9CF00E6498A /* ProfilView.swift in Sources */,
+				CD472F562379FFE100DFCAB7 /* AddPictureContainer.swift in Sources */,
 				CD6554E82352533F00E6498A /* MatchesView.swift in Sources */,
 				CD6554B32351B91900E6498A /* ContentView.swift in Sources */,
 				CD2A6DA42364A64600EEDDA5 /* TabBarViewModel.swift in Sources */,
@@ -903,6 +917,7 @@
 				CDFA9C3E235FA0AC0069C341 /* Draggable.swift in Sources */,
 				CD3B85E5236860AC0007C0D4 /* SwipeableView.swift in Sources */,
 				CD972D10236C58230008F022 /* FirebaseProfilUpdater.swift in Sources */,
+				CD472F522379F43D00DFCAB7 /* Extension+Array.swift in Sources */,
 				CD2442212354804700C357EE /* Message.swift in Sources */,
 				CDFA9C432360A2F60069C341 /* CardView.swift in Sources */,
 				CDFA9C452360A5DE0069C341 /* ProfilInfoView.swift in Sources */,
@@ -910,6 +925,7 @@
 				CD2442232354976300C357EE /* MatchProfile.swift in Sources */,
 				CD2A6DA82364B25B00EEDDA5 /* SwipingReducer.swift in Sources */,
 				CD92B2FD23630986006F0190 /* AccountState.swift in Sources */,
+				CD472F542379F89B00DFCAB7 /* ProfilContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1160,7 +1176,7 @@
 		};
 		CD6554DC2351B91B00E6498A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0285C5D141556E7D0906529C /* Pods-Vinder-VinderUITests.debug.xcconfig */;
+			baseConfigurationReference = EAEE466B152FBBBF6388D24D /* Pods-VinderUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1181,7 +1197,7 @@
 		};
 		CD6554DD2351B91B00E6498A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE1603D1A3108BED9EAD8F7B /* Pods-Vinder-VinderUITests.release.xcconfig */;
+			baseConfigurationReference = 622929F74ED5DF23F5A6ED66 /* Pods-VinderUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
