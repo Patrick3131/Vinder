@@ -13,6 +13,7 @@ struct AccountState:FluxState {
     var profile: Profile?
     var userUID: String?
     var loggedIn: Bool = false
+    var didUserAlreadyCreateACompleteProfile: Bool = false
 }
 
 

@@ -9,8 +9,8 @@
 import Foundation
 
 protocol ProfileReading {
-    func profileRead(id: String, completionHandler: @escaping (_ profile: Profile, _ error: Error?) -> Void)
-    func profileReads(ids: [String], completionHandler: @escaping (_ profiles: [Profile], _ error: Error?) -> Void)
+    func profileRead(id: String, completionHandler: @escaping (_ profile: Profile?, _ error: Error?) -> Void)
+    func profileReads(ids: [String], completionHandler: @escaping (_ profiles: [Profile]?, _ error: Error?) -> Void)
 }
 
 

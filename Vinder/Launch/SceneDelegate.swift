@@ -49,11 +49,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.makeKeyAndVisible()
         }
         
-        let firebaseReader = FirebaseProfileReader()
-        firebaseReader.profileRead(id: "1", completionHandler: { _,_  in
-            
-            
-        })
+//        let firebaseReader = FirebaseProfileReader()
+//        firebaseReader.profileRead(id: "1", completionHandler: { _,_  in
+//            
+//            
+//        })
         store.dispatch(action: LocationAction.trackLocation(userId: "1"))
     }
 

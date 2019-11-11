@@ -19,23 +19,28 @@ struct FirebaseProfileReader: ProfileReading {
         self.db = Firestore.firestore()
     }
     
-    func profileRead(id: String, completionHandler: @escaping (Profile, Error?) -> Void) {
+    func profileRead(id: String, completionHandler: @escaping (Profile?, Error?) -> Void) {
+        
         db.collection(dbName).document(id).getDocument(completion: { (document, error) in
+            
             if let error = error {
-                completionHandler(Profile.preDataAccount, error)
+                print(error)
+                
+                completionHandler(nil, error)
             } else {
                 do {
+                    
                     let decoded = try self.decodeDictionary(document: document)
                     completionHandler(decoded,nil)
                 } catch let error {
-                    
+                    completionHandler(nil, error)
                     print(error.localizedDescription)
                 }
             }
         })
     }
     
-    func profileReads(ids: [String], completionHandler: @escaping ([Profile], Error?) -> Void) {
+    func profileReads(ids: [String], completionHandler: @escaping ([Profile]?, Error?) -> Void) {
         
     }
     
@@ -48,7 +53,7 @@ struct FirebaseProfileReader: ProfileReading {
         case picture
         case biography
         case location
-        case dataNil
+        case profilDoesNotExist
         
         var errorDescription: String {
             let failed = " decoding failed"
@@ -69,15 +74,15 @@ struct FirebaseProfileReader: ProfileReading {
                 return "biography" + failed
             case .location:
                 return "location" + failed
-            case .dataNil:
-                return "datanil"
+            case .profilDoesNotExist:
+                return "profilDoesNotExist"
             }
         }
     }
     
-    func decodeDictionary(document: DocumentSnapshot?) throws -> Profile  {
+    private func decodeDictionary(document: DocumentSnapshot?) throws -> Profile  {
         
-        guard let value = document?.data() else { throw FirebaseError.dataNil}
+        guard let value = document?.data() else { throw FirebaseError.profilDoesNotExist}
         print(value)
         guard let name = value[Keys.name.rawValue] as? String else { throw FirebaseError.name}
         guard let age = value[Keys.age.rawValue] as? Double else { throw FirebaseError.age}

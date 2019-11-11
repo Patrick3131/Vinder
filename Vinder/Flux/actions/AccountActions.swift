@@ -34,29 +34,58 @@ struct AccountActions {
         var userUID: String?
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             
-            dispatch(GetPublicProfil(userUID: ""))
+            if isLoggedIn && userUID != nil {
+                dispatch(ReadProfil(userUID: userUID!))
+            }
         }
-        
-        
     }
 
     
-    struct GetPublicProfil: AsyncAction {
+    struct ReadProfil: AsyncAction {
         var userUID: String
         
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
-            dispatch(SetProfil(profil: Profile.preDataAccount))
+            let firebase = FirebaseProfileReader()
+            
+            firebase.profileRead(id: userUID, completionHandler: { profile, error in
+                
+                if let error = error {
+                    
+                    if let error = error as? FirebaseProfileReader.FirebaseError {
+                        switch error {
+                        case .profilDoesNotExist:
+                            
+                            dispatch(SetProfil(profil: nil))
+                        default:
+                            break
+                        }
+                    }
+                    print(error)
+                } else {
+                    print(profile)
+                    
+                    dispatch(SetProfil(profil: profile))
+                }
+                
+            })
+//            dispatch(SetProfil(profil: Profile.preDataAccount))
         }
     }
     
     struct CreateProfil: AsyncAction {
+        let profile: Profile
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
-            
+            let firebase = FirebaseProfilUpdater()
+            firebase.profilUpdate(id: profile.id, update: .inital(profile: profile), completionHandler: { success in
+                if success {
+                    dispatch(SetProfil(profil: self.profile))
+                }
+            })
         }
     }
 
     struct SetProfil: Action {
-        let profil: Profile
+        let profil: Profile?
     }
 
     
