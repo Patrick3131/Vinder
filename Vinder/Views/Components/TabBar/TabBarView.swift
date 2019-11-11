@@ -18,7 +18,7 @@ struct TabBarView: ConnectedView {
     @State private var selectedTab = Tab.profil
     
     private enum Tab: Int {
-        case swiping, matches, profil
+        case swiping, matches, profil, chat
     }
     
     func map(state: AppState, dispatch: @escaping DispatchFunction) -> Props {
@@ -41,15 +41,25 @@ struct TabBarView: ConnectedView {
                     }, label: {
                         Text("props.viewModel.profile!.name").foregroundColor(.green)
                         }).tabItem({
-                            TabBarItem(text: "text", image: "pause.circle")
-                        }).tag(Tab.profil)
+                            TabBarItem(text: "Chat", image: "pause.circle")
+                        }).tag(Tab.chat)
                     Text(props.viewModel.profile!.name).tabItem {
-                        TabBarItem(text: "Text", image: "pause.circle")
+                        TabBarItem(text: "Matches", image: "pause.circle")
                     }.tag(Tab.matches)
-                    SwipingView().tabItem {
-                        TabBarItem(text: "Swipe", image: "pause.circle")
+                    ExplorerContainer().tabItem {
+                        TabBarItem(text: "Explore", image: "pause.circle")
                     }.tag(Tab.swiping)
+                    ProfilContainer().tabItem {
+                        TabBarItem(text: "Profile", image: "pause.circle")
+                    }.tag(Tab.profil)
                 }
+            } else if props.viewModel.showProfilNotCompleteView {
+                Button(action: {
+                    store.dispatch(action: AccountActions.CreateProfil(profile: Profile(id: "RPTujanhFfc3zVLaKoPXvqXb8WH3", name: "Patrick", age: Date(), gender: .male, preference: .hetero, pictureUrl: [URL](), biography: nil, location: nil)))
+//                    store.dispatch(action: )
+                }, label: {
+                    ProfilContainer()
+                })
             } else {
                 LoginView()
             }

@@ -32,6 +32,11 @@ struct TabBarViewModel {
         return (isLoggedIn && (profile != nil)) ? true : false
     }
     
+    var showProfilNotCompleteView: Bool {
+        print((isLoggedIn && (profile == nil)) ? true : false)
+        return (isLoggedIn && (profile == nil)) ? true : false
+    }
+    
     
     func logout() {
         dispatch(AccountActions.Logout())
