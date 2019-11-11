@@ -1,11 +1,11 @@
 # Vinder
 
-Tinder clone with voice messages to experiment with SwiftUI.
+Tinder clone with voice messaging to experiment with SwiftUI.
 
-Using flux implementation for Swift.
+Using a flux implementation for Swift.
 
 - Firebase
-    - Firetore
+    - Firestore
     - Storage
     
 
