@@ -83,14 +83,18 @@ struct FirebaseProfileReader: ProfileReading {
     private func decodeDictionary(document: DocumentSnapshot?) throws -> Profile  {
         
         guard let value = document?.data() else { throw FirebaseError.profilDoesNotExist}
+        
         print(value)
+        
         guard let name = value[Keys.name.rawValue] as? String else { throw FirebaseError.name}
         guard let age = value[Keys.age.rawValue] as? Double else { throw FirebaseError.age}
         guard let gender = value[Keys.gender.rawValue] as? String else { throw FirebaseError.gender}
         guard let preference = value[Keys.preference.rawValue] as? String else { throw FirebaseError.preference}
         
+        let pictureURL = (value[Keys.pictureUrls.rawValue] as? [String])?.compactMap {
+            return URL(string: $0)
+        }
         
-        let pictureURL = value[Keys.pictureUrls.rawValue] as? [URL]
         let location = value[Keys.location.rawValue] as? GeoPoint
         let biography = value[Keys.biography.rawValue] as? URL
         

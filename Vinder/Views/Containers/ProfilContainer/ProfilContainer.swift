@@ -22,7 +22,7 @@ struct ProfilContainer: ConnectedView {
     
     func body(props: Props) -> some View {
         AddPictureContainer(tabbed: { element in
-            
+            print(element)
         })
     }
 }
