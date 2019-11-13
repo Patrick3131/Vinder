@@ -8,12 +8,11 @@
 
 import Foundation
 import UIKit
-import FirebaseStorage
 
 
 struct ImageService: ImageNetworking {
 
-    var dataService: DataService
+    var dataService: DataNetworking
     
     func create(_ image: UIImage, profil: Profile, completion: @escaping (_ hasFinished: Bool, _ url: String) -> Void) {
         let data: Data? = image.jpegData(compressionQuality: 1.0)
@@ -24,9 +23,13 @@ struct ImageService: ImageNetworking {
         }
     }
     
-    func delete(_ url: String) {
-        dataService.delete(url)
+    func delete(_ url: String, completion: @escaping (_ successful: Bool) -> Void) {
+        dataService.delete(url, completion: { successful in
+            completion(successful)
+            
+        })
     }
+
     
     func read(_ urls: [String], completion: @escaping ([UIImage]) -> Void) {
         dataService.read(urls, completion: { data in
@@ -34,8 +37,10 @@ struct ImageService: ImageNetworking {
             completion(images)
         })
     }
-    
-    
 }
 
-
+extension ImageService {
+    init() {
+        self.dataService = FirebaseDataService()
+    }
+}

@@ -9,5 +9,5 @@
 import Foundation
 
 struct AudioService {
-    let dataService: DataService
+    let dataService: FirebaseDataService
 }

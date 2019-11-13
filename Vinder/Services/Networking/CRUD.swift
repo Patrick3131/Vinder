@@ -39,13 +39,13 @@ struct Networking: CRUD {
 
 protocol DataNetworking {
     func create(_ data: Data, profil: Profile, mainPath: String, completion: @escaping (_ hasFinished: Bool, _ url: String) -> Void)
-    func delete(_ url: String)
+    func delete(_ url: String, completion: @escaping (_ successful: Bool) -> Void)
     func read(_ urls: [String], completion: @escaping ([Data]) -> Void)
 }
 
 protocol ImageNetworking {
     func create(_ image: UIImage, profil: Profile, completion: @escaping (_ hasFinished: Bool, _ url: String) -> Void)
-    func delete(_ url: String)
+    func delete(_ url: String, completion: @escaping (_ successful: Bool) -> Void)
     func read(_ urls: [String], completion: @escaping ([UIImage]) -> Void)
 }
 
