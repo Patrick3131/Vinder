@@ -32,6 +32,8 @@
 		CD472F522379F43D00DFCAB7 /* Extension+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F512379F43D00DFCAB7 /* Extension+Array.swift */; };
 		CD472F542379F89B00DFCAB7 /* ProfilContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F532379F89B00DFCAB7 /* ProfilContainer.swift */; };
 		CD472F562379FFE100DFCAB7 /* AddPictureContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F552379FFE100DFCAB7 /* AddPictureContainer.swift */; };
+		CD472F5A237C86CD00DFCAB7 /* ProfileUpdateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F59237C86CD00DFCAB7 /* ProfileUpdateState.swift */; };
+		CD472F5C237C86F600DFCAB7 /* ProfileUpdateActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F5B237C86F600DFCAB7 /* ProfileUpdateActions.swift */; };
 		CD4890BA23746B9700AD57CD /* MiddlewareProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890B923746B9700AD57CD /* MiddlewareProvider.swift */; };
 		CD4890BC23746BC400AD57CD /* LocationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890BB23746BC400AD57CD /* LocationAction.swift */; };
 		CD4890BE23746BFB00AD57CD /* VMiddlewareProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890BD23746BFB00AD57CD /* VMiddlewareProvider.swift */; };
@@ -68,7 +70,7 @@
 		CDAC6D402371597200D68072 /* SwiftDux in Frameworks */ = {isa = PBXBuildFile; productRef = CDAC6D3F2371597200D68072 /* SwiftDux */; };
 		CDCA463F2370653E00E72C6C /* TrackLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA463E2370653E00E72C6C /* TrackLocation.swift */; };
 		CDCF3EDF2369AC77005C876A /* AnimatedPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */; };
-		CDD7BDA823551EE100F28C23 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDA723551EE100F28C23 /* DataService.swift */; };
+		CDD7BDA823551EE100F28C23 /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDA723551EE100F28C23 /* FirebaseDataService.swift */; };
 		CDD7BDAA2355202000F28C23 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDA92355202000F28C23 /* AudioService.swift */; };
 		CDD7BDAC2358610500F28C23 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CDD7BDAB2358610500F28C23 /* README.md */; };
 		CDD7BDAE235864EE00F28C23 /* ExplorerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDAD235864EE00F28C23 /* ExplorerContainer.swift */; };
@@ -133,6 +135,8 @@
 		CD472F512379F43D00DFCAB7 /* Extension+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Array.swift"; sourceTree = "<group>"; };
 		CD472F532379F89B00DFCAB7 /* ProfilContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilContainer.swift; sourceTree = "<group>"; };
 		CD472F552379FFE100DFCAB7 /* AddPictureContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPictureContainer.swift; sourceTree = "<group>"; };
+		CD472F59237C86CD00DFCAB7 /* ProfileUpdateState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateState.swift; sourceTree = "<group>"; };
+		CD472F5B237C86F600DFCAB7 /* ProfileUpdateActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateActions.swift; sourceTree = "<group>"; };
 		CD4890B923746B9700AD57CD /* MiddlewareProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewareProvider.swift; sourceTree = "<group>"; };
 		CD4890BB23746BC400AD57CD /* LocationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAction.swift; sourceTree = "<group>"; };
 		CD4890BD23746BFB00AD57CD /* VMiddlewareProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMiddlewareProvider.swift; sourceTree = "<group>"; };
@@ -175,7 +179,7 @@
 		CD972F609C603009BA9AE251 /* Pods_VinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDCA463E2370653E00E72C6C /* TrackLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLocation.swift; sourceTree = "<group>"; };
 		CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedPlaceholder.swift; sourceTree = "<group>"; };
-		CDD7BDA723551EE100F28C23 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		CDD7BDA723551EE100F28C23 /* FirebaseDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDataService.swift; sourceTree = "<group>"; };
 		CDD7BDA92355202000F28C23 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
 		CDD7BDAB2358610500F28C23 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CDD7BDAD235864EE00F28C23 /* ExplorerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerContainer.swift; sourceTree = "<group>"; };
@@ -311,7 +315,7 @@
 				CD2442242354997400C357EE /* Matching.swift */,
 				CD2442292354E33100C357EE /* ImageService.swift */,
 				CDD7BDA92355202000F28C23 /* AudioService.swift */,
-				CDD7BDA723551EE100F28C23 /* DataService.swift */,
+				CDD7BDA723551EE100F28C23 /* FirebaseDataService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -520,6 +524,7 @@
 				CD92B2F62362F607006F0190 /* AppState.swift */,
 				CD92B2FC23630986006F0190 /* AccountState.swift */,
 				CD2A6DA52364B1DA00EEDDA5 /* SwipingState.swift */,
+				CD472F59237C86CD00DFCAB7 /* ProfileUpdateState.swift */,
 				CD87E01F23703A4300F75568 /* ConversationState.swift */,
 			);
 			path = state;
@@ -531,6 +536,7 @@
 				CD92B3052363116D006F0190 /* AccountActions.swift */,
 				CD2A6DA92364B2A700EEDDA5 /* SwipingActions.swift */,
 				CD4890BB23746BC400AD57CD /* LocationAction.swift */,
+				CD472F5B237C86F600DFCAB7 /* ProfileUpdateActions.swift */,
 			);
 			path = actions;
 			sourceTree = "<group>";
@@ -873,7 +879,7 @@
 				CD87E02023703A4300F75568 /* ConversationState.swift in Sources */,
 				CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */,
 				CD972D17236C8ECD0008F022 /* FirebaseProfileReader.swift in Sources */,
-				CDD7BDA823551EE100F28C23 /* DataService.swift in Sources */,
+				CDD7BDA823551EE100F28C23 /* FirebaseDataService.swift in Sources */,
 				CDFA9C472360AA3A0069C341 /* ProfilInfoViewModel.swift in Sources */,
 				CD4890BC23746BC400AD57CD /* LocationAction.swift in Sources */,
 				CDFA9C4A2360C2150069C341 /* ViewBuilder.swift in Sources */,
@@ -881,6 +887,7 @@
 				CDCA463F2370653E00E72C6C /* TrackLocation.swift in Sources */,
 				CD92B3062363116D006F0190 /* AccountActions.swift in Sources */,
 				CD92B2FB23630135006F0190 /* AppReducer.swift in Sources */,
+				CD472F5A237C86CD00DFCAB7 /* ProfileUpdateState.swift in Sources */,
 				CDCF3EDF2369AC77005C876A /* AnimatedPlaceholder.swift in Sources */,
 				CDD7BDB423588C9300F28C23 /* FirebaseAuthentication.swift in Sources */,
 				CDD7BDB223588B5C00F28C23 /* Authentication.swift in Sources */,
@@ -922,6 +929,7 @@
 				CDFA9C432360A2F60069C341 /* CardView.swift in Sources */,
 				CDFA9C452360A5DE0069C341 /* ProfilInfoView.swift in Sources */,
 				CD972D0C236C57E90008F022 /* ProfileUpdate.swift in Sources */,
+				CD472F5C237C86F600DFCAB7 /* ProfileUpdateActions.swift in Sources */,
 				CD2442232354976300C357EE /* MatchProfile.swift in Sources */,
 				CD2A6DA82364B25B00EEDDA5 /* SwipingReducer.swift in Sources */,
 				CD92B2FD23630986006F0190 /* AccountState.swift in Sources */,
