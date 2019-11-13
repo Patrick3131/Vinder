@@ -13,38 +13,45 @@ import SwiftUIFlux
 struct AddPictureContainer: ConnectedView {
     struct Props {
         let urls: [URL]
+        let dispatch: DispatchFunction
     }
+    
+    
     
     var tabbed: (Int) -> Void
     
     func map(state: AppState, dispatch: @escaping DispatchFunction) -> Props {
-        let props = Props(urls: state.accountState.profile?.pictureUrl ?? [URL]())
+        let props = Props(urls: state.accountState.profile?.pictureUrl ?? [URL](), dispatch: dispatch)
         return props
+    }
+    
+    
+    func addSinglePicture(props: Props, element: Int) -> SinglePicture {
+        SinglePicture(viewModel: SinglePictureViewModel(picture: props.urls.safeAccess(element), onTab: { action in
+            switch action {
+            case .add:
+                break
+            case .remove:
+                props.dispatch(ProfileUpdateActions.RemoveImage(imageIndex: element, url: props.urls[element]))
+            case .show:
+                break
+            }
+            print(action, element)
+        }))
     }
     
     func body(props: Props) -> some View {
         VStack {
             HStack {
-                SinglePicture(viewModel: SinglePictureViewModel(picture: props.urls.safeAccess(0), onTab: {
-                    self.tabbed(0)
-                }))
-                SinglePicture(viewModel: SinglePictureViewModel(picture: props.urls.safeAccess(1), onTab: {
-                    self.tabbed(1)
-                }))
-                SinglePicture(viewModel: SinglePictureViewModel(picture: props.urls.safeAccess(2), onTab: {
-                    self.tabbed(2)
-                }))
+                addSinglePicture(props: props, element: 0)
+                addSinglePicture(props: props, element: 1)
+                addSinglePicture(props: props, element: 2)
             }
             HStack {
-                SinglePicture(viewModel: SinglePictureViewModel(picture: props.urls.safeAccess(3), onTab: {
-                    self.tabbed(3)
-                }))
-                SinglePicture(viewModel: SinglePictureViewModel(picture: props.urls.safeAccess(4), onTab: {
-                    self.tabbed(4)
-                }))
-                SinglePicture(viewModel: SinglePictureViewModel(picture: props.urls.safeAccess(5), onTab: {
-                    self.tabbed(5)
-                }))
+                addSinglePicture(props: props, element: 3)
+                addSinglePicture(props: props, element: 4)
+                addSinglePicture(props: props, element: 5)
+
             }
         }
     }
