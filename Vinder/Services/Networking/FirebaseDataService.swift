@@ -15,17 +15,35 @@ struct FirebaseDataService: DataNetworking {
     
     
     func create(_ data: Data, profil: Profile, mainPath: String, completion: @escaping (_ hasFinished: Bool, _ url: String) -> Void) {
-        let reference = storage.reference(withPath: "mainPath" + "/" + "\(profil.id)" + "\(profil.pictureUrl.count + 1)")
-        reference.putData(data, metadata: nil, completion: { (meta, error) in
+        let reference = storage.reference(withPath: mainPath + "/" + "\(profil.id)" + "\(profil.pictureUrl.count + 1)")
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/jpeg"
+        reference.putData(data, metadata: metadata, completion: { (meta, error) in
+            
             if error == nil {
-                meta?.storageReference?.downloadURL(completion: { (url, error) in
-                    if error == nil {
-                        completion(true, url?.absoluteString ?? "")
-                    } else {
-                        print(error?.localizedDescription as Any)
+                reference.downloadURL(completion: { url, error in
+                    if let error = error {
+                        print(error.localizedDescription)
+                        
+                    } else if let url = url {
+                        completion(true, url.absoluteString)
                     }
+                    
                 })
+                
+//                meta?.storageReference!.downloadURL(completion: { (url, error) in
+//
+//                    if error == nil {
+//
+//                        completion(true, url?.absoluteString ?? "")
+//                    } else {
+//
+//                        print(error?.localizedDescription as Any)
+//                    }
+//                })
+                
             } else {
+                
                 print(error?.localizedDescription as Any)
             }
         })

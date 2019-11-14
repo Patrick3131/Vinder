@@ -15,7 +15,7 @@ struct ImageService: ImageNetworking {
     var dataService: DataNetworking
     
     func create(_ image: UIImage, profil: Profile, completion: @escaping (_ hasFinished: Bool, _ url: String) -> Void) {
-        let data: Data? = image.jpegData(compressionQuality: 1.0)
+        let data: Data? = image.jpegData(compressionQuality: 0.5)
         if let data = data {
             dataService.create(data, profil: profil, mainPath: "media", completion: { hasFinished, url in
                 completion(hasFinished, url)
