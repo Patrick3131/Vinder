@@ -13,5 +13,6 @@ func appStateReducer(state: AppState, action: Action) -> AppState {
     var state = state
     state.accountState = accountStateReducer(state: state.accountState, action: action)
     state.swipingState = swipingStateReducer(state: state.swipingState, action: action)
+    state.profileUpdateState = profileUpdateStateReducer(state: state.profileUpdateState, action: action)
     return state
 }

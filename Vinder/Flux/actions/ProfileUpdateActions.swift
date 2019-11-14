@@ -21,14 +21,16 @@ struct ProfileUpdateActions {
         let profile: Profile
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             let uploader = ImageService()
+            
             uploader.create(image, profil: profile, completion: { success, url in
+                
                 dispatch(UploadStatus(status: .imageIsProcessing(index: 0)))
                 if success {
                     if let url = URL(string: url) {
                         dispatch(SetImageUrl(url: url))
                     }
                 } else {
-                    
+                  print("upload failed")
                 }
             })
 //            let uploader =
@@ -61,4 +63,7 @@ struct ProfileUpdateActions {
         let status: ProfileUpdateState.ImageProcessingStatus
     }
     
+    struct ShowImagePicker: Action {
+        let show: Bool
+    }
 }

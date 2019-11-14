@@ -12,8 +12,10 @@ import SwiftUIFlux
 struct AppState: FluxState {
     var accountState: AccountState
     var swipingState: SwipingState
+    var profileUpdateState: ProfileUpdateState
     init() {
         self.accountState = AccountState()
         self.swipingState = SwipingState()
+        self.profileUpdateState = ProfileUpdateState()
     }
 }
