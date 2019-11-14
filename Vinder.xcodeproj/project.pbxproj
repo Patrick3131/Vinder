@@ -34,6 +34,8 @@
 		CD472F562379FFE100DFCAB7 /* AddPictureContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F552379FFE100DFCAB7 /* AddPictureContainer.swift */; };
 		CD472F5A237C86CD00DFCAB7 /* ProfileUpdateState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F59237C86CD00DFCAB7 /* ProfileUpdateState.swift */; };
 		CD472F5C237C86F600DFCAB7 /* ProfileUpdateActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F5B237C86F600DFCAB7 /* ProfileUpdateActions.swift */; };
+		CD472F5F237D388700DFCAB7 /* ImagePickerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F5E237D388700DFCAB7 /* ImagePickerWrapper.swift */; };
+		CD472F61237D3C3500DFCAB7 /* ProfileUpdateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F60237D3C3500DFCAB7 /* ProfileUpdateReducer.swift */; };
 		CD4890BA23746B9700AD57CD /* MiddlewareProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890B923746B9700AD57CD /* MiddlewareProvider.swift */; };
 		CD4890BC23746BC400AD57CD /* LocationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890BB23746BC400AD57CD /* LocationAction.swift */; };
 		CD4890BE23746BFB00AD57CD /* VMiddlewareProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890BD23746BFB00AD57CD /* VMiddlewareProvider.swift */; };
@@ -137,6 +139,8 @@
 		CD472F552379FFE100DFCAB7 /* AddPictureContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPictureContainer.swift; sourceTree = "<group>"; };
 		CD472F59237C86CD00DFCAB7 /* ProfileUpdateState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateState.swift; sourceTree = "<group>"; };
 		CD472F5B237C86F600DFCAB7 /* ProfileUpdateActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateActions.swift; sourceTree = "<group>"; };
+		CD472F5E237D388700DFCAB7 /* ImagePickerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerWrapper.swift; sourceTree = "<group>"; };
+		CD472F60237D3C3500DFCAB7 /* ProfileUpdateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateReducer.swift; sourceTree = "<group>"; };
 		CD4890B923746B9700AD57CD /* MiddlewareProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewareProvider.swift; sourceTree = "<group>"; };
 		CD4890BB23746BC400AD57CD /* LocationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAction.swift; sourceTree = "<group>"; };
 		CD4890BD23746BFB00AD57CD /* VMiddlewareProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMiddlewareProvider.swift; sourceTree = "<group>"; };
@@ -299,7 +303,6 @@
 			children = (
 				CDD7BDB5235891D300F28C23 /* GoogleService-Info.plist */,
 				CDD7BDB123588B5C00F28C23 /* Authentication.swift */,
-				CD27F65E2358AEA1005224C9 /* FUIAuthBaseViewControllerWrapper.swift */,
 				CDD7BDB323588C9300F28C23 /* FirebaseAuthentication.swift */,
 				CD972D12236C8DBB0008F022 /* FirebaseConstants.swift */,
 			);
@@ -387,6 +390,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		CD472F5D237D386700DFCAB7 /* UIKit Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				CD27F65E2358AEA1005224C9 /* FUIAuthBaseViewControllerWrapper.swift */,
+				CD472F5E237D388700DFCAB7 /* ImagePickerWrapper.swift */,
+			);
+			path = "UIKit Wrapper";
+			sourceTree = "<group>";
+		};
 		CD6554A22351B91900E6498A = {
 			isa = PBXGroup;
 			children = (
@@ -467,6 +479,7 @@
 		CD6554DF2351D5AF00E6498A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CD472F5D237D386700DFCAB7 /* UIKit Wrapper */,
 				CDAC6D4123718AE000D68072 /* Containers */,
 				CDFA9C492360C2150069C341 /* ViewBuilder.swift */,
 				CD6554E22351D5F300E6498A /* Shared */,
@@ -547,6 +560,7 @@
 				CD92B2FA23630135006F0190 /* AppReducer.swift */,
 				CD92B30023630C03006F0190 /* AccountReducer.swift */,
 				CD2A6DA72364B25B00EEDDA5 /* SwipingReducer.swift */,
+				CD472F60237D3C3500DFCAB7 /* ProfileUpdateReducer.swift */,
 			);
 			path = reducers;
 			sourceTree = "<group>";
@@ -876,6 +890,7 @@
 				CD24421723547FD600C357EE /* CRUD.swift in Sources */,
 				CD6554E623524D7C00E6498A /* ImageGallery.swift in Sources */,
 				CD6554EC235258C900E6498A /* MatchesHome.swift in Sources */,
+				CD472F5F237D388700DFCAB7 /* ImagePickerWrapper.swift in Sources */,
 				CD87E02023703A4300F75568 /* ConversationState.swift in Sources */,
 				CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */,
 				CD972D17236C8ECD0008F022 /* FirebaseProfileReader.swift in Sources */,
@@ -898,6 +913,7 @@
 				CD972D21236E204D0008F022 /* SinglePicture.swift in Sources */,
 				CD6554EE23525C5300E6498A /* SearchBar.swift in Sources */,
 				CD92B2F523621CF1006F0190 /* Swiping.swift in Sources */,
+				CD472F61237D3C3500DFCAB7 /* ProfileUpdateReducer.swift in Sources */,
 				CD972D13236C8DBB0008F022 /* FirebaseConstants.swift in Sources */,
 				CDD7BDB82358960500F28C23 /* LoginView.swift in Sources */,
 				CD972D15236C8EB20008F022 /* ProfileReading.swift in Sources */,

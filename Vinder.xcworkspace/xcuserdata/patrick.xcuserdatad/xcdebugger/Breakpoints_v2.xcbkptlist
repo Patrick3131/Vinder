@@ -20,5 +20,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8ACF9CEA-2427-4197-8706-47CA20FF5AB6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Vinder/Services/Networking/FirebaseDataService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "create(_:profil:mainPath:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8ACF9CEA-2427-4197-8706-47CA20FF5AB6 - 28523322e3c0acf1"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRStorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Vinder.FirebaseDataService.create(_: Foundation.Data, profil: Vinder.Profile, mainPath: Swift.String, completion: (Swift.Bool, Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "Vinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patrick/Dropbox/Developer/Swift/Vinder/Vinder/Services/Networking/FirebaseDataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "257">
+               </Location>
+               <Location
+                  uuid = "8ACF9CEA-2427-4197-8706-47CA20FF5AB6 - cf39a06a2ba1687d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRStorageMetadata&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Vinder.FirebaseDataService.create(_: Foundation.Data, profil: Vinder.Profile, mainPath: Swift.String, completion: (Swift.Bool, Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "Vinder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/patrick/Dropbox/Developer/Swift/Vinder/Vinder/Services/Networking/FirebaseDataService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "218">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

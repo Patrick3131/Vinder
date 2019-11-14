@@ -19,6 +19,10 @@ struct SinglePictureViewModel {
         onTab(.remove)
     }
     
+    var isThereAPictureAdded: Bool {
+        (picture != nil)
+    }
+    
     enum Tabbed {
         case add
         case remove
@@ -33,10 +37,12 @@ struct SinglePicture: View {
         Group {
             ZStack(alignment: .bottomTrailing) {
                 Button(action: {
-                    self.viewModel.addPicture()
+                    if !self.viewModel.isThereAPictureAdded {
+                        self.viewModel.addPicture()
+                    }
                 }) {
                     Group {
-                        if viewModel.picture != nil {
+                        if viewModel.isThereAPictureAdded {
                             ZStack {
                                 CacheImage(viewModel.picture!)
                                     .resizable()
@@ -51,7 +57,7 @@ struct SinglePicture: View {
                     .buttonStyle(PlainButtonStyle())
                     .clipShape(Circle())
                     .overlay(Circle().stroke(color.opacity(0.5),lineWidth: 5))
-                if viewModel.picture != nil {
+                if viewModel.isThereAPictureAdded {
                     Button(action: {
                         self.viewModel.removePicture()
                     }) {
