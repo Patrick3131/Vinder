@@ -14,10 +14,10 @@ struct FirebaseDataService: DataNetworking {
     
     
     
-    func create(_ data: Data, profil: Profile, mainPath: String, completion: @escaping (_ hasFinished: Bool, _ url: String) -> Void) {
-        let reference = storage.reference(withPath: mainPath + "/" + "\(profil.id)" + "\(profil.pictureUrl.count + 1)")
+    func create(_ data: Data, profil: Profile, config: DataServiceConfig, completion: @escaping (_ hasFinished: Bool, _ url: String) -> Void) {
+        let reference = storage.reference(withPath: config.path + "/" + "\(profil.id)" + "\(profil.pictureUrl.count + 1)")
         let metadata = StorageMetadata()
-        metadata.contentType = "image/jpeg"
+        metadata.contentType = config.contentType
         reference.putData(data, metadata: metadata, completion: { (meta, error) in
             
             if error == nil {
@@ -64,16 +64,6 @@ struct FirebaseDataService: DataNetworking {
     }
 
     
-    func delete(_ url: String) {
-        let reference = storage.reference(forURL: url)
-        reference.delete { error in
-            if let error = error {
-                print(error.localizedDescription)
-            } else {
-                print(url,"deleted")
-            }
-        }
-    }
     
     func read(_ urls: [String], completion: @escaping ([Data]) -> Void) {
         var dataOutput = [Data]()

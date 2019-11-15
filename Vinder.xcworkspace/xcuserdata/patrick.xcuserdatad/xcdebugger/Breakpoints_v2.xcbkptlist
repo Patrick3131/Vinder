@@ -32,7 +32,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "24"
             endingLineNumber = "24"
-            landmarkName = "create(_:profil:mainPath:completion:)"
+            landmarkName = "create(_:profil:config:completion:)"
             landmarkType = "7">
             <Locations>
                <Location

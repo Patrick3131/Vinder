@@ -36,6 +36,10 @@
 		CD472F5C237C86F600DFCAB7 /* ProfileUpdateActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F5B237C86F600DFCAB7 /* ProfileUpdateActions.swift */; };
 		CD472F5F237D388700DFCAB7 /* ImagePickerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F5E237D388700DFCAB7 /* ImagePickerWrapper.swift */; };
 		CD472F61237D3C3500DFCAB7 /* ProfileUpdateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F60237D3C3500DFCAB7 /* ProfileUpdateReducer.swift */; };
+		CD472F63237ED23100DFCAB7 /* DataNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F62237ED23100DFCAB7 /* DataNetworking.swift */; };
+		CD472F65237ED24A00DFCAB7 /* ImageNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F64237ED24A00DFCAB7 /* ImageNetworking.swift */; };
+		CD472F68237ED2A000DFCAB7 /* MediumType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F67237ED2A000DFCAB7 /* MediumType.swift */; };
+		CD472F6A237ED2C700DFCAB7 /* DataServiceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F69237ED2C700DFCAB7 /* DataServiceConfig.swift */; };
 		CD4890BA23746B9700AD57CD /* MiddlewareProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890B923746B9700AD57CD /* MiddlewareProvider.swift */; };
 		CD4890BC23746BC400AD57CD /* LocationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890BB23746BC400AD57CD /* LocationAction.swift */; };
 		CD4890BE23746BFB00AD57CD /* VMiddlewareProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890BD23746BFB00AD57CD /* VMiddlewareProvider.swift */; };
@@ -141,6 +145,10 @@
 		CD472F5B237C86F600DFCAB7 /* ProfileUpdateActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateActions.swift; sourceTree = "<group>"; };
 		CD472F5E237D388700DFCAB7 /* ImagePickerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerWrapper.swift; sourceTree = "<group>"; };
 		CD472F60237D3C3500DFCAB7 /* ProfileUpdateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateReducer.swift; sourceTree = "<group>"; };
+		CD472F62237ED23100DFCAB7 /* DataNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataNetworking.swift; sourceTree = "<group>"; };
+		CD472F64237ED24A00DFCAB7 /* ImageNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNetworking.swift; sourceTree = "<group>"; };
+		CD472F67237ED2A000DFCAB7 /* MediumType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumType.swift; sourceTree = "<group>"; };
+		CD472F69237ED2C700DFCAB7 /* DataServiceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceConfig.swift; sourceTree = "<group>"; };
 		CD4890B923746B9700AD57CD /* MiddlewareProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewareProvider.swift; sourceTree = "<group>"; };
 		CD4890BB23746BC400AD57CD /* LocationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAction.swift; sourceTree = "<group>"; };
 		CD4890BD23746BFB00AD57CD /* VMiddlewareProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMiddlewareProvider.swift; sourceTree = "<group>"; };
@@ -314,8 +322,10 @@
 			children = (
 				CD972D11236C8BF60008F022 /* ProfileReader */,
 				CD972D0A236C57B70008F022 /* ProfileUpdate */,
-				CD24421623547FD600C357EE /* CRUD.swift */,
+				CD472F66237ED25A00DFCAB7 /* CRUD */,
 				CD2442242354997400C357EE /* Matching.swift */,
+				CD472F67237ED2A000DFCAB7 /* MediumType.swift */,
+				CD472F69237ED2C700DFCAB7 /* DataServiceConfig.swift */,
 				CD2442292354E33100C357EE /* ImageService.swift */,
 				CDD7BDA92355202000F28C23 /* AudioService.swift */,
 				CDD7BDA723551EE100F28C23 /* FirebaseDataService.swift */,
@@ -397,6 +407,16 @@
 				CD472F5E237D388700DFCAB7 /* ImagePickerWrapper.swift */,
 			);
 			path = "UIKit Wrapper";
+			sourceTree = "<group>";
+		};
+		CD472F66237ED25A00DFCAB7 /* CRUD */ = {
+			isa = PBXGroup;
+			children = (
+				CD24421623547FD600C357EE /* CRUD.swift */,
+				CD472F64237ED24A00DFCAB7 /* ImageNetworking.swift */,
+				CD472F62237ED23100DFCAB7 /* DataNetworking.swift */,
+			);
+			path = CRUD;
 			sourceTree = "<group>";
 		};
 		CD6554A22351B91900E6498A = {
@@ -895,9 +915,11 @@
 				CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */,
 				CD972D17236C8ECD0008F022 /* FirebaseProfileReader.swift in Sources */,
 				CDD7BDA823551EE100F28C23 /* FirebaseDataService.swift in Sources */,
+				CD472F68237ED2A000DFCAB7 /* MediumType.swift in Sources */,
 				CDFA9C472360AA3A0069C341 /* ProfilInfoViewModel.swift in Sources */,
 				CD4890BC23746BC400AD57CD /* LocationAction.swift in Sources */,
 				CDFA9C4A2360C2150069C341 /* ViewBuilder.swift in Sources */,
+				CD472F65237ED24A00DFCAB7 /* ImageNetworking.swift in Sources */,
 				CD2A6DA62364B1DA00EEDDA5 /* SwipingState.swift in Sources */,
 				CDCA463F2370653E00E72C6C /* TrackLocation.swift in Sources */,
 				CD92B3062363116D006F0190 /* AccountActions.swift in Sources */,
@@ -928,6 +950,7 @@
 				CD24422823549C1300C357EE /* AudioRecorder.swift in Sources */,
 				CD2A6DAA2364B2A700EEDDA5 /* SwipingActions.swift in Sources */,
 				CD92B2F1236209A8006F0190 /* SwipingIconView.swift in Sources */,
+				CD472F63237ED23100DFCAB7 /* DataNetworking.swift in Sources */,
 				CD92B30123630C03006F0190 /* AccountReducer.swift in Sources */,
 				CD24422A2354E33100C357EE /* ImageService.swift in Sources */,
 				CD4890BA23746B9700AD57CD /* MiddlewareProvider.swift in Sources */,
@@ -942,6 +965,7 @@
 				CD972D10236C58230008F022 /* FirebaseProfilUpdater.swift in Sources */,
 				CD472F522379F43D00DFCAB7 /* Extension+Array.swift in Sources */,
 				CD2442212354804700C357EE /* Message.swift in Sources */,
+				CD472F6A237ED2C700DFCAB7 /* DataServiceConfig.swift in Sources */,
 				CDFA9C432360A2F60069C341 /* CardView.swift in Sources */,
 				CDFA9C452360A5DE0069C341 /* ProfilInfoView.swift in Sources */,
 				CD972D0C236C57E90008F022 /* ProfileUpdate.swift in Sources */,

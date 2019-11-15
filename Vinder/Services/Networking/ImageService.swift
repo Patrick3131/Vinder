@@ -10,14 +10,22 @@ import Foundation
 import UIKit
 
 
+
+
+
 struct ImageService: ImageNetworking {
 
     var dataService: DataNetworking
     
+    
+    func test(completion: @escaping (Result<Bool, Error>) -> Void ) {
+        
+    }
+    
     func create(_ image: UIImage, profil: Profile, completion: @escaping (_ hasFinished: Bool, _ url: String) -> Void) {
         let data: Data? = image.jpegData(compressionQuality: 0.5)
         if let data = data {
-            dataService.create(data, profil: profil, mainPath: "media", completion: { hasFinished, url in
+            dataService.create(data, profil: profil, config: .image, completion: { hasFinished, url in
                 completion(hasFinished, url)
             })
         }
