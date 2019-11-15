@@ -85,6 +85,9 @@
 		CDD7BDB423588C9300F28C23 /* FirebaseAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDB323588C9300F28C23 /* FirebaseAuthentication.swift */; };
 		CDD7BDB6235891D300F28C23 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDD7BDB5235891D300F28C23 /* GoogleService-Info.plist */; };
 		CDD7BDB82358960500F28C23 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDB72358960500F28C23 /* LoginView.swift */; };
+		CDDD9753237EF4BD00E462EF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDD9752237EF4BD00E462EF /* ActivityIndicator.swift */; };
+		CDDD9755237EF93A00E462EF /* ImageProcessingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDD9754237EF93A00E462EF /* ImageProcessingStatus.swift */; };
+		CDDD9757237EFEE000E462EF /* SinglePictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDD9756237EFEE000E462EF /* SinglePictureViewModel.swift */; };
 		CDFA9C3A235F9BF10069C341 /* ExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C39235F9BF10069C341 /* ExplorerViewModel.swift */; };
 		CDFA9C3E235FA0AC0069C341 /* Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C3D235FA0AC0069C341 /* Draggable.swift */; };
 		CDFA9C40235FA0ED0069C341 /* View+Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C3F235FA0ED0069C341 /* View+Draggable.swift */; };
@@ -200,6 +203,9 @@
 		CDD7BDB323588C9300F28C23 /* FirebaseAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthentication.swift; sourceTree = "<group>"; };
 		CDD7BDB5235891D300F28C23 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CDD7BDB72358960500F28C23 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CDDD9752237EF4BD00E462EF /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		CDDD9754237EF93A00E462EF /* ImageProcessingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessingStatus.swift; sourceTree = "<group>"; };
+		CDDD9756237EFEE000E462EF /* SinglePictureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePictureViewModel.swift; sourceTree = "<group>"; };
 		CDFA9C39235F9BF10069C341 /* ExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerViewModel.swift; sourceTree = "<group>"; };
 		CDFA9C3D235FA0AC0069C341 /* Draggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draggable.swift; sourceTree = "<group>"; };
 		CDFA9C3F235FA0ED0069C341 /* View+Draggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Draggable.swift"; sourceTree = "<group>"; };
@@ -284,6 +290,7 @@
 				CD2432A72378737D004C916F /* Views */,
 				CD472F532379F89B00DFCAB7 /* ProfilContainer.swift */,
 				CD472F552379FFE100DFCAB7 /* AddPictureContainer.swift */,
+				CDDD9754237EF93A00E462EF /* ImageProcessingStatus.swift */,
 			);
 			path = ProfilContainer;
 			sourceTree = "<group>";
@@ -538,6 +545,7 @@
 				CD6554ED23525C5300E6498A /* SearchBar.swift */,
 				CDFA9C482360AA420069C341 /* ProfilInfo */,
 				CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */,
+				CDDD9752237EF4BD00E462EF /* ActivityIndicator.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -546,6 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				CD972D20236E204D0008F022 /* SinglePicture.swift */,
+				CDDD9756237EFEE000E462EF /* SinglePictureViewModel.swift */,
 			);
 			path = AddPicture;
 			sourceTree = "<group>";
@@ -901,6 +910,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDDD9753237EF4BD00E462EF /* ActivityIndicator.swift in Sources */,
 				CDD7BDAA2355202000F28C23 /* AudioService.swift in Sources */,
 				CDFA9C40235FA0ED0069C341 /* View+Draggable.swift in Sources */,
 				CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */,
@@ -961,11 +971,13 @@
 				CD2A6DA42364A64600EEDDA5 /* TabBarViewModel.swift in Sources */,
 				CD24421F2354803900C357EE /* Conversation.swift in Sources */,
 				CDFA9C3E235FA0AC0069C341 /* Draggable.swift in Sources */,
+				CDDD9757237EFEE000E462EF /* SinglePictureViewModel.swift in Sources */,
 				CD3B85E5236860AC0007C0D4 /* SwipeableView.swift in Sources */,
 				CD972D10236C58230008F022 /* FirebaseProfilUpdater.swift in Sources */,
 				CD472F522379F43D00DFCAB7 /* Extension+Array.swift in Sources */,
 				CD2442212354804700C357EE /* Message.swift in Sources */,
 				CD472F6A237ED2C700DFCAB7 /* DataServiceConfig.swift in Sources */,
+				CDDD9755237EF93A00E462EF /* ImageProcessingStatus.swift in Sources */,
 				CDFA9C432360A2F60069C341 /* CardView.swift in Sources */,
 				CDFA9C452360A5DE0069C341 /* ProfilInfoView.swift in Sources */,
 				CD972D0C236C57E90008F022 /* ProfileUpdate.swift in Sources */,

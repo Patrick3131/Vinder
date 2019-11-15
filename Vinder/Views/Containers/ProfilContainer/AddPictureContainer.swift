@@ -15,21 +15,23 @@ struct AddPictureContainer: ConnectedView {
         let urls: [URL]
         let dispatch: DispatchFunction
         var showImagePicker: Bool = false
-        @State var image: Image? = nil
+        var imageProcessingStatus = ImageProcessingStatus.isReady
     }
     
     var tabbed: (Int) -> Void
     
     func map(state: AppState, dispatch: @escaping DispatchFunction) -> Props {
-        let props = Props(urls: state.accountState.profile?.pictureUrl ?? [URL](), dispatch: dispatch, showImagePicker: state.profileUpdateState.showImagePicker)
+        let props = Props(
+            urls: state.accountState.profile?.pictureUrl ?? [URL](),
+            dispatch: dispatch, showImagePicker: state.profileUpdateState.showImagePicker,
+            imageProcessingStatus: state.profileUpdateState.imageUploadStatus)
         return props
     }
     
     func addSinglePicture(props: Props, element: Int) -> SinglePicture {
-        SinglePicture(viewModel: SinglePictureViewModel(picture: props.urls.safeAccess(element), onTab: { action in
+        var viewModel = SinglePictureViewModel(picture: props.urls.safeAccess(element), onTab: { action in
             switch action {
             case .add:
-                
                 props.dispatch(ProfileUpdateActions.ShowImagePicker(show: true))
             case .remove:
                 props.dispatch(ProfileUpdateActions.RemoveImage(imageIndex: element, url: props.urls[element]))
@@ -37,7 +39,16 @@ struct AddPictureContainer: ConnectedView {
                 break
             }
             print(action, element)
-        }))
+        })
+        
+        switch props.imageProcessingStatus {
+        case .imageIsProcessing(index: let processingElement):
+            if element == processingElement {
+                viewModel.isActivitySpinnerActivated = true
+            }
+        default: break
+        }
+        return SinglePicture(viewModel: viewModel)
     }
     
     func body(props: Props) -> some View {
@@ -58,7 +69,7 @@ struct AddPictureContainer: ConnectedView {
         }.sheet(isPresented: .constant(props.showImagePicker), content: {
             ImagePickerWrapper(selectedImage: { image in
                 if let image = image {
-                    props.dispatch(ProfileUpdateActions.UploadImage(image: image, profile: store.state.accountState.profile!))
+                    props.dispatch(ProfileUpdateActions.UploadImage(image: image, profile: store.state.accountState.profile!, element: props.urls.count))
                 }
                 props.dispatch(ProfileUpdateActions.ShowImagePicker(show: false))
             })

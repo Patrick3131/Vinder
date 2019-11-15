@@ -19,18 +19,22 @@ struct ProfileUpdateActions {
     struct UploadImage: AsyncAction {
         let image: UIImage
         let profile: Profile
+        let element: Int
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             let uploader = ImageService()
-            
+            dispatch(UploadStatus(status: .imageIsProcessing(index: self.element)))
+
             uploader.create(image, profil: profile, completion: { result in
-                dispatch(UploadStatus(status: .imageIsProcessing(index: 0)))
                 switch result {
                 case .success(let url):
                     if let url = URL(string: url) {
                         dispatch(SetImageUrl(url: url))
                     }
+                    dispatch(UploadStatus(status: .isReady))
+
                 case .failure(let error):
                     print("upload failed", error.localizedDescription)
+                    dispatch(UploadStatus(status: .isReady))
                     break
                 }
             })
@@ -66,7 +70,7 @@ struct ProfileUpdateActions {
     }
     
     struct UploadStatus:Action {
-        let status: ProfileUpdateState.ImageProcessingStatus
+        let status: ImageProcessingStatus
     }
     
     struct ShowImagePicker: Action {

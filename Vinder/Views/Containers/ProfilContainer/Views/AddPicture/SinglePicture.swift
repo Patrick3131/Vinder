@@ -8,31 +8,41 @@
 
 import SwiftUI
 
-struct SinglePictureViewModel {
-    var picture: URL?
-    var onTab: (Tabbed) -> Void
-    func addPicture() {
-        onTab(.add)
-    }
-    
-    func removePicture() {
-        onTab(.remove)
-    }
-    
-    var isThereAPictureAdded: Bool {
-        (picture != nil)
-    }
-    
-    enum Tabbed {
-        case add
-        case remove
-        case show
-    }
-}
+
 
 struct SinglePicture: View {
     var viewModel: SinglePictureViewModel
     var color: Color = .green
+    
+    private var removeButton: some View {
+        Button(action: {
+            self.viewModel.removePicture()
+        }) {
+            Image(systemName: "minus.circle")
+        }.buttonStyle(PlainButtonStyle())
+            .foregroundColor(.gray)
+    }
+    
+    private var groupedView: some View {
+        Group {
+            if viewModel.isThereAPictureAdded {
+                ZStack {
+                    CacheImage(viewModel.picture!)
+                        .resizable()
+                        .frame(width: 100, height: 100, alignment: .center)
+                }
+            } else {
+                if viewModel.isActivitySpinnerActivated {
+                    ActivityIndicator()
+                        .frame(width: 50, height: 50, alignment: .center)
+                        .foregroundColor(.gray)
+                } else {
+                    Image(systemName: "plus.circle")
+                }
+            }
+        }
+    }
+    
     var body: some View {
         Group {
             ZStack(alignment: .bottomTrailing) {
@@ -41,29 +51,13 @@ struct SinglePicture: View {
                         self.viewModel.addPicture()
                     }
                 }) {
-                    Group {
-                        if viewModel.isThereAPictureAdded {
-                            ZStack {
-                                CacheImage(viewModel.picture!)
-                                    .resizable()
-                                    .frame(width: 100, height: 100, alignment: .center)
-                            }
-                            
-                        } else {
-                            Image(systemName: "plus.circle")
-                        }
-                    }
+                    groupedView
                 }.frame(width: 100, height: 100, alignment: .center)
                     .buttonStyle(PlainButtonStyle())
                     .clipShape(Circle())
                     .overlay(Circle().stroke(color.opacity(0.5),lineWidth: 5))
                 if viewModel.isThereAPictureAdded {
-                    Button(action: {
-                        self.viewModel.removePicture()
-                    }) {
-                        Image(systemName: "minus.circle")
-                    }.buttonStyle(PlainButtonStyle())
-                        .foregroundColor(.gray)
+                    removeButton
                 }
             }
         }

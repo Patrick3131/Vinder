@@ -11,12 +11,11 @@ import SwiftUIFlux
 
 struct ProfileUpdateState: FluxState {
     var showImagePicker: Bool = false
-    var imageUploadStatus: ImageProcessingStatus = .nothingHappendSoFar
-    var imageDeleteStatus: ImageProcessingStatus = .nothingHappendSoFar
+    var imageUploadStatus: ImageProcessingStatus = .isReady
+    var imageDeleteStatus: ImageProcessingStatus = .isReady
     
-    enum ImageProcessingStatus {
-        case imageIsProcessing(index: Int)
-        case imageProcessingFailed(index: Int)
-        case nothingHappendSoFar
-    }
+   
 }
+
+
+
