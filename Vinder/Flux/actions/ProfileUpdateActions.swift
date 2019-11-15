@@ -22,15 +22,16 @@ struct ProfileUpdateActions {
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             let uploader = ImageService()
             
-            uploader.create(image, profil: profile, completion: { success, url in
-                
+            uploader.create(image, profil: profile, completion: { result in
                 dispatch(UploadStatus(status: .imageIsProcessing(index: 0)))
-                if success {
+                switch result {
+                case .success(let url):
                     if let url = URL(string: url) {
                         dispatch(SetImageUrl(url: url))
                     }
-                } else {
-                  print("upload failed")
+                case .failure(let error):
+                    print("upload failed", error.localizedDescription)
+                    break
                 }
             })
 //            let uploader =
@@ -43,10 +44,15 @@ struct ProfileUpdateActions {
         
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             let imageService = ImageService()
-            imageService.delete(url.absoluteString, completion: { successful in
-                if successful {
+            imageService.delete(url.absoluteString, completion: { result in
+                switch result {
+                case .success:
                     dispatch(RemoveImageState(imageIndex: self.imageIndex))
+                    
+                case .failure:
+                    break
                 }
+                
             })
         }
     }

@@ -12,60 +12,44 @@ import FirebaseStorage
 struct FirebaseDataService: DataNetworking {
     let storage: Storage
     
-    
-    
-    func create(_ data: Data, profil: Profile, config: DataServiceConfig, completion: @escaping (_ hasFinished: Bool, _ url: String) -> Void) {
+    func create(_ data: Data, profil: Profile, config: DataServiceConfig, completion: @escaping (Result<String, Error>) -> Void) {
         let reference = storage.reference(withPath: config.path + "/" + "\(profil.id)" + "\(profil.pictureUrl.count + 1)")
-        let metadata = StorageMetadata()
-        metadata.contentType = config.contentType
-        reference.putData(data, metadata: metadata, completion: { (meta, error) in
-            
-            if error == nil {
-                reference.downloadURL(completion: { url, error in
-                    if let error = error {
-                        print(error.localizedDescription)
-                        
-                    } else if let url = url {
-                        completion(true, url.absoluteString)
-                    }
+                let metadata = StorageMetadata()
+                metadata.contentType = config.contentType
+                reference.putData(data, metadata: metadata, completion: { (meta, error) in
                     
+                    if error == nil {
+                        reference.downloadURL(completion: { url, error in
+                            if let error = error {
+                                print(error.localizedDescription)
+                                
+                            } else if let url = url {
+                                completion(.success(url.absoluteString))
+                            }
+                            
+                        })
+                        
+                    } else {
+                        
+                        print(error?.localizedDescription as Any)
+                    }
                 })
-                
-//                meta?.storageReference!.downloadURL(completion: { (url, error) in
-//
-//                    if error == nil {
-//
-//                        completion(true, url?.absoluteString ?? "")
-//                    } else {
-//
-//                        print(error?.localizedDescription as Any)
-//                    }
-//                })
-                
-            } else {
-                
-                print(error?.localizedDescription as Any)
-            }
-        })
     }
     
-    func delete(_ url: String, completion: @escaping (_ successful: Bool) -> Void) {
+    func delete(_ url: String, completion: @escaping (Result<Bool, Error>) -> Void) {
         let reference = storage.reference(forURL: url)
         reference.delete { error in
             if let error = error {
                 print(error.localizedDescription)
-                completion(false)
+                completion(.failure(error))
             } else {
-                
                 print(url,"deleted")
-                completion(true)
+                completion(.success(true))
             }
         }
     }
-
     
-    
-    func read(_ urls: [String], completion: @escaping ([Data]) -> Void) {
+    func read(_ urls: [String], completion: @escaping (Result<[Data], Error>) -> Void) {
         var dataOutput = [Data]()
         for url in urls {
             let reference = storage.reference().child(url)
@@ -78,7 +62,9 @@ struct FirebaseDataService: DataNetworking {
                 }
             })
         }
+        completion(.success(dataOutput))
     }
+    
 }
 
 extension FirebaseDataService {

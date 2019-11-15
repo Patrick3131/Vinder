@@ -9,8 +9,8 @@
 import Foundation
 
 protocol DataNetworking {
-    func create(_ data: Data, profil: Profile, config: DataServiceConfig, completion: @escaping (_ hasFinished: Bool, _ url: String) -> Void)
-    func delete(_ url: String, completion: @escaping (_ successful: Bool) -> Void)
-    func read(_ urls: [String], completion: @escaping ([Data]) -> Void)
+    func create(_ data: Data, profil: Profile, config: DataServiceConfig, completion: @escaping (Result<String,Error>) -> Void)
+    func delete(_ url: String, completion: @escaping (Result<Bool,Error>) -> Void)
+    func read(_ urls: [String], completion: @escaping (Result<[Data],Error>) -> Void)
 }
 

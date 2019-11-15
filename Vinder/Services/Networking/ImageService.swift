@@ -14,37 +14,38 @@ import UIKit
 
 
 struct ImageService: ImageNetworking {
-
     var dataService: DataNetworking
     
-    
-    func test(completion: @escaping (Result<Bool, Error>) -> Void ) {
-        
-    }
-    
-    func create(_ image: UIImage, profil: Profile, completion: @escaping (_ hasFinished: Bool, _ url: String) -> Void) {
+    func create(_ image: UIImage, profil: Profile, completion: @escaping (Result<String, Error>) -> Void) {
         let data: Data? = image.jpegData(compressionQuality: 0.5)
         if let data = data {
-            dataService.create(data, profil: profil, config: .image, completion: { hasFinished, url in
-                completion(hasFinished, url)
+            dataService.create(data, profil: profil, config: MediumType.image, completion: { result in
+                completion(result)
             })
         }
     }
     
-    func delete(_ url: String, completion: @escaping (_ successful: Bool) -> Void) {
-        dataService.delete(url, completion: { successful in
-            completion(successful)
-            
+    func delete(_ url: String, completion: @escaping (Result<Bool, Error>) -> Void) {
+        dataService.delete(url, completion: { result in
+            completion(result)
         })
     }
+    
+    func read(_ urls: [String], completion: @escaping (Result<[UIImage], Error>) -> Void) {
+        dataService.read(urls, completion: { result in
+            switch result {
+            case .success(let data):
+                let images = data.map { UIImage(data: $0) }.compactMap { $0 }
+                completion(.success(images))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        })
+    }
+    
 
     
-    func read(_ urls: [String], completion: @escaping ([UIImage]) -> Void) {
-        dataService.read(urls, completion: { data in
-            let images = data.map { UIImage(data: $0) }.compactMap { $0 }
-            completion(images)
-        })
-    }
+    
 }
 
 extension ImageService {
