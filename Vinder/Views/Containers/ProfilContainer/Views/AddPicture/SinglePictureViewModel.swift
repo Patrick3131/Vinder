@@ -11,7 +11,7 @@ import Foundation
 struct SinglePictureViewModel {
     let picture: URL?
     let onTab: (Tabbed) -> Void
-    let isActivitySpinnerActivated = false
+    var isActivitySpinnerActivated = false
     func addPicture() {
         onTab(.add)
     }

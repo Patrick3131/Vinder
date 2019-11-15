@@ -17,9 +17,7 @@ struct AddPictureContainer: ConnectedView {
         var showImagePicker: Bool = false
         var imageProcessingStatus = ImageProcessingStatus.isReady
     }
-    
-    var tabbed: (Int) -> Void
-    
+        
     func map(state: AppState, dispatch: @escaping DispatchFunction) -> Props {
         let props = Props(
             urls: state.accountState.profile?.pictureUrl ?? [URL](),
