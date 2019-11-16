@@ -78,9 +78,7 @@ struct AddPictureContainer: ConnectedView {
 
 struct AddPictureContainer_Previews: PreviewProvider {
     static var previews: some View {
-        AddPictureContainer(tabbed: { _ in 
-            
-        }).environmentObject(store)
+        AddPictureContainer().environmentObject(store)
         
     }
 }

@@ -88,6 +88,7 @@
 		CDDD9753237EF4BD00E462EF /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDD9752237EF4BD00E462EF /* ActivityIndicator.swift */; };
 		CDDD9755237EF93A00E462EF /* ImageProcessingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDD9754237EF93A00E462EF /* ImageProcessingStatus.swift */; };
 		CDDD9757237EFEE000E462EF /* SinglePictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDD9756237EFEE000E462EF /* SinglePictureViewModel.swift */; };
+		CDDD9759237F1BC200E462EF /* PickerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDD9758237F1BC200E462EF /* PickerWrapper.swift */; };
 		CDFA9C3A235F9BF10069C341 /* ExplorerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C39235F9BF10069C341 /* ExplorerViewModel.swift */; };
 		CDFA9C3E235FA0AC0069C341 /* Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C3D235FA0AC0069C341 /* Draggable.swift */; };
 		CDFA9C40235FA0ED0069C341 /* View+Draggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFA9C3F235FA0ED0069C341 /* View+Draggable.swift */; };
@@ -206,6 +207,7 @@
 		CDDD9752237EF4BD00E462EF /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		CDDD9754237EF93A00E462EF /* ImageProcessingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessingStatus.swift; sourceTree = "<group>"; };
 		CDDD9756237EFEE000E462EF /* SinglePictureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePictureViewModel.swift; sourceTree = "<group>"; };
+		CDDD9758237F1BC200E462EF /* PickerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerWrapper.swift; sourceTree = "<group>"; };
 		CDFA9C39235F9BF10069C341 /* ExplorerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorerViewModel.swift; sourceTree = "<group>"; };
 		CDFA9C3D235FA0AC0069C341 /* Draggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Draggable.swift; sourceTree = "<group>"; };
 		CDFA9C3F235FA0ED0069C341 /* View+Draggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Draggable.swift"; sourceTree = "<group>"; };
@@ -546,6 +548,7 @@
 				CDFA9C482360AA420069C341 /* ProfilInfo */,
 				CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */,
 				CDDD9752237EF4BD00E462EF /* ActivityIndicator.swift */,
+				CDDD9758237F1BC200E462EF /* PickerWrapper.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -928,6 +931,7 @@
 				CD472F68237ED2A000DFCAB7 /* MediumType.swift in Sources */,
 				CDFA9C472360AA3A0069C341 /* ProfilInfoViewModel.swift in Sources */,
 				CD4890BC23746BC400AD57CD /* LocationAction.swift in Sources */,
+				CDDD9759237F1BC200E462EF /* PickerWrapper.swift in Sources */,
 				CDFA9C4A2360C2150069C341 /* ViewBuilder.swift in Sources */,
 				CD472F65237ED24A00DFCAB7 /* ImageNetworking.swift in Sources */,
 				CD2A6DA62364B1DA00EEDDA5 /* SwipingState.swift in Sources */,

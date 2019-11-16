@@ -22,8 +22,19 @@ struct Profile: Identifiable {
     
     
     enum Gender: String {
-        case female
         case male
+        case female
+
+        static func getGender(index: Int) -> Gender {
+            switch index {
+            case 0:
+                return male
+            case 1:
+                return female
+            default:
+                return male
+            }
+        }
     }
     
     enum Preference: String {
@@ -31,6 +42,21 @@ struct Profile: Identifiable {
         case gay
         case bi
         case friendship
+        
+        static func getPreference(index: Int) -> Preference {
+            switch index {
+            case 0:
+                return hetero
+            case 1:
+                return gay
+            case 2:
+                return bi
+            case 3:
+                return friendship
+            default:
+                return hetero
+            }
+        }
     }
     
     static var preDataAccount: Profile = Profile(id: "1", name: "Patrick", age: Date(), gender: .male, preference: .hetero, pictureUrl: [URL](), biography: nil)

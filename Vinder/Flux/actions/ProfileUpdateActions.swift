@@ -38,7 +38,6 @@ struct ProfileUpdateActions {
                     break
                 }
             })
-//            let uploader =
         }
     }
     
@@ -75,5 +74,13 @@ struct ProfileUpdateActions {
     
     struct ShowImagePicker: Action {
         let show: Bool
+    }
+    
+    struct ChangeGender: Action {
+        let index: Int
+    }
+    
+    struct ChangePreference: Action {
+        let index: Int
     }
 }
