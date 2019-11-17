@@ -43,7 +43,7 @@ struct TabBarView: ConnectedView {
                         }).tabItem({
                             TabBarItem(text: "Chat", image: "pause.circle")
                         }).tag(Tab.chat)
-                    Text(props.viewModel.profile!.name).tabItem {
+                    Text(props.viewModel.profile!.name!).tabItem {
                         TabBarItem(text: "Matches", image: "pause.circle")
                     }.tag(Tab.matches)
                     ExplorerContainer().tabItem {
@@ -55,7 +55,8 @@ struct TabBarView: ConnectedView {
                 }
             } else if props.viewModel.showProfilNotCompleteView {
                 Button(action: {
-                    store.dispatch(action: AccountActions.CreateProfil(profile: Profile(id: "RPTujanhFfc3zVLaKoPXvqXb8WH3", name: "Patrick", age: Date(), gender: .male, preference: .hetero, pictureUrl: [URL](), biography: nil, location: nil)))
+                    let profile = Profile(id: "RPTujanhFfc3zVLaKoPXvqXb8WH3", name: "name", age: Date.init(), gender: .male, preference: .bi, pictureUrl: [URL](), biography: nil, location: nil)
+                    store.dispatch(action: AccountActions.CreateProfil(profile: profile))
 //                    store.dispatch(action: )
                 }, label: {
                     ProfilContainer()

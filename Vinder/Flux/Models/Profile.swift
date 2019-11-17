@@ -12,10 +12,10 @@ import FirebaseFirestore
 
 struct Profile: Identifiable {
     var id: String
-    var name: String
-    var age: Date
-    var gender: Gender
-    var preference: Preference
+    var name: String?
+    var age: Date?
+    var gender: Gender = .male
+    var preference: Preference = .hetero
     var pictureUrl: [URL]
     var biography: URL?
     var location: CLLocation?

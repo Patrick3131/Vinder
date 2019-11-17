@@ -32,7 +32,7 @@ struct ProfilInfoViewModel:ProfilInfoProtocol {
     }
     
     var name: String {
-        profil.name
+        profil.name!
     }
     
     var age: String {
@@ -83,7 +83,7 @@ struct ProfilInfoViewModel2: ProfilInfoProtocol {
     }
     
     var name: String {
-        return profile.name
+        return profile.name!
     }
     
     var age: String {
