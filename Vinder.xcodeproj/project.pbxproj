@@ -74,6 +74,7 @@
 		CD972D1F236DE85A0008F022 /* FirebaseMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD972D1E236DE85A0008F022 /* FirebaseMiddleware.swift */; };
 		CD972D21236E204D0008F022 /* SinglePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD972D20236E204D0008F022 /* SinglePicture.swift */; };
 		CDAC6D402371597200D68072 /* SwiftDux in Frameworks */ = {isa = PBXBuildFile; productRef = CDAC6D3F2371597200D68072 /* SwiftDux */; };
+		CDBE2D922382C888006F0DCC /* AddBiography.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBE2D912382C888006F0DCC /* AddBiography.swift */; };
 		CDCA463F2370653E00E72C6C /* TrackLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA463E2370653E00E72C6C /* TrackLocation.swift */; };
 		CDCF3EDF2369AC77005C876A /* AnimatedPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */; };
 		CDD7BDA823551EE100F28C23 /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDA723551EE100F28C23 /* FirebaseDataService.swift */; };
@@ -193,6 +194,7 @@
 		CD972D1E236DE85A0008F022 /* FirebaseMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseMiddleware.swift; sourceTree = "<group>"; };
 		CD972D20236E204D0008F022 /* SinglePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePicture.swift; sourceTree = "<group>"; };
 		CD972F609C603009BA9AE251 /* Pods_VinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDBE2D912382C888006F0DCC /* AddBiography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBiography.swift; sourceTree = "<group>"; };
 		CDCA463E2370653E00E72C6C /* TrackLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLocation.swift; sourceTree = "<group>"; };
 		CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedPlaceholder.swift; sourceTree = "<group>"; };
 		CDD7BDA723551EE100F28C23 /* FirebaseDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDataService.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 		CD2432A72378737D004C916F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CDBE2D902382C866006F0DCC /* AddBiography */,
 				CD87E01E236EDE3700F75568 /* AddPicture */,
 			);
 			path = Views;
@@ -635,6 +638,14 @@
 			path = Containers;
 			sourceTree = "<group>";
 		};
+		CDBE2D902382C866006F0DCC /* AddBiography */ = {
+			isa = PBXGroup;
+			children = (
+				CDBE2D912382C888006F0DCC /* AddBiography.swift */,
+			);
+			path = AddBiography;
+			sourceTree = "<group>";
+		};
 		CDFA9C38235F9BD50069C341 /* ExplorerContainer */ = {
 			isa = PBXGroup;
 			children = (
@@ -968,6 +979,7 @@
 				CD92B30123630C03006F0190 /* AccountReducer.swift in Sources */,
 				CD24422A2354E33100C357EE /* ImageService.swift in Sources */,
 				CD4890BA23746B9700AD57CD /* MiddlewareProvider.swift in Sources */,
+				CDBE2D922382C888006F0DCC /* AddBiography.swift in Sources */,
 				CD6554E42351D9CF00E6498A /* ProfilView.swift in Sources */,
 				CD472F562379FFE100DFCAB7 /* AddPictureContainer.swift in Sources */,
 				CD6554E82352533F00E6498A /* MatchesView.swift in Sources */,

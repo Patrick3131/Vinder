@@ -14,6 +14,16 @@ struct ProfileUpdateState: FluxState {
     var imageUploadStatus: ImageProcessingStatus = .isReady
     var imageDeleteStatus: ImageProcessingStatus = .isReady
     
+    var audioStatus = AudioStatus.nothingIsHappening
+
+    enum AudioStatus {
+        case nothingIsHappening
+        case recording
+        case stopRecording
+        case uploading
+        case delete
+        case playing
+    }
    
 }
 
