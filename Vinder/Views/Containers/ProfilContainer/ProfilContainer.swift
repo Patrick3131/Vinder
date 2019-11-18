@@ -15,26 +15,50 @@ struct ProfilContainer: ConnectedView {
     struct Props {
         var genderSelection: Int
         var preferenceSelection: Int
+        var birthday: Date
         var dispatch: DispatchFunction
     }
     
     func map(state: AppState, dispatch: @escaping DispatchFunction) -> Props {
-        return Props(genderSelection: 0, preferenceSelection: 0, dispatch: dispatch)
+        return Props(genderSelection: 0, preferenceSelection: 0, birthday: Date(), dispatch: dispatch)
     }
     
     func body(props: Props) -> some View {
-        return VStack {
+        return VStack(alignment: .center) {
+            Spacer()
+            Text("Curate your profile").font(.title)
+            Spacer()
+            Text("Choose awesome pictures for your profile")
+            
             AddPictureContainer()
-            Text("What is your gender?")
-            PickerWrapper(selection: 0, label:"" , content: ["Male", "Female"], index: { index in
-            print(index)
             
-            }).pickerStyle(SegmentedPickerStyle())
-            Text("What are you looking for?")
-            PickerWrapper(selection: 0, label:"" , content: ["Male", "Female", "Both", "Friendship"], index: { index in
-            print(index)
+            Form {
+                Section {
+                    DatePickerWrapper(selection: props.birthday, date: { date in
+                    print(date)
+                    }, label: Text("When is your birthday?"))
+                }
+                Section {
+                    Text("What is your gender?").frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+
+                    PickerWrapper(selection: props.genderSelection, label:"What is your Gender?" , content: ["Male", "Female"], index: { index in
+                    print(index)
+                    
+                    }).pickerStyle(SegmentedPickerStyle())
+                }
+                
+                Section {
+                    Text("What are you looking for?").frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+
+                    PickerWrapper(selection: props.preferenceSelection, label: "What are you looking for?" , content: ["Male", "Female", "Both", "Friendship"], index: { index in
+                    print(index)
+                    
+                    }).pickerStyle(SegmentedPickerStyle())
+                }
+            }
             
-            }).pickerStyle(SegmentedPickerStyle())
+            
+            
         }
         
     }
