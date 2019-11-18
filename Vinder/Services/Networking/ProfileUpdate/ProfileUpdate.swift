@@ -10,7 +10,8 @@ import Foundation
 import CoreLocation
 
 enum ProfileUpdate {
-    case inital(profile: Profile)
+    case id(String)
+    case newComplete(profile: Profile)
     case name(name: String)
     case age(age: Date)
     case gender(gender: Profile.Gender)

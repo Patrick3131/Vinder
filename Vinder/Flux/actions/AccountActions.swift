@@ -24,8 +24,8 @@ struct AccountActions {
         let isLoggedIn: Bool
         let userUID: String?
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+                dispatch(SetLogin(isLoggedIn: isLoggedIn, userUID: userUID))
             
-            dispatch(SetLogin(isLoggedIn: isLoggedIn, userUID: userUID))
         }
     }
 
@@ -33,8 +33,8 @@ struct AccountActions {
         var isLoggedIn: Bool
         var userUID: String?
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
-            
             if isLoggedIn && userUID != nil {
+
                 dispatch(ReadProfil(userUID: userUID!))
             }
         }
@@ -42,7 +42,9 @@ struct AccountActions {
 
     
     struct ReadProfil: AsyncAction {
+        
         var userUID: String
+        
         
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             let firebase = FirebaseProfileReader()
@@ -55,7 +57,7 @@ struct AccountActions {
                         switch error {
                         case .profilDoesNotExist:
                             
-                            dispatch(SetProfil(profil: nil))
+                            dispatch(CreateInitialProfil(userUID: self.userUID))
                         default:
                             break
                         }
@@ -72,11 +74,26 @@ struct AccountActions {
         }
     }
     
+   struct CreateInitialProfil: AsyncAction {
+               var userUID: String
+               func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+                   let firebase = FirebaseProfilUpdater()
+                firebase.profilUpdate(id: userUID, update: .id(userUID), completionHandler: { success in
+                       if success {
+                           dispatch(ReadProfil(userUID: self.userUID))
+                       }
+                   })
+               }
+               
+               
+           }
+           
+    
     struct CreateProfil: AsyncAction {
         let profile: Profile
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             let firebase = FirebaseProfilUpdater()
-            firebase.profilUpdate(id: profile.id, update: .inital(profile: profile), completionHandler: { success in
+            firebase.profilUpdate(id: profile.id, update: .newComplete(profile: profile), completionHandler: { success in
                 if success {
                     dispatch(SetProfil(profil: self.profile))
                 }

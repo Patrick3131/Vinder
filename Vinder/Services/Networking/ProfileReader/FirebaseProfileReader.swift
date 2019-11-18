@@ -86,10 +86,10 @@ struct FirebaseProfileReader: ProfileReading {
         
         print(value)
         
-        guard let name = value[Keys.name.rawValue] as? String else { throw FirebaseError.name}
-        guard let age = value[Keys.age.rawValue] as? Double else { throw FirebaseError.age}
-        guard let gender = value[Keys.gender.rawValue] as? String else { throw FirebaseError.gender}
-        guard let preference = value[Keys.preference.rawValue] as? String else { throw FirebaseError.preference}
+        let name = value[Keys.name.rawValue] as? String
+        let age = value[Keys.age.rawValue] as? Double ?? 0.0
+        let gender = value[Keys.gender.rawValue] as? String
+        let preference = value[Keys.preference.rawValue] as? String
         
         let pictureURL = (value[Keys.pictureUrls.rawValue] as? [String])?.compactMap {
             return URL(string: $0)
@@ -110,8 +110,8 @@ struct FirebaseProfileReader: ProfileReading {
         let profile = Profile(id: document!.documentID,
                               name: name,
                               age: Date(timeIntervalSince1970: age),
-                              gender: Profile.Gender(rawValue: gender)!,
-                              preference: Profile.Preference(rawValue: preference)!,
+                              gender: Profile.Gender(rawValue: gender ?? "male") ?? .male ,
+                              preference: Profile.Preference(rawValue: preference ?? "hetero") ?? .hetero,
                               pictureUrl: pictureURL ?? [URL]() ,
                               biography: biography,
                               location: cllocation)

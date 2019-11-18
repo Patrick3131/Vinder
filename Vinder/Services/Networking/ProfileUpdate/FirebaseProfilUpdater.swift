@@ -33,7 +33,7 @@ struct FirebaseProfilUpdater: ProfilUpdating {
     
     func profilUpdate(id: String,update: ProfileUpdate, completionHandler: @escaping (Bool) -> Void) {
         switch update {
-        case .inital(_):
+        case .newComplete(_):
             createProfil(id: id, data: convertToDictionary(update), completionHandler: { completion in
                 completionHandler(completion)
             })
@@ -78,12 +78,14 @@ struct FirebaseProfilUpdater: ProfilUpdating {
     
     private func convertToDictionary(_ profilUpdate:ProfileUpdate) -> [String: Any] {
         switch profilUpdate {
-        case let .inital(profil):
+        case .id:
+            return [:]
+        case let .newComplete(profil):
             return [
                 Keys.name.rawValue : profil.name,
                 Keys.age.rawValue : profil.age!.timeIntervalSince1970,
-                Keys.gender.rawValue : profil.gender!.rawValue,
-                Keys.preference.rawValue : profil.preference!.rawValue,
+                Keys.gender.rawValue : profil.gender.rawValue,
+                Keys.preference.rawValue : profil.preference.rawValue,
                 Keys.pictureUrls.rawValue : profil.pictureUrl,
                 Keys.biography.rawValue : profil.biography as Any,
                 Keys.location.rawValue : locationFormatting(profil.location) as Any

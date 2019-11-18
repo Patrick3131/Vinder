@@ -82,8 +82,10 @@ class VMiddlewareProvider: MiddlewareProvider {
                 return { action in
                     switch action {
                     case _ as AccountActions.Authenticate:
+                        Auth.auth()
                         _ = Auth.auth().addStateDidChangeListener {  (auth, user) in
                             if let user = user {
+
                                 return next(AccountActions.AuthentificationAction(isLoggedIn: true, userUID: user.uid))
                             }  else {
                                 return next(AccountActions.AuthentificationAction(isLoggedIn: false, userUID: nil))
