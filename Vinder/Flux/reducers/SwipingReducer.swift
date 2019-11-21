@@ -26,15 +26,3 @@ func swipingStateReducer(state: SwipingState, action: Action) -> SwipingState {
     return state
 }
 
-func profileUpdateStateReducer(state: ProfileUpdateState, action: Action) -> ProfileUpdateState {
-    var state = state
-    switch action {
-    case let action as ProfileUpdateActions.UploadStatus:
-        state.imageUploadStatus = action.status
-    case let action as ProfileUpdateActions.ShowImagePicker:
-        state.showImagePicker = action.show
-    default:
-        break
-    }
-    return state
-}
