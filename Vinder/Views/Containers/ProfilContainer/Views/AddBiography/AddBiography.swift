@@ -120,11 +120,7 @@ struct BioView: View {
 
 struct AddBiography_Previews: PreviewProvider {
     static var previews: some View {
-        AddBiography(viewModel: AddBioViewModel(record: {
-            
-        }, delete: {
-            
-        }, play: {
+        AddBiography(viewModel: AddBioViewModel(tabbed: { _ in
             
         }, isBioAvailable: true))
     }
