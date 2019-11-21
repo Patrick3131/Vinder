@@ -83,4 +83,8 @@ struct ProfileUpdateActions {
     struct ChangePreference: Action {
         let index: Int
     }
+    
+    struct ShowRecordingDetailView: Action {
+        let show: Bool
+    }
 }

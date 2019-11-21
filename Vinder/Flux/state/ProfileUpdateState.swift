@@ -15,7 +15,8 @@ struct ProfileUpdateState: FluxState {
     var imageDeleteStatus: ImageProcessingStatus = .isReady
     
     var audioStatus = AudioStatus.nothingIsHappening
-
+    var showRecordingDetailView: Bool = false
+    
     enum AudioStatus {
         case nothingIsHappening
         case recording

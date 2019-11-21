@@ -75,6 +75,9 @@
 		CD972D21236E204D0008F022 /* SinglePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD972D20236E204D0008F022 /* SinglePicture.swift */; };
 		CDAC6D402371597200D68072 /* SwiftDux in Frameworks */ = {isa = PBXBuildFile; productRef = CDAC6D3F2371597200D68072 /* SwiftDux */; };
 		CDBE2D922382C888006F0DCC /* AddBiography.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBE2D912382C888006F0DCC /* AddBiography.swift */; };
+		CDBE2D9523841950006F0DCC /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBE2D9423841950006F0DCC /* RecordView.swift */; };
+		CDBE2D982386BD98006F0DCC /* DatePickerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBE2D972386BD98006F0DCC /* DatePickerWrapper.swift */; };
+		CDBE2D9A2386BDB3006F0DCC /* TextFieldWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBE2D992386BDB3006F0DCC /* TextFieldWrapper.swift */; };
 		CDCA463F2370653E00E72C6C /* TrackLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA463E2370653E00E72C6C /* TrackLocation.swift */; };
 		CDCF3EDF2369AC77005C876A /* AnimatedPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */; };
 		CDD7BDA823551EE100F28C23 /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDA723551EE100F28C23 /* FirebaseDataService.swift */; };
@@ -195,6 +198,9 @@
 		CD972D20236E204D0008F022 /* SinglePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePicture.swift; sourceTree = "<group>"; };
 		CD972F609C603009BA9AE251 /* Pods_VinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDBE2D912382C888006F0DCC /* AddBiography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBiography.swift; sourceTree = "<group>"; };
+		CDBE2D9423841950006F0DCC /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		CDBE2D972386BD98006F0DCC /* DatePickerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerWrapper.swift; sourceTree = "<group>"; };
+		CDBE2D992386BDB3006F0DCC /* TextFieldWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWrapper.swift; sourceTree = "<group>"; };
 		CDCA463E2370653E00E72C6C /* TrackLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLocation.swift; sourceTree = "<group>"; };
 		CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedPlaceholder.swift; sourceTree = "<group>"; };
 		CDD7BDA723551EE100F28C23 /* FirebaseDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDataService.swift; sourceTree = "<group>"; };
@@ -302,6 +308,7 @@
 		CD2432A72378737D004C916F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CDBE2D932384192D006F0DCC /* Record */,
 				CDBE2D902382C866006F0DCC /* AddBiography */,
 				CD87E01E236EDE3700F75568 /* AddPicture */,
 			);
@@ -551,7 +558,7 @@
 				CDFA9C482360AA420069C341 /* ProfilInfo */,
 				CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */,
 				CDDD9752237EF4BD00E462EF /* ActivityIndicator.swift */,
-				CDDD9758237F1BC200E462EF /* PickerWrapper.swift */,
+				CDBE2D9623855781006F0DCC /* Callback Wrapper */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -644,6 +651,24 @@
 				CDBE2D912382C888006F0DCC /* AddBiography.swift */,
 			);
 			path = AddBiography;
+			sourceTree = "<group>";
+		};
+		CDBE2D932384192D006F0DCC /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				CDBE2D9423841950006F0DCC /* RecordView.swift */,
+			);
+			path = Record;
+			sourceTree = "<group>";
+		};
+		CDBE2D9623855781006F0DCC /* Callback Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				CDDD9758237F1BC200E462EF /* PickerWrapper.swift */,
+				CDBE2D972386BD98006F0DCC /* DatePickerWrapper.swift */,
+				CDBE2D992386BDB3006F0DCC /* TextFieldWrapper.swift */,
+			);
+			path = "Callback Wrapper";
 			sourceTree = "<group>";
 		};
 		CDFA9C38235F9BD50069C341 /* ExplorerContainer */ = {
@@ -933,6 +958,7 @@
 				CD24421B2354801C00C357EE /* Account.swift in Sources */,
 				CD24421723547FD600C357EE /* CRUD.swift in Sources */,
 				CD6554E623524D7C00E6498A /* ImageGallery.swift in Sources */,
+				CDBE2D9A2386BDB3006F0DCC /* TextFieldWrapper.swift in Sources */,
 				CD6554EC235258C900E6498A /* MatchesHome.swift in Sources */,
 				CD472F5F237D388700DFCAB7 /* ImagePickerWrapper.swift in Sources */,
 				CD87E02023703A4300F75568 /* ConversationState.swift in Sources */,
@@ -952,6 +978,7 @@
 				CD472F5A237C86CD00DFCAB7 /* ProfileUpdateState.swift in Sources */,
 				CDCF3EDF2369AC77005C876A /* AnimatedPlaceholder.swift in Sources */,
 				CDD7BDB423588C9300F28C23 /* FirebaseAuthentication.swift in Sources */,
+				CDBE2D9523841950006F0DCC /* RecordView.swift in Sources */,
 				CDD7BDB223588B5C00F28C23 /* Authentication.swift in Sources */,
 				CD2A6DA22364A5D500EEDDA5 /* TabBarItem.swift in Sources */,
 				CD6554EA235256F900E6498A /* ConversationPreview.swift in Sources */,
@@ -970,6 +997,7 @@
 				CDD7BDAE235864EE00F28C23 /* ExplorerContainer.swift in Sources */,
 				CDD7BDB023586C0400F28C23 /* TabBarView.swift in Sources */,
 				CDFA9C3A235F9BF10069C341 /* ExplorerViewModel.swift in Sources */,
+				CDBE2D982386BD98006F0DCC /* DatePickerWrapper.swift in Sources */,
 				CD4890BE23746BFB00AD57CD /* VMiddlewareProvider.swift in Sources */,
 				CD2442252354997400C357EE /* Matching.swift in Sources */,
 				CD24422823549C1300C357EE /* AudioRecorder.swift in Sources */,
