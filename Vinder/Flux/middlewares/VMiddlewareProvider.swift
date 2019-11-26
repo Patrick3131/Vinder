@@ -15,6 +15,7 @@ import FirebaseAuth
 class VMiddlewareProvider: MiddlewareProvider {
     
     private lazy var location = TrackLocation()
+    private lazy var audioRecorder = AudioRecorder()
 //    private lazy var profilUpdater = FirebaseProfilUpdater()
     init() {
 
@@ -24,7 +25,8 @@ class VMiddlewareProvider: MiddlewareProvider {
         return [
             loggingMiddleware(),
             locationTrackingMiddleware(),
-            firebaseAUTHMiddleware()
+            firebaseAUTHMiddleware(),
+            audioRecordingMiddleware()
         ]
     }
     
@@ -44,6 +46,47 @@ class VMiddlewareProvider: MiddlewareProvider {
             }
         }
         return loggingMiddleware
+    }
+    
+    
+    private func audioRecordingMiddleware() -> Middleware<FluxState> {
+        { dispatch, getState in
+            return { next in
+                return { action in
+                        
+                    switch action {
+                        
+                    case let action as ProfileUpdateActions.BioRecording:
+                        if action.recording {
+                            
+                            self.audioRecorder.record(name: "test")
+                            self.audioRecorder.newRecording = { result in
+                                switch result {
+                                case .success(let url):
+                                    do {
+                                        next(ProfileUpdateActions.UploadAudio(profile: action.profile, data: try Data(contentsOf: url)))
+                                    } catch let error {
+                                        print(error)
+                                    }
+                                    
+                                case .failure:
+                                    break
+                                }
+                            }
+                        } else {
+                            self.audioRecorder.stop()
+                        }
+                        break
+                    default:
+                        break
+                        
+                    }
+                    
+                    
+                    return next(action)
+                }
+            }
+        }
     }
     
     /// Mark: - LocationTrackingMiddleware

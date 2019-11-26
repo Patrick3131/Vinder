@@ -28,7 +28,14 @@ struct ProfileUpdateActions {
                 switch result {
                 case .success(let url):
                     if let url = URL(string: url) {
-                        dispatch(SetImageUrl(url: url))
+                        let updater = FirebaseProfilUpdater()
+                        var urls = self.profile.pictureUrl
+                        urls.append(url)
+                        updater.profilUpdate(id: self.profile.id, update: .prictureUrl(urls: urls), completionHandler: { result in
+                            if result {
+                                dispatch(SetImageUrl(url: url))
+                            }
+                        })
                     }
                     dispatch(UploadStatus(status: .isReady))
 
@@ -60,11 +67,41 @@ struct ProfileUpdateActions {
         }
     }
     
+    struct UploadAudio: AsyncAction {
+        let profile: Profile
+        let data: Data
+        func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+            let audioService = AudioService()
+            
+            audioService.create(data, profil: profile, completion: { result in
+                switch result {
+                case .success(let url):
+                    let updater = FirebaseProfilUpdater()
+                    if let url = URL(string: url) {
+                        updater.profilUpdate(id: self.profile.id, update: .biography(url: url), completionHandler: { result in
+                            if result {
+                                dispatch(SetBioUrl(url: url))
+                            }
+                        })
+
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+                
+            })
+        }
+    }
+    
     struct RemoveImageState: Action {
         let imageIndex: Int
     }
     
     struct SetImageUrl: Action {
+        let url: URL
+    }
+    
+    struct SetBioUrl: Action {
         let url: URL
     }
     
@@ -86,5 +123,10 @@ struct ProfileUpdateActions {
     
     struct ShowRecordingDetailView: Action {
         let show: Bool
+    }
+    
+    struct BioRecording: Action {
+        let recording: Bool
+        let profile: Profile
     }
 }

@@ -18,6 +18,7 @@ func profileUpdateStateReducer(state: ProfileUpdateState, action: Action) -> Pro
         state.showImagePicker = action.show
     case let action as ProfileUpdateActions.ShowRecordingDetailView:
         state.showRecordingDetailView = action.show
+        
     default:
         break
     }

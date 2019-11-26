@@ -37,7 +37,7 @@
 		CD472F5F237D388700DFCAB7 /* ImagePickerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F5E237D388700DFCAB7 /* ImagePickerWrapper.swift */; };
 		CD472F61237D3C3500DFCAB7 /* ProfileUpdateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F60237D3C3500DFCAB7 /* ProfileUpdateReducer.swift */; };
 		CD472F63237ED23100DFCAB7 /* DataNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F62237ED23100DFCAB7 /* DataNetworking.swift */; };
-		CD472F65237ED24A00DFCAB7 /* ImageNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F64237ED24A00DFCAB7 /* ImageNetworking.swift */; };
+		CD472F65237ED24A00DFCAB7 /* MediumNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F64237ED24A00DFCAB7 /* MediumNetworking.swift */; };
 		CD472F68237ED2A000DFCAB7 /* MediumType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F67237ED2A000DFCAB7 /* MediumType.swift */; };
 		CD472F6A237ED2C700DFCAB7 /* DataServiceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F69237ED2C700DFCAB7 /* DataServiceConfig.swift */; };
 		CD4890BA23746B9700AD57CD /* MiddlewareProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890B923746B9700AD57CD /* MiddlewareProvider.swift */; };
@@ -154,7 +154,7 @@
 		CD472F5E237D388700DFCAB7 /* ImagePickerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerWrapper.swift; sourceTree = "<group>"; };
 		CD472F60237D3C3500DFCAB7 /* ProfileUpdateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdateReducer.swift; sourceTree = "<group>"; };
 		CD472F62237ED23100DFCAB7 /* DataNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataNetworking.swift; sourceTree = "<group>"; };
-		CD472F64237ED24A00DFCAB7 /* ImageNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNetworking.swift; sourceTree = "<group>"; };
+		CD472F64237ED24A00DFCAB7 /* MediumNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumNetworking.swift; sourceTree = "<group>"; };
 		CD472F67237ED2A000DFCAB7 /* MediumType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumType.swift; sourceTree = "<group>"; };
 		CD472F69237ED2C700DFCAB7 /* DataServiceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceConfig.swift; sourceTree = "<group>"; };
 		CD4890B923746B9700AD57CD /* MiddlewareProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewareProvider.swift; sourceTree = "<group>"; };
@@ -432,7 +432,7 @@
 			isa = PBXGroup;
 			children = (
 				CD24421623547FD600C357EE /* CRUD.swift */,
-				CD472F64237ED24A00DFCAB7 /* ImageNetworking.swift */,
+				CD472F64237ED24A00DFCAB7 /* MediumNetworking.swift */,
 				CD472F62237ED23100DFCAB7 /* DataNetworking.swift */,
 			);
 			path = CRUD;
@@ -970,7 +970,7 @@
 				CD4890BC23746BC400AD57CD /* LocationAction.swift in Sources */,
 				CDDD9759237F1BC200E462EF /* PickerWrapper.swift in Sources */,
 				CDFA9C4A2360C2150069C341 /* ViewBuilder.swift in Sources */,
-				CD472F65237ED24A00DFCAB7 /* ImageNetworking.swift in Sources */,
+				CD472F65237ED24A00DFCAB7 /* MediumNetworking.swift in Sources */,
 				CD2A6DA62364B1DA00EEDDA5 /* SwipingState.swift in Sources */,
 				CDCA463F2370653E00E72C6C /* TrackLocation.swift in Sources */,
 				CD92B3062363116D006F0190 /* AccountActions.swift in Sources */,
