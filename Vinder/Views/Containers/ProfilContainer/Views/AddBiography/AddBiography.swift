@@ -114,7 +114,7 @@ struct BioView: View {
             self.record()
         }, label: {
             Image(systemName: "mic")
-        })
+        }).padding(.bottom, 8)
     }
 }
 
