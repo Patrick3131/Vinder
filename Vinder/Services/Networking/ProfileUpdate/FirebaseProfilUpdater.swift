@@ -108,11 +108,11 @@ struct FirebaseProfilUpdater: ProfilUpdating {
             ]
         case let .prictureUrl(urls: urls):
             return [
-                Keys.pictureUrls.rawValue : urls
+                Keys.pictureUrls.rawValue : urls.map { $0.absoluteString}
             ]
         case let .biography(url: url):
             return [
-                Keys.biography.rawValue : url
+                Keys.biography.rawValue : url.absoluteString
             ]
         case let.location(location: location):
             return [
