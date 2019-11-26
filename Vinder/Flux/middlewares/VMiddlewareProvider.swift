@@ -92,7 +92,21 @@ class VMiddlewareProvider: MiddlewareProvider {
         let middleware: Middleware<AppState> = { dispatch, getState in
             return { next in
                 return { action in
-                    
+                    switch action {
+                    case let action as ProfileUpdateActions.PlayAudio:
+                        self.audioPlayer.play(data: action.data)
+                        self.audioPlayer.playing = { result in
+                            switch result {
+                            case .success:
+                                break
+                            case .failure(let error):
+                                print(error)
+                            }
+                            
+                        }
+                    default:
+                        next(action)
+                    }
                 }
                 
             }

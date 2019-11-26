@@ -10,7 +10,7 @@ import Foundation
 import AVFoundation
 
 
-class AudioPlayer: AudioPlaying {
+class AudioPlayer: NSObject, AudioPlaying {
     
     private var audioPlayer:AVAudioPlayer?
     

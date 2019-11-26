@@ -160,8 +160,27 @@ struct ProfileUpdateActions {
         }
     }
     
+    struct ReadAudio: AsyncAction {
+        let url: URL
+        func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+            let audioService = AudioService()
+            audioService.read([url.absoluteString], completion: { result in
+                switch result {
+                case .success(let data):
+                    if let bio = data.safeAccess(0) {
+                        dispatch(PlayAudio(data: bio))
+                    }
+                    
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+                
+            })
+        }
+    }
+    
     struct PlayAudio: Action {
-        
+        let data: Data
     }
     
     struct RemoveImageState: Action {

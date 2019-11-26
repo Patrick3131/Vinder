@@ -9,7 +9,7 @@
 import Foundation
 
 protocol AudioPlaying {
-    var playing: ((Result<Bool,Error>) -> ())?
+    var playing: ((Result<Bool,Error>) -> ())? { get set}
     func play(data: Data)
     func stop()
 }
