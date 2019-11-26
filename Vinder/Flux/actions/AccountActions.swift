@@ -34,7 +34,7 @@ struct AccountActions {
         var userUID: String?
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             if isLoggedIn && userUID != nil {
-
+                dispatch(LocationAction.trackLocation(userId: userUID!))
                 dispatch(ReadProfil(userUID: userUID!))
             }
         }

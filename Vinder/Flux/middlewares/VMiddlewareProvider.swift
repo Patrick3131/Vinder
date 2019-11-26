@@ -103,6 +103,7 @@ class VMiddlewareProvider: MiddlewareProvider {
                             profilUpdater.profilUpdate(id: userID, update: .location(location: result), completion: { newResult in
                                 switch newResult {
                                 case .success:
+                                    
                                     next(LocationAction.setLocation(location: result))
                                 case .failure(let error):
                                     print(error.localizedDescription)

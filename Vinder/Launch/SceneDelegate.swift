@@ -54,7 +54,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //            
 //            
 //        })
-        store.dispatch(action: LocationAction.trackLocation(userId: "1"))
+//        store.dispatch(action: LocationAction.trackLocation(userId: "1"))
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
