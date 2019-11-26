@@ -114,7 +114,7 @@ struct FirebaseProfileReader: ProfileReading {
                               name: name,
                               age: Date(timeIntervalSince1970: age),
                               gender: Profile.Gender(rawValue: gender ?? "male") ?? .male ,
-                              preference: Profile.Preference(rawValue: preference ?? "hetero") ?? .hetero,
+                              preference: Profile.Preference(rawValue: preference ?? "hetero") ?? .female,
                               pictureUrl: pictureURL ?? [URL]() ,
                               biography: biography,
                               location: cllocation)

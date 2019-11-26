@@ -13,6 +13,7 @@ import SwiftUIFlux
 
 struct ProfilContainer: ConnectedView {
     struct Props {
+        var profile: Profile
         var genderSelection: Int
         var preferenceSelection: Int
         var birthday: Date
@@ -24,6 +25,7 @@ struct ProfilContainer: ConnectedView {
     
     func map(state: AppState, dispatch: @escaping DispatchFunction) -> Props {
         return Props(
+            profile: store.state.accountState.profile!,
             genderSelection: 0,
             preferenceSelection: 0,
             birthday: Date(),
@@ -57,7 +59,7 @@ struct ProfilContainer: ConnectedView {
                     
                     Section {
                         TextFieldWrapper(text: props.name, placeholder: "What is your name?", currentText: { text in
-                            print(text)
+                            props.dispatch(ProfileUpdateActions.UpdateName(profile: props.profile, name: text))
                             }).textFieldStyle(RoundedBorderTextFieldStyle())
                     }
                     
@@ -66,7 +68,7 @@ struct ProfilContainer: ConnectedView {
                             switch action {
                             case .recording:
                                 props.dispatch(ProfileUpdateActions.ShowRecordingDetailView(show: true))
-                                props.dispatch(ProfileUpdateActions.BioRecording(recording: true, profile: store.state.accountState.profile!))
+                                props.dispatch(ProfileUpdateActions.BioRecording(recording: true, profile: props.profile))
                             default:
                                 break
                             }
@@ -84,7 +86,7 @@ struct ProfilContainer: ConnectedView {
                         Text("What is your gender?").frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
                         
                         PickerWrapper(selection: props.genderSelection, label:"What is your Gender?" , content: ["Male", "Female"], index: { index in
-                            print(index)
+                            props.dispatch(ProfileUpdateActions.UpdateGender(profile: props.profile, index: index))
                             
                         }).pickerStyle(SegmentedPickerStyle())
                     }
@@ -92,8 +94,8 @@ struct ProfilContainer: ConnectedView {
                     Section {
                         Text("What are you looking for?").frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
                         
-                        PickerWrapper(selection: props.preferenceSelection, label: "What are you looking for?" , content: ["Male", "Female", "Both", "Friendship"], index: { index in
-                            print(index)
+                        PickerWrapper(selection: props.preferenceSelection, label: "What are you looking for?" , content: ["Female", "Male", "Both", "Friendship"], index: { index in
+                            props.dispatch(ProfileUpdateActions.UpdatePreference(profile: props.profile, index: index))
                             
                         }).pickerStyle(SegmentedPickerStyle())
                     }

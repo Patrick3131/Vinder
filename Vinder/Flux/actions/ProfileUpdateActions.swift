@@ -16,7 +16,7 @@ struct ProfileUpdateActions {
         
     }
     
-    struct UploadImage: AsyncAction {
+    struct UpdateImage: AsyncAction {
         let image: UIImage
         let profile: Profile
         let element: Int
@@ -70,7 +70,7 @@ struct ProfileUpdateActions {
         }
     }
     
-    struct UploadAudio: AsyncAction {
+    struct UpdateAudio: AsyncAction {
         let profile: Profile
         let data: Data
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
@@ -98,17 +98,62 @@ struct ProfileUpdateActions {
         }
     }
     
+    struct UpdateGender:AsyncAction {
+        let profile: Profile
+        let index: Int
+        func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+            let updater = FirebaseProfilUpdater()
+            updater.profilUpdate(id: profile.id, update: .gender(gender: Profile.Gender.getGender(index: index)), completion: { result in
+                switch result {
+                case .success:
+                    dispatch(SetGender(gender: Profile.Gender.getGender(index: self.index)))
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            })
+        }
+        
+        
+    }
+    
+    struct UpdatePreference: AsyncAction {
+        let profile: Profile
+        let index: Int
+        func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+            let updater = FirebaseProfilUpdater()
+            updater.profilUpdate(id: profile.id, update: .preference(preference: Profile.Preference.getPreference(index: index)), completion: { result in
+                switch result {
+                case .success:
+                    dispatch(SetPreference(preference: Profile.Preference.getPreference(index: self.index)))
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            })
+        }
+    }
+    
+    
+    struct UpdateName: AsyncAction {
+        let profile: Profile
+        let name: String
+        func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+            let updater = FirebaseProfilUpdater()
+            updater.profilUpdate(id: profile.id, update: .name(name: name), completion: { result in
+                switch result {
+                case .success:
+                    dispatch(SetName(name: self.name))
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            })
+        }
+    }
+    
     struct RemoveImageState: Action {
         let imageIndex: Int
     }
     
-    struct SetImageUrl: Action {
-        let url: URL
-    }
     
-    struct SetBioUrl: Action {
-        let url: URL
-    }
     
     struct UploadStatus:Action {
         let status: ImageProcessingStatus
@@ -118,12 +163,23 @@ struct ProfileUpdateActions {
         let show: Bool
     }
     
-    struct ChangeGender: Action {
-        let index: Int
+    struct SetName: Action {
+        let name: String
+    }
+    struct SetImageUrl: Action {
+        let url: URL
     }
     
-    struct ChangePreference: Action {
-        let index: Int
+    struct SetBioUrl: Action {
+        let url: URL
+    }
+    
+    struct SetGender: Action {
+        let gender: Profile.Gender
+    }
+    
+    struct SetPreference: Action {
+        let preference: Profile.Preference
     }
     
     struct ShowRecordingDetailView: Action {

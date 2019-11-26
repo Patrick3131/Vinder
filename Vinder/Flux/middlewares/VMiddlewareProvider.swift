@@ -64,7 +64,7 @@ class VMiddlewareProvider: MiddlewareProvider {
                                 switch result {
                                 case .success(let url):
                                     do {
-                                        next(ProfileUpdateActions.UploadAudio(profile: action.profile, data: try Data(contentsOf: url)))
+                                        next(ProfileUpdateActions.UpdateAudio(profile: action.profile, data: try Data(contentsOf: url)))
                                     } catch let error {
                                         print(error)
                                     }

@@ -33,8 +33,11 @@ struct TabBarViewModel {
     }
     
     var showProfilNotCompleteView: Bool {
-        print((isLoggedIn && (profile == nil)) ? true : false)
-        return (isLoggedIn && (profile == nil)) ? true : false
+        print((profile?.age == nil || profile?.name == nil))
+        
+        print((isLoggedIn && profile != nil && (profile?.age == nil || profile?.name == nil)) ? true : false)
+        return ((isLoggedIn && profile != nil && (profile?.age == nil || profile?.name == nil)) ? true : false)
+
     }
     
     

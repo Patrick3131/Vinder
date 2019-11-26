@@ -49,18 +49,22 @@ struct TabBarView: ConnectedView {
                     ExplorerContainer().tabItem {
                         TabBarItem(text: "Explore", image: "pause.circle")
                     }.tag(Tab.swiping)
-                    ProfilContainer().tabItem {
+//                        Text("")
+                    ProfilContainer()
+                        .tabItem {
                         TabBarItem(text: "Profile", image: "pause.circle")
                     }.tag(Tab.profil)
                 }
             } else if props.viewModel.showProfilNotCompleteView {
-                Button(action: {
-                    let profile = Profile(id: "RPTujanhFfc3zVLaKoPXvqXb8WH3", name: "name", age: Date.init(), gender: .male, preference: .hetero, pictureUrl: [URL](), biography: nil, location: nil)
-                    store.dispatch(action: AccountActions.CreateProfil(profile: profile))
-//                    store.dispatch(action: )
-                }, label: {
-                    ProfilContainer()
-                })
+                ProfilContainer()
+//                Button(action: {
+//                    let profile = Profile(id: "RPTujanhFfc3zVLaKoPXvqXb8WH3", name: "name", age: Date.init(), gender: .male, preference: .female, pictureUrl: [URL](), biography: nil, location: nil)
+//                    store.dispatch(action: AccountActions.CreateProfil(profile: profile))
+////                    store.dispatch(action: )
+//                }, label: {
+//                    Text("")
+////                    ProfilContainer()
+//                })
             } else {
                 LoginView()
             }

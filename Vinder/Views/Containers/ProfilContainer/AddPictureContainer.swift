@@ -67,7 +67,7 @@ struct AddPictureContainer: ConnectedView {
         }.sheet(isPresented: .constant(props.showImagePicker), content: {
             ImagePickerWrapper(selectedImage: { image in
                 if let image = image {
-                    props.dispatch(ProfileUpdateActions.UploadImage(image: image, profile: store.state.accountState.profile!, element: props.urls.count))
+                    props.dispatch(ProfileUpdateActions.UpdateImage(image: image, profile: store.state.accountState.profile!, element: props.urls.count))
                 }
                 props.dispatch(ProfileUpdateActions.ShowImagePicker(show: false))
             })

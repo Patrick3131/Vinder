@@ -15,7 +15,7 @@ struct Profile: Identifiable {
     var name: String?
     var age: Date?
     var gender: Gender = .male
-    var preference: Preference = .hetero
+    var preference: Preference = .female
     var pictureUrl: [URL]
     var biography: URL?
     var location: CLLocation?
@@ -38,28 +38,28 @@ struct Profile: Identifiable {
     }
     
     enum Preference: String {
-        case hetero
-        case gay
-        case bi
+        case female
+        case male
+        case both
         case friendship
         
         static func getPreference(index: Int) -> Preference {
             switch index {
             case 0:
-                return hetero
+                return female
             case 1:
-                return gay
+                return male
             case 2:
-                return bi
+                return both
             case 3:
                 return friendship
             default:
-                return hetero
+                return female
             }
         }
     }
     
-    static var preDataAccount: Profile = Profile(id: "1", name: "Patrick", age: Date(), gender: .male, preference: .hetero, pictureUrl: [URL](), biography: nil)
+    static var preDataAccount: Profile = Profile(id: "1", name: "Patrick", age: Date(), gender: .male, preference: .female, pictureUrl: [URL](), biography: nil)
     
     func getLocation() {
         let location = CLLocationManager()
