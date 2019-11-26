@@ -54,13 +54,24 @@ struct ProfileUpdateActions {
     struct RemoveImage: AsyncAction {
         let imageIndex: Int
         let url: URL
-        
+        let profile: Profile
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             let imageService = ImageService()
             imageService.delete(url.absoluteString, completion: { result in
                 switch result {
                 case .success:
-                    dispatch(RemoveImageState(imageIndex: self.imageIndex))
+                    let updater = FirebaseProfilUpdater()
+                    var urls = self.profile.pictureUrl
+                    urls.remove(at: self.imageIndex)
+                    updater.profilUpdate(id: self.profile.id, update: .prictureUrl(urls: urls), completion: { result in
+                        switch result {
+                        case .success:
+                            dispatch(RemoveImageState(imageIndex: self.imageIndex))
+                        case .failure(let error):
+                            print(error.localizedDescription)
+                        }
+                        
+                    })
                     
                 case .failure:
                     break
@@ -147,6 +158,10 @@ struct ProfileUpdateActions {
                 }
             })
         }
+    }
+    
+    struct PlayAudio: Action {
+        
     }
     
     struct RemoveImageState: Action {

@@ -16,6 +16,7 @@ struct SinglePicture: View {
     
     private var removeButton: some View {
         Button(action: {
+            
             self.viewModel.removePicture()
         }) {
             Image(systemName: "minus.circle")

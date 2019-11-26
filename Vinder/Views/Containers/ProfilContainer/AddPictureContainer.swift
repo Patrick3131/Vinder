@@ -12,6 +12,7 @@ import SwiftUIFlux
 
 struct AddPictureContainer: ConnectedView {
     struct Props {
+        let profile: Profile
         let urls: [URL]
         let dispatch: DispatchFunction
         var showImagePicker: Bool = false
@@ -20,8 +21,10 @@ struct AddPictureContainer: ConnectedView {
         
     func map(state: AppState, dispatch: @escaping DispatchFunction) -> Props {
         let props = Props(
+            profile: state.accountState.profile!,
             urls: state.accountState.profile?.pictureUrl ?? [URL](),
-            dispatch: dispatch, showImagePicker: state.profileUpdateState.showImagePicker,
+            dispatch: dispatch,
+            showImagePicker: state.profileUpdateState.showImagePicker,
             imageProcessingStatus: state.profileUpdateState.imageUploadStatus)
         return props
     }
@@ -30,9 +33,11 @@ struct AddPictureContainer: ConnectedView {
         var viewModel = SinglePictureViewModel(picture: props.urls.safeAccess(element), onTab: { action in
             switch action {
             case .add:
+                
                 props.dispatch(ProfileUpdateActions.ShowImagePicker(show: true))
             case .remove:
-                props.dispatch(ProfileUpdateActions.RemoveImage(imageIndex: element, url: props.urls[element]))
+                
+                props.dispatch(ProfileUpdateActions.RemoveImage(imageIndex: element, url: props.urls[element], profile: props.profile))
             case .show:
                 break
             }
@@ -67,7 +72,7 @@ struct AddPictureContainer: ConnectedView {
         }.sheet(isPresented: .constant(props.showImagePicker), content: {
             ImagePickerWrapper(selectedImage: { image in
                 if let image = image {
-                    props.dispatch(ProfileUpdateActions.UpdateImage(image: image, profile: store.state.accountState.profile!, element: props.urls.count))
+                    props.dispatch(ProfileUpdateActions.UpdateImage(image: image, profile: props.profile, element: props.urls.count))
                 }
                 props.dispatch(ProfileUpdateActions.ShowImagePicker(show: false))
             })

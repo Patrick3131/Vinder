@@ -16,6 +16,7 @@ class VMiddlewareProvider: MiddlewareProvider {
     
     private lazy var location = TrackLocation()
     private lazy var audioRecorder = AudioRecorder()
+    private lazy var audioPlayer = AudioPlayer()
 //    private lazy var profilUpdater = FirebaseProfilUpdater()
     init() {
 
@@ -81,12 +82,23 @@ class VMiddlewareProvider: MiddlewareProvider {
                         break
                         
                     }
-                    
-                    
                     return next(action)
                 }
             }
         }
+    }
+    
+    private func audioPlayerMiddleware() -> Middleware<FluxState> {
+        let middleware: Middleware<AppState> = { dispatch, getState in
+            return { next in
+                return { action in
+                    
+                }
+                
+            }
+            
+        }
+        return middleware
     }
     
     /// Mark: - LocationTrackingMiddleware

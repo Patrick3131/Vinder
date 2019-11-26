@@ -9,12 +9,7 @@
 import Foundation
 import AVFoundation
 
-//https://www.blckbirds.com/post/voice-recorder-app-in-swiftui-1
 
-protocol AudioRecording {
-    func record()
-    func stop()
-}
 
 class AudioRecorder: NSObject {
     
@@ -123,31 +118,5 @@ extension AudioRecorder: AVAudioRecorderDelegate {
     }
 }
 
-protocol AudioPlaying {
-    func play()
-    func stop()
-}
 
-struct AudioPlayer {
-    
-    private var audioPlayer:AVAudioPlayer?
-    
-    private var isPlaying = false
-    
-    mutating func play(data: Data) {
-        do {
-            audioPlayer = try AVAudioPlayer(data: data)
-            if let audioPlayer = audioPlayer {
-                audioPlayer.play()
-            }
-        } catch let error {
-            print(error.localizedDescription)
-        }
-    }
-    
-    func stop() {
-        if let audioPlayer = audioPlayer {
-            audioPlayer.stop()
-        }
-    }
-}
+
