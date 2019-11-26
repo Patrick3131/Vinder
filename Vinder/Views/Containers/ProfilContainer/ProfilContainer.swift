@@ -19,6 +19,7 @@ struct ProfilContainer: ConnectedView {
         var name: String
         var isRecordingDetailViewActive: Bool
         var dispatch: DispatchFunction
+        var isBioRecordingAvailable: Bool
     }
     
     func map(state: AppState, dispatch: @escaping DispatchFunction) -> Props {
@@ -28,7 +29,8 @@ struct ProfilContainer: ConnectedView {
             birthday: Date(),
             name: "Patrick",
             isRecordingDetailViewActive: state.profileUpdateState.showRecordingDetailView,
-            dispatch: dispatch)
+            dispatch: dispatch,
+            isBioRecordingAvailable: (state.accountState.profile?.biography != nil) ? true : false)
     }
     @State var test = Date()
     @State var stringTest = "Test"
@@ -64,10 +66,11 @@ struct ProfilContainer: ConnectedView {
                             switch action {
                             case .recording:
                                 props.dispatch(ProfileUpdateActions.ShowRecordingDetailView(show: true))
+                                props.dispatch(ProfileUpdateActions.BioRecording(recording: true, profile: store.state.accountState.profile!))
                             default:
                                 break
                             }
-                        }, isBioAvailable: true)).frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
+                        }, isBioAvailable: props.isBioRecordingAvailable)).frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .center)
                     }
                     
                     Section {
@@ -114,6 +117,8 @@ struct ProfilContainer: ConnectedView {
                             switch status {
                             case .stoppedRecording:
                                 props.dispatch(ProfileUpdateActions.ShowRecordingDetailView(show: false))
+                                props.dispatch(ProfileUpdateActions.BioRecording(recording: false, profile: store.state.accountState.profile!))
+
                             default:
                                 break
                             }
