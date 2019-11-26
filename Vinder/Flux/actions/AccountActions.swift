@@ -39,55 +39,45 @@ struct AccountActions {
             }
         }
     }
-
+    
     
     struct ReadProfil: AsyncAction {
-        
         var userUID: String
-        
-        
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             let firebase = FirebaseProfileReader()
             
-            firebase.profileRead(id: userUID, completionHandler: { profile, error in
-                
-                if let error = error {
-                    
+            firebase.profileRead(id: userUID, completion: { result in
+                switch result {
+                case .success(let profile):
+                    dispatch(SetProfil(profil: profile))
+                case .failure(let error):
                     if let error = error as? FirebaseProfileReader.FirebaseError {
                         switch error {
                         case .profilDoesNotExist:
-                            
                             dispatch(CreateInitialProfil(userUID: self.userUID))
                         default:
                             break
                         }
                     }
-                    print(error)
-                } else {
-                    print(profile)
-                    
-                    dispatch(SetProfil(profil: profile))
                 }
-                
             })
-//            dispatch(SetProfil(profil: Profile.preDataAccount))
         }
     }
     
-   struct CreateInitialProfil: AsyncAction {
-               var userUID: String
-               func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
-                   let firebase = FirebaseProfilUpdater()
-                firebase.profilUpdate(id: userUID, update: .id(userUID), completionHandler: { success in
-                       if success {
-                           dispatch(ReadProfil(userUID: self.userUID))
-                       }
-                   })
-               }
-               
-               
-           }
-           
+    struct CreateInitialProfil: AsyncAction {
+        var userUID: String
+        func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+            let firebase = FirebaseProfilUpdater()
+            firebase.profilUpdate(id: userUID, update: .id(userUID), completionHandler: { success in
+                if success {
+                    dispatch(ReadProfil(userUID: self.userUID))
+                }
+            })
+        }
+        
+        
+    }
+    
     
     struct CreateProfil: AsyncAction {
         let profile: Profile
@@ -100,10 +90,10 @@ struct AccountActions {
             })
         }
     }
-
+    
     struct SetProfil: Action {
         let profil: Profile?
     }
-
+    
     
 }

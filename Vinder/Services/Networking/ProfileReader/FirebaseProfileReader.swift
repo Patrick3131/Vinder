@@ -18,29 +18,27 @@ struct FirebaseProfileReader: ProfileReading {
     init() {
         self.db = Firestore.firestore()
     }
-    
-    func profileRead(id: String, completionHandler: @escaping (Profile?, Error?) -> Void) {
-        
+    func profileRead(id: String, completion: @escaping (Result<Profile, Error>) -> Void) {
         db.collection(dbName).document(id).getDocument(completion: { (document, error) in
             
             if let error = error {
                 print(error)
-                
-                completionHandler(nil, error)
+                completion(.failure(error))
             } else {
                 do {
                     
                     let decoded = try self.decodeDictionary(document: document)
-                    completionHandler(decoded,nil)
+                    completion(.success(decoded))
                 } catch let error {
-                    completionHandler(nil, error)
+                    completion(.failure(error))
                     print(error.localizedDescription)
                 }
             }
         })
     }
     
-    func profileReads(ids: [String], completionHandler: @escaping ([Profile]?, Error?) -> Void) {
+    
+    func profileReads(ids: [String], completion: @escaping (Result<[Profile], Error>) -> Void) {
         
     }
     
