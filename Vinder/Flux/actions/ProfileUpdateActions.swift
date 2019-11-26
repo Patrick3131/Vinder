@@ -160,6 +160,25 @@ struct ProfileUpdateActions {
         }
     }
     
+    struct UpdateAge: AsyncAction {
+        let date: Date
+        let profile: Profile
+        func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
+            let updater = FirebaseProfilUpdater()
+            updater.profilUpdate(id: profile.id, update: .age(age: date), completion: { result in
+                switch result {
+                case .success:
+                    dispatch(SetAge(age: self.date))
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+                
+            })
+        }
+        
+        
+    }
+    
     struct ReadAudio: AsyncAction {
         let url: URL
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
@@ -195,6 +214,10 @@ struct ProfileUpdateActions {
     
     struct ShowImagePicker: Action {
         let show: Bool
+    }
+    
+    struct SetAge: Action {
+        let age: Date
     }
     
     struct SetName: Action {

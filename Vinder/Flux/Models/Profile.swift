@@ -35,6 +35,15 @@ struct Profile: Identifiable {
                 return male
             }
         }
+        
+        func index() -> Int {
+            switch self {
+            case .male:
+                return 0
+            case .female:
+                return 1
+            }
+        }
     }
     
     enum Preference: String {
@@ -55,6 +64,19 @@ struct Profile: Identifiable {
                 return friendship
             default:
                 return female
+            }
+        }
+        
+        func index() -> Int {
+            switch self {
+            case .female:
+                return 0
+            case .male:
+                return 1
+            case .both:
+                return 2
+            case .friendship:
+                return 3
             }
         }
     }

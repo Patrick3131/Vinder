@@ -25,11 +25,11 @@ struct ProfilContainer: ConnectedView {
     
     func map(state: AppState, dispatch: @escaping DispatchFunction) -> Props {
         return Props(
-            profile: store.state.accountState.profile!,
-            genderSelection: 0,
-            preferenceSelection: 0,
-            birthday: Date(),
-            name: "Patrick",
+            profile: state.accountState.profile!,
+            genderSelection: state.accountState.profile?.gender.index() ?? 0,
+            preferenceSelection: state.accountState.profile?.preference.index() ?? 0,
+            birthday: state.accountState.profile?.age ?? Date(),
+            name: state.accountState.profile?.name ?? "",
             isRecordingDetailViewActive: state.profileUpdateState.showRecordingDetailView,
             dispatch: dispatch,
             isBioRecordingAvailable: (state.accountState.profile?.biography != nil) ? true : false)
@@ -77,7 +77,7 @@ struct ProfilContainer: ConnectedView {
                     
                     Section {
                         DatePickerWrapper(selection: props.birthday, date: { date in
-                                           print(date)
+                            props.dispatch(ProfileUpdateActions.UpdateAge(date: date, profile: props.profile))
                                        }, label: Text("When is your birthday?"))
                     }
                     

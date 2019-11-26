@@ -27,7 +27,8 @@ class VMiddlewareProvider: MiddlewareProvider {
             loggingMiddleware(),
             locationTrackingMiddleware(),
             firebaseAUTHMiddleware(),
-            audioRecordingMiddleware()
+            audioRecordingMiddleware(),
+            audioPlayerMiddleware()
         ]
     }
     

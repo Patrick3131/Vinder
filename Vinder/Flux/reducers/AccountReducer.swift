@@ -20,6 +20,8 @@ func accountStateReducer(state: AccountState, action: Action) -> AccountState {
         state.profile = action.profil
     case let action as ProfileUpdateActions.SetName:
         state.profile?.name = action.name
+    case let action as ProfileUpdateActions.SetAge:
+        state.profile?.age = action.age
     case let action as ProfileUpdateActions.SetImageUrl:
         state.profile?.pictureUrl.append(action.url)
     case let action as ProfileUpdateActions.SetBioUrl:
