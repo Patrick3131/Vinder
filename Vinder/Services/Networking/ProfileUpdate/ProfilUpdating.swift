@@ -10,8 +10,8 @@ import Foundation
 
 
 protocol ProfilUpdating {
-    func profilUpdate(id: String, update: ProfileUpdate, completionHandler: @escaping ( _ success: Bool) -> Void)
-    func profilUpdates(id: String, updates: [ProfileUpdate], completionHandler: @escaping (Bool) -> Void)
+    func profilUpdate(id: String, update: ProfileUpdate, completion: @escaping (Result<Bool,Error>) -> Void)
+    func profilUpdates(id: String, updates: [ProfileUpdate], completion: @escaping (Result<Bool,Error>) -> Void)
 }
 
 

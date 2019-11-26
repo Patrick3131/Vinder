@@ -100,10 +100,12 @@ class VMiddlewareProvider: MiddlewareProvider {
                         self.location.startTrackingLocation()
                         self.location.newLocation = { result in
                             let profilUpdater = FirebaseProfilUpdater()
-                            profilUpdater.profilUpdate(id: userID, update: .location(location: result), completionHandler: { success in
-                                if success {
+                            profilUpdater.profilUpdate(id: userID, update: .location(location: result), completion: { newResult in
+                                switch newResult {
+                                case .success:
                                     next(LocationAction.setLocation(location: result))
-                                } else {
+                                case .failure(let error):
+                                    print(error.localizedDescription)
                                     next(action)
                                 }
                             })

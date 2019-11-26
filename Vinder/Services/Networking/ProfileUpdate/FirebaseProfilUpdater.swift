@@ -23,47 +23,49 @@ struct FirebaseProfilUpdater: ProfilUpdating {
     }
     
     
-    func profilUpdates(id: String, updates: [ProfileUpdate], completionHandler: @escaping (Bool) -> Void) {
+    func profilUpdates(id: String, updates: [ProfileUpdate], completion: @escaping (Result<Bool,Error>) -> Void) {
         for update in updates {
-            profilUpdate(id: id, update: update, completionHandler: { completion in
-                completionHandler(completion)
+            profilUpdate(id: id, update: update, completion: { result in
+                completion(result)
+//                completion(completion)
             })
         }
     }
     
-    func profilUpdate(id: String,update: ProfileUpdate, completionHandler: @escaping (Bool) -> Void) {
+    func profilUpdate(id: String,update: ProfileUpdate, completion: @escaping (Result<Bool,Error>) -> Void) {
         switch update {
         case .newComplete(_):
-            createProfil(id: id, data: convertToDictionary(update), completionHandler: { completion in
-                completionHandler(completion)
+            createProfil(id: id, data: convertToDictionary(update), completion: { result in
+                completion(result)
             })
         default:
-            updateProfil(id: id, data: convertToDictionary(update), completionHandler: { completion in
-                completionHandler(completion)
+            updateProfil(id: id, data: convertToDictionary(update), completion: { result in
+                completion(result)
             })
         }
     }
     
-    private func updateProfil(id: String, data: [String: Any], completionHandler: @escaping (Bool) -> Void) {
+    private func updateProfil(id: String, data: [String: Any], completion: @escaping (Result<Bool,Error>) -> Void) {
         db.collection(dbName).document(id).setData(data, merge: true) { error in
             if let error = error {
                 print(error.localizedDescription)
-                completionHandler(false)
+                
+                completion(.failure(error))
             } else {
                 print("Document", id, data, "successfully written")
-                completionHandler(true)
+                completion(.success(true))
             }
         }
     }
     
-    private func createProfil(id: String, data: [String: Any], completionHandler: @escaping (Bool) -> Void) {
+    private func createProfil(id: String, data: [String: Any], completion: @escaping (Result<Bool,Error>) -> Void) {
         db.collection(dbName).document(id).setData(data, merge: false) { error in
             if let error = error {
                 print(error.localizedDescription)
-                completionHandler(false)
+                completion(.failure(error))
             } else {
                 print("Document", id, data, "successfully written")
-                completionHandler(true)
+                completion(.success(true))
             }
         }
     }

@@ -11,10 +11,10 @@ import UIKit
 struct AudioService: MediumNetworking {
   
     
-    typealias myType = Data
+    typealias Medium = Data
     let dataService: FirebaseDataService
     
-    func create(_ medium: myType, profil: Profile, completion: @escaping (Result<String, Error>) -> Void) {
+    func create(_ medium: Medium, profil: Profile, completion: @escaping (Result<String, Error>) -> Void) {
         dataService.create(medium, profil: profil, config: MediumType.biography, completion: { result in
             completion(result)
         })
@@ -26,7 +26,7 @@ struct AudioService: MediumNetworking {
         })
       }
       
-      func read(_ urls: [String], completion: @escaping (Result<[myType], Error>) -> Void) {
+      func read(_ urls: [String], completion: @escaping (Result<[Medium], Error>) -> Void) {
         dataService.read(urls, completion: { result in
             switch result {
             case .success(let data):

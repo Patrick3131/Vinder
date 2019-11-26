@@ -31,9 +31,12 @@ struct ProfileUpdateActions {
                         let updater = FirebaseProfilUpdater()
                         var urls = self.profile.pictureUrl
                         urls.append(url)
-                        updater.profilUpdate(id: self.profile.id, update: .prictureUrl(urls: urls), completionHandler: { result in
-                            if result {
+                        updater.profilUpdate(id: self.profile.id, update: .prictureUrl(urls: urls), completion: { result in
+                            switch result {
+                            case .success:
                                 dispatch(SetImageUrl(url: url))
+                            case .failure(let error):
+                                print(error.localizedDescription)
                             }
                         })
                     }
@@ -78,12 +81,14 @@ struct ProfileUpdateActions {
                 case .success(let url):
                     let updater = FirebaseProfilUpdater()
                     if let url = URL(string: url) {
-                        updater.profilUpdate(id: self.profile.id, update: .biography(url: url), completionHandler: { result in
-                            if result {
+                        updater.profilUpdate(id: self.profile.id, update: .biography(url: url), completion: { result in
+                            switch result {
+                            case .success:
                                 dispatch(SetBioUrl(url: url))
+                            case .failure(let error):
+                                print(error.localizedDescription)
                             }
                         })
-
                     }
                 case .failure(let error):
                     print(error.localizedDescription)

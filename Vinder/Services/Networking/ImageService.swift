@@ -14,10 +14,10 @@ import UIKit
 
 
 struct ImageService: MediumNetworking {
-    typealias myType = UIImage
+    typealias Medium = UIImage
     var dataService: DataNetworking
     
-    func create(_ medium: myType, profil: Profile, completion: @escaping (Result<String, Error>) -> Void) {
+    func create(_ medium: Medium, profil: Profile, completion: @escaping (Result<String, Error>) -> Void) {
         let data: Data? = medium.jpegData(compressionQuality: 0.5)
         if let data = data {
             dataService.create(data, profil: profil, config: MediumType.image, completion: { result in
@@ -32,7 +32,7 @@ struct ImageService: MediumNetworking {
         })
     }
     
-    func read(_ urls: [String], completion: @escaping (Result<[myType], Error>) -> Void) {
+    func read(_ urls: [String], completion: @escaping (Result<[Medium], Error>) -> Void) {
         dataService.read(urls, completion: { result in
             switch result {
             case .success(let data):

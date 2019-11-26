@@ -68,10 +68,14 @@ struct AccountActions {
         var userUID: String
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             let firebase = FirebaseProfilUpdater()
-            firebase.profilUpdate(id: userUID, update: .id(userUID), completionHandler: { success in
-                if success {
+            firebase.profilUpdate(id: userUID, update: .id(userUID), completion: { result in
+                switch result {
+                case .success:
                     dispatch(ReadProfil(userUID: self.userUID))
+                case .failure(let error):
+                    print(error.localizedDescription)
                 }
+                
             })
         }
         
@@ -83,9 +87,12 @@ struct AccountActions {
         let profile: Profile
         func execute(state: FluxState?, dispatch: @escaping DispatchFunction) {
             let firebase = FirebaseProfilUpdater()
-            firebase.profilUpdate(id: profile.id, update: .newComplete(profile: profile), completionHandler: { success in
-                if success {
+            firebase.profilUpdate(id: profile.id, update: .newComplete(profile: profile), completion: { result in
+                switch result {
+                case .success:
                     dispatch(SetProfil(profil: self.profile))
+                case .failure(let error):
+                    print(error.localizedDescription)
                 }
             })
         }
