@@ -29,7 +29,7 @@ enum MediumType: DataServiceConfig {
         case .image:
            return "image/jpeg"
         case .biography:
-           return "audio"
+           return "audio/mp3"
         case .message:
             return "audio"
         }

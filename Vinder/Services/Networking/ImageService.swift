@@ -13,11 +13,12 @@ import UIKit
 
 
 
-struct ImageService: ImageNetworking {
+struct ImageService: MediumNetworking {
+    typealias myType = UIImage
     var dataService: DataNetworking
     
-    func create(_ image: UIImage, profil: Profile, completion: @escaping (Result<String, Error>) -> Void) {
-        let data: Data? = image.jpegData(compressionQuality: 0.5)
+    func create(_ medium: myType, profil: Profile, completion: @escaping (Result<String, Error>) -> Void) {
+        let data: Data? = medium.jpegData(compressionQuality: 0.5)
         if let data = data {
             dataService.create(data, profil: profil, config: MediumType.image, completion: { result in
                 completion(result)
@@ -31,7 +32,7 @@ struct ImageService: ImageNetworking {
         })
     }
     
-    func read(_ urls: [String], completion: @escaping (Result<[UIImage], Error>) -> Void) {
+    func read(_ urls: [String], completion: @escaping (Result<[myType], Error>) -> Void) {
         dataService.read(urls, completion: { result in
             switch result {
             case .success(let data):

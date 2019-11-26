@@ -96,7 +96,12 @@ struct FirebaseProfileReader: ProfileReading {
         }
         
         let location = value[Keys.location.rawValue] as? GeoPoint
-        let biography = value[Keys.biography.rawValue] as? URL
+        var biography: URL?
+        if ((value[Keys.biography.rawValue] as? String) != nil) {
+            biography = URL(string: value[Keys.biography.rawValue] as! String)
+
+        }
+//        let biography = value[Keys.biography.rawValue] as? URL
         
         
         /*
