@@ -68,6 +68,10 @@
 		CD93AE6E238D9FFB00CA5683 /* AudioPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93AE6D238D9FFB00CA5683 /* AudioPlaying.swift */; };
 		CD93AE70238DA02300CA5683 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93AE6F238DA02300CA5683 /* AudioPlayer.swift */; };
 		CD93AE72238DA04C00CA5683 /* AudioRecording.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93AE71238DA04C00CA5683 /* AudioRecording.swift */; };
+		CD93AE75238DABE400CA5683 /* AddBioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93AE74238DABE400CA5683 /* AddBioViewModel.swift */; };
+		CD93AE77238DAC0400CA5683 /* RecordBioAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93AE76238DAC0400CA5683 /* RecordBioAudio.swift */; };
+		CD93AE79238DAC2800CA5683 /* BioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93AE78238DAC2800CA5683 /* BioView.swift */; };
+		CD93AE7B238DAC7900CA5683 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93AE7A238DAC7900CA5683 /* MatchView.swift */; };
 		CD972D0C236C57E90008F022 /* ProfileUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD972D0B236C57E90008F022 /* ProfileUpdate.swift */; };
 		CD972D0E236C580A0008F022 /* ProfilUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD972D0D236C580A0008F022 /* ProfilUpdating.swift */; };
 		CD972D10236C58230008F022 /* FirebaseProfilUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD972D0F236C58230008F022 /* FirebaseProfilUpdater.swift */; };
@@ -194,6 +198,10 @@
 		CD93AE6D238D9FFB00CA5683 /* AudioPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlaying.swift; sourceTree = "<group>"; };
 		CD93AE6F238DA02300CA5683 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		CD93AE71238DA04C00CA5683 /* AudioRecording.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecording.swift; sourceTree = "<group>"; };
+		CD93AE74238DABE400CA5683 /* AddBioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBioViewModel.swift; sourceTree = "<group>"; };
+		CD93AE76238DAC0400CA5683 /* RecordBioAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordBioAudio.swift; sourceTree = "<group>"; };
+		CD93AE78238DAC2800CA5683 /* BioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioView.swift; sourceTree = "<group>"; };
+		CD93AE7A238DAC7900CA5683 /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
 		CD972D0B236C57E90008F022 /* ProfileUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdate.swift; sourceTree = "<group>"; };
 		CD972D0D236C580A0008F022 /* ProfilUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilUpdating.swift; sourceTree = "<group>"; };
 		CD972D0F236C58230008F022 /* FirebaseProfilUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseProfilUpdater.swift; sourceTree = "<group>"; };
@@ -626,6 +634,14 @@
 			path = middlewares;
 			sourceTree = "<group>";
 		};
+		CD93AE73238DABBB00CA5683 /* MatchesContainer */ = {
+			isa = PBXGroup;
+			children = (
+				CD93AE7A238DAC7900CA5683 /* MatchView.swift */,
+			);
+			path = MatchesContainer;
+			sourceTree = "<group>";
+		};
 		CD972D0A236C57B70008F022 /* ProfileUpdate */ = {
 			isa = PBXGroup;
 			children = (
@@ -648,6 +664,7 @@
 		CDAC6D4123718AE000D68072 /* Containers */ = {
 			isa = PBXGroup;
 			children = (
+				CD93AE73238DABBB00CA5683 /* MatchesContainer */,
 				CD2432A623787352004C916F /* ProfilContainer */,
 				CDFA9C38235F9BD50069C341 /* ExplorerContainer */,
 			);
@@ -658,6 +675,9 @@
 			isa = PBXGroup;
 			children = (
 				CDBE2D912382C888006F0DCC /* AddBiography.swift */,
+				CD93AE74238DABE400CA5683 /* AddBioViewModel.swift */,
+				CD93AE76238DAC0400CA5683 /* RecordBioAudio.swift */,
+				CD93AE78238DAC2800CA5683 /* BioView.swift */,
 			);
 			path = AddBiography;
 			sourceTree = "<group>";
@@ -968,10 +988,12 @@
 				CD24421B2354801C00C357EE /* Account.swift in Sources */,
 				CD24421723547FD600C357EE /* CRUD.swift in Sources */,
 				CD6554E623524D7C00E6498A /* ImageGallery.swift in Sources */,
+				CD93AE7B238DAC7900CA5683 /* MatchView.swift in Sources */,
 				CDBE2D9A2386BDB3006F0DCC /* TextFieldWrapper.swift in Sources */,
 				CD6554EC235258C900E6498A /* MatchesHome.swift in Sources */,
 				CD472F5F237D388700DFCAB7 /* ImagePickerWrapper.swift in Sources */,
 				CD87E02023703A4300F75568 /* ConversationState.swift in Sources */,
+				CD93AE75238DABE400CA5683 /* AddBioViewModel.swift in Sources */,
 				CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */,
 				CD972D17236C8ECD0008F022 /* FirebaseProfileReader.swift in Sources */,
 				CDD7BDA823551EE100F28C23 /* FirebaseDataService.swift in Sources */,
@@ -1029,6 +1051,7 @@
 				CD3B85E5236860AC0007C0D4 /* SwipeableView.swift in Sources */,
 				CD93AE70238DA02300CA5683 /* AudioPlayer.swift in Sources */,
 				CD972D10236C58230008F022 /* FirebaseProfilUpdater.swift in Sources */,
+				CD93AE79238DAC2800CA5683 /* BioView.swift in Sources */,
 				CD472F522379F43D00DFCAB7 /* Extension+Array.swift in Sources */,
 				CD2442212354804700C357EE /* Message.swift in Sources */,
 				CD472F6A237ED2C700DFCAB7 /* DataServiceConfig.swift in Sources */,
@@ -1039,6 +1062,7 @@
 				CD93AE72238DA04C00CA5683 /* AudioRecording.swift in Sources */,
 				CD472F5C237C86F600DFCAB7 /* ProfileUpdateActions.swift in Sources */,
 				CD2442232354976300C357EE /* MatchProfile.swift in Sources */,
+				CD93AE77238DAC0400CA5683 /* RecordBioAudio.swift in Sources */,
 				CD2A6DA82364B25B00EEDDA5 /* SwipingReducer.swift in Sources */,
 				CD92B2FD23630986006F0190 /* AccountState.swift in Sources */,
 				CD472F542379F89B00DFCAB7 /* ProfilContainer.swift in Sources */,
