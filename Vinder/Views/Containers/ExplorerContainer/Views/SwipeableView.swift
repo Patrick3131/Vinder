@@ -69,7 +69,7 @@ struct SwipeableView<Content:View>: View {
     private  let shadowRadius: CGFloat = 16
     
     // MARK: - Constructor vars
-    @Binding var gestureViewState: DragState
+    @Binding var gestureViewState:  DragState
     let onTabGesture: () -> Void
     let willEndGesture: (CGSize) -> Void
     let endGestureHandler: (EndState) -> Void
