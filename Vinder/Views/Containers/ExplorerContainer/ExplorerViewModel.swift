@@ -10,7 +10,7 @@ import Combine
 import SwiftUIFlux
 
 
-struct SwipingViewModel {
+struct ExplorerViewModel {
     let profilesToSwipe: [String]
     let dispatch: DispatchFunction
     

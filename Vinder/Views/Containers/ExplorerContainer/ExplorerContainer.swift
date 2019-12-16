@@ -16,11 +16,11 @@ struct ExplorerContainer: ConnectedView {
     @State private var draggedViewState = SwipeableView<CardView>.DragState.inactive
     @State private var willEndPosition: CGSize? = nil
     struct Props {
-        var viewModel: SwipingViewModel
+        var viewModel: ExplorerViewModel
     }
     
     func map(state: AppState, dispatch: @escaping DispatchFunction) -> Props {
-        return Props(viewModel: SwipingViewModel(profilesToSwipe: state.swipingState.profilesToSwipe, dispatch: dispatch))
+        return Props(viewModel: ExplorerViewModel(profilesToSwipe: state.swipingState.profilesToSwipe, dispatch: dispatch))
     }
     
     private func draggableCardViewEndGestureHandler(props: Props, handler: SwipeableView<CardView>.EndState) {
