@@ -14,6 +14,7 @@ struct AccountState:FluxState {
     var userUID: String?
     var loggedIn: Bool = false
     var didUserAlreadyCreateACompleteProfile: Bool = false
+    var matches = [MatchProfile]()
 }
 
 

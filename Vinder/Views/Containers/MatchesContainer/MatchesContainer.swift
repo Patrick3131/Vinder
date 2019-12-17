@@ -7,12 +7,33 @@
 //
 
 import SwiftUI
+import SwiftUIFlux
 
-struct MatchesContainer: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct MatchesContainer: ConnectedView {
+    
+    struct Props {
+        let profiles: [MatchProfile]
     }
+    
+    func map(state: AppState, dispatch: @escaping DispatchFunction) -> Props {
+        return Props(profiles: state.accountState.matches)
+    }
+    
+    func body(props: MatchesContainer.Props) -> some View {
+        GeometryReader { geometry in
+                    List {
+                        
+                        MatchesRowView()
+                        MatchesRowView()
+                        MatchesRowView()
+                        MatchesRowView()
+            }
+                }
+    }
+    
+ 
 }
+
 
 struct MatchesContainer_Previews: PreviewProvider {
     static var previews: some View {

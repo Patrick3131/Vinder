@@ -30,21 +30,21 @@ struct MatchViewModel {
 }
 
 struct MatchView: View {
-    let url: URL?
+    var viewModel: MatchViewModel
     var isPlaying: Bool = false
     var toggled: (Bool) -> Void
     var body: some View {
         
             GeometryReader { geometry in
                 VStack(alignment: .center) {
-                CacheImage(self.url)
+                    CacheImage(self.viewModel.pictureUrl)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 180, height: 200, alignment: .center)
                     .background(Color.blue)
-                Text("name")
+                    Text(self.viewModel.name)
                 HStack {
-                    Text("24, München")
+                    Text((self.viewModel.age + ", " + self.viewModel.city))
                     Button(action: {
                         self.toggled(self.isPlaying)
                     } , label: {
@@ -60,7 +60,7 @@ struct MatchView_Previews: PreviewProvider {
     static var previews: some View {
         
         let url = URL(string: "https://firebasestorage.googleapis.com/v0/b/vinder-cb83a.appspot.com/o/media%2FRPTujanhFfc3zVLaKoPXvqXb8WH37?alt=media&token=9afc87af-d8be-4bce-8219-c808f44a5f9b")
-        return MatchView(url: url, toggled: { toggled in
+        return MatchView(viewModel: MatchViewModel(profile: Profile.preDataAccount), toggled: { toggled in
             print(toggled)
             
         })

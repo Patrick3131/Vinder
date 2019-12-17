@@ -16,6 +16,10 @@ struct Account {
     var profilesToSwipe: [MatchProfile]
     
     
+    // range Location
+    // range Age
+    
+    
     static var preData: Account = Account(profile: Profile.preDataAccount, loggedIn: false, matches: [MatchProfile.preDataAccount], profilesToSwipe: [MatchProfile.preDataAccount])
 }
 
