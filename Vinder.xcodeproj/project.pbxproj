@@ -59,6 +59,7 @@
 		CD6554EE23525C5300E6498A /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554ED23525C5300E6498A /* SearchBar.swift */; };
 		CD7C6F8623A79C8F002AEC3E /* MatchesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C6F8523A79C8F002AEC3E /* MatchesContainer.swift */; };
 		CD7C6F8823A7A0E1002AEC3E /* MatchesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C6F8723A7A0E1002AEC3E /* MatchesRowView.swift */; };
+		CD7C6F8B23A901F6002AEC3E /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = CD7C6F8A23A901F6002AEC3E /* ASCollectionView */; };
 		CD87E02023703A4300F75568 /* ConversationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87E01F23703A4300F75568 /* ConversationState.swift */; };
 		CD92B2F1236209A8006F0190 /* SwipingIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92B2F0236209A8006F0190 /* SwipingIconView.swift */; };
 		CD92B2F523621CF1006F0190 /* Swiping.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92B2F423621CF1006F0190 /* Swiping.swift */; };
@@ -255,6 +256,7 @@
 				CD24420E235327AC00C357EE /* SwiftUIFlux in Frameworks */,
 				C3530AD12A5B4174A991C067 /* Pods_Vinder.framework in Frameworks */,
 				CDAC6D402371597200D68072 /* SwiftDux in Frameworks */,
+				CD7C6F8B23A901F6002AEC3E /* ASCollectionView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -757,6 +759,7 @@
 			packageProductDependencies = (
 				CD24420D235327AC00C357EE /* SwiftUIFlux */,
 				CDAC6D3F2371597200D68072 /* SwiftDux */,
+				CD7C6F8A23A901F6002AEC3E /* ASCollectionView */,
 			);
 			productName = Vinder;
 			productReference = CD6554AB2351B91900E6498A /* Vinder.app */;
@@ -835,6 +838,7 @@
 			packageReferences = (
 				CD24420C235327AC00C357EE /* XCRemoteSwiftPackageReference "SwiftUIFlux" */,
 				CDAC6D3E2371597200D68072 /* XCRemoteSwiftPackageReference "SwiftDux" */,
+				CD7C6F8923A901F6002AEC3E /* XCRemoteSwiftPackageReference "ASCollectionView" */,
 			);
 			productRefGroup = CD6554AC2351B91900E6498A /* Products */;
 			projectDirPath = "";
@@ -1414,6 +1418,14 @@
 				minimumVersion = 0.4.5;
 			};
 		};
+		CD7C6F8923A901F6002AEC3E /* XCRemoteSwiftPackageReference "ASCollectionView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apptekstudios/ASCollectionView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.6;
+			};
+		};
 		CDAC6D3E2371597200D68072 /* XCRemoteSwiftPackageReference "SwiftDux" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/StevenLambion/SwiftDux.git";
@@ -1429,6 +1441,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CD24420C235327AC00C357EE /* XCRemoteSwiftPackageReference "SwiftUIFlux" */;
 			productName = SwiftUIFlux;
+		};
+		CD7C6F8A23A901F6002AEC3E /* ASCollectionView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD7C6F8923A901F6002AEC3E /* XCRemoteSwiftPackageReference "ASCollectionView" */;
+			productName = ASCollectionView;
 		};
 		CDAC6D3F2371597200D68072 /* SwiftDux */ = {
 			isa = XCSwiftPackageProductDependency;
