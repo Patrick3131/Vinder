@@ -39,11 +39,11 @@ struct TabBarView: ConnectedView {
                     Button(action: {
                         props.viewModel.logout()
                     }, label: {
-                        Text("props.viewModel.profile!.name").foregroundColor(.green)
+                        Text("Log out").foregroundColor(.green)
                         }).tabItem({
                             TabBarItem(text: "Chat", image: "pause.circle")
                         }).tag(Tab.chat)
-                    Text(props.viewModel.profile!.name ?? "").tabItem {
+                    MatchesContainer().tabItem {
                         TabBarItem(text: "Matches", image: "pause.circle")
                     }.tag(Tab.matches)
                     ExplorerContainer().tabItem {

@@ -39,9 +39,9 @@ struct MatchView: View {
                 VStack(alignment: .center) {
                     CacheImage(self.viewModel.pictureUrl)
                     .resizable()
-                    .scaledToFit()
-                    .frame(width: 180, height: 200, alignment: .center)
-                    .background(Color.blue)
+                    .cornerRadius(20)
+                        .aspectRatio(1, contentMode: .fit)
+                        .frame(width: geometry.size.width, height: geometry.size.width, alignment: .center)
                     Text(self.viewModel.name)
                 HStack {
                     Text((self.viewModel.age + ", " + self.viewModel.city))
@@ -51,7 +51,9 @@ struct MatchView: View {
                         Image(systemName:  (self.isPlaying ? "pause.circle" : "play.circle"))
                     })
                 }
-            }
+                }
+                .cornerRadius(20)
+                .background(Color.white)
         }
     }
 }

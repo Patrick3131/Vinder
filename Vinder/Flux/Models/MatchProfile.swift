@@ -8,7 +8,9 @@
 
 import Foundation
 
-struct MatchProfile {
+struct MatchProfile: Identifiable {
+    var id = UUID()
+    
     var profile: Profile
     var startedConversation: Bool = false
     var conversation: Conversation?
@@ -22,4 +24,7 @@ struct MatchProfile {
     }
     
     static var preDataAccount: MatchProfile = MatchProfile(profile: Profile.preDataAccount)
+    static var pre1: MatchProfile = MatchProfile(profile: Profile.preDataAccount)
+    static var pre2: MatchProfile = MatchProfile(profile: Profile.preDataAccount)
+    static var pre3: MatchProfile = MatchProfile(profile: Profile.preDataAccount)
 }
