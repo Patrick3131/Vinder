@@ -32,18 +32,15 @@ struct MatchesContainer: ConnectedView {
                 MatchView(viewModel: MatchViewModel(profile: item.profile), isPlaying: false, toggled: { _ in
                     
                     })
-                    .cornerRadius(20)
-
-                
                 })
 
             )
                 .layout {
                     
-                    .grid(layoutMode: .fixedNumberOfColumns(2),
+                    .grid(layoutMode: .adaptive(withMinItemSize:200),
                           itemSpacing: 15,
                           lineSpacing: 5,
-                          itemSize: .absolute(geometry.size.width * 0.7))
+                          itemSize: .estimated(300))
             }
             .background(Color.lightBackground)
         }
