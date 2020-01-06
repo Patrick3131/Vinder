@@ -76,6 +76,7 @@
 		CD93AE77238DAC0400CA5683 /* RecordBioAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93AE76238DAC0400CA5683 /* RecordBioAudio.swift */; };
 		CD93AE79238DAC2800CA5683 /* BioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93AE78238DAC2800CA5683 /* BioView.swift */; };
 		CD93AE7B238DAC7900CA5683 /* MatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93AE7A238DAC7900CA5683 /* MatchView.swift */; };
+		CD96B0C023C34C9F00C7E7EB /* MatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD96B0BF23C34C9F00C7E7EB /* MatchViewModel.swift */; };
 		CD972D0C236C57E90008F022 /* ProfileUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD972D0B236C57E90008F022 /* ProfileUpdate.swift */; };
 		CD972D0E236C580A0008F022 /* ProfilUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD972D0D236C580A0008F022 /* ProfilUpdating.swift */; };
 		CD972D10236C58230008F022 /* FirebaseProfilUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD972D0F236C58230008F022 /* FirebaseProfilUpdater.swift */; };
@@ -209,6 +210,7 @@
 		CD93AE76238DAC0400CA5683 /* RecordBioAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordBioAudio.swift; sourceTree = "<group>"; };
 		CD93AE78238DAC2800CA5683 /* BioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioView.swift; sourceTree = "<group>"; };
 		CD93AE7A238DAC7900CA5683 /* MatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchView.swift; sourceTree = "<group>"; };
+		CD96B0BF23C34C9F00C7E7EB /* MatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewModel.swift; sourceTree = "<group>"; };
 		CD972D0B236C57E90008F022 /* ProfileUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUpdate.swift; sourceTree = "<group>"; };
 		CD972D0D236C580A0008F022 /* ProfilUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilUpdating.swift; sourceTree = "<group>"; };
 		CD972D0F236C58230008F022 /* FirebaseProfilUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseProfilUpdater.swift; sourceTree = "<group>"; };
@@ -647,6 +649,7 @@
 			isa = PBXGroup;
 			children = (
 				CD93AE7A238DAC7900CA5683 /* MatchView.swift */,
+				CD96B0BF23C34C9F00C7E7EB /* MatchViewModel.swift */,
 				CD7C6F8723A7A0E1002AEC3E /* MatchesRowView.swift */,
 				CD7C6F8523A79C8F002AEC3E /* MatchesContainer.swift */,
 			);
@@ -1027,6 +1030,7 @@
 				CDD7BDB423588C9300F28C23 /* FirebaseAuthentication.swift in Sources */,
 				CDBE2D9523841950006F0DCC /* RecordView.swift in Sources */,
 				CDD7BDB223588B5C00F28C23 /* Authentication.swift in Sources */,
+				CD96B0C023C34C9F00C7E7EB /* MatchViewModel.swift in Sources */,
 				CD2A6DA22364A5D500EEDDA5 /* TabBarItem.swift in Sources */,
 				CD6554EA235256F900E6498A /* ConversationPreview.swift in Sources */,
 				CD24421D2354802B00C357EE /* Profile.swift in Sources */,

@@ -34,7 +34,7 @@ struct MatchesContainer: ConnectedView {
                     })
                 })
 
-            )
+                )
                 .layout {
                     
                     .grid(layoutMode: .adaptive(withMinItemSize:200),
