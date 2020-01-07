@@ -27,23 +27,28 @@ struct MatchesContainer: ConnectedView {
     }
     
     func body(props: MatchesContainer.Props) -> some View {
-        GeometryReader { geometry in
-            ASCollectionView(section: ASCollectionViewSection(id: 0, data: props.profiles, contentBuilder: { item, _ in
-                MatchView(viewModel: MatchViewModel(profile: item.profile), isPlaying: false, toggled: { _ in
+            NavigationView {
+                ASCollectionView(section: ASCollectionViewSection(id: 0, data: props.profiles, contentBuilder: { item, _ in
+                    NavigationLink(destination: MatchView(viewModel: MatchViewModel(profile: item.profile), isPlaying: false, toggled: { _ in
                     
+                    }) ){
+                        MatchView(viewModel: MatchViewModel(profile: item.profile), isPlaying: false, toggled: { _ in
+                        
+                        })
+                    }
                     })
-                })
 
-                )
-                .layout {
-                    
-                    .grid(layoutMode: .adaptive(withMinItemSize:200),
-                          itemSpacing: 15,
-                          lineSpacing: 5,
-                          itemSize: .estimated(300))
+                    )
+                    .layout {
+                        
+                        .grid(layoutMode: .adaptive(withMinItemSize:200),
+                              itemSpacing: 15,
+                              lineSpacing: 5,
+                              itemSize: .estimated(300))
+                }
+                .navigationBarTitle(Text("Matches"))
             }
-            .background(Color.lightBackground)
-        }
+            
     }
 }
 
