@@ -27,6 +27,8 @@
 		CD2A6DA62364B1DA00EEDDA5 /* SwipingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2A6DA52364B1DA00EEDDA5 /* SwipingState.swift */; };
 		CD2A6DA82364B25B00EEDDA5 /* SwipingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2A6DA72364B25B00EEDDA5 /* SwipingReducer.swift */; };
 		CD2A6DAA2364B2A700EEDDA5 /* SwipingActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2A6DA92364B2A700EEDDA5 /* SwipingActions.swift */; };
+		CD2E67E023C891670040D993 /* PreChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2E67DF23C891670040D993 /* PreChatView.swift */; };
+		CD2E67E323C892430040D993 /* ProfileCountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2E67E223C892430040D993 /* ProfileCountdownView.swift */; };
 		CD3B85E5236860AC0007C0D4 /* SwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3B85E4236860AC0007C0D4 /* SwipeableView.swift */; };
 		CD472F4F2379A26B00DFCAB7 /* KingfisherBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F4E2379A26B00DFCAB7 /* KingfisherBridge.swift */; };
 		CD472F522379F43D00DFCAB7 /* Extension+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F512379F43D00DFCAB7 /* Extension+Array.swift */; };
@@ -156,6 +158,8 @@
 		CD2A6DA52364B1DA00EEDDA5 /* SwipingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingState.swift; sourceTree = "<group>"; };
 		CD2A6DA72364B25B00EEDDA5 /* SwipingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingReducer.swift; sourceTree = "<group>"; };
 		CD2A6DA92364B2A700EEDDA5 /* SwipingActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingActions.swift; sourceTree = "<group>"; };
+		CD2E67DF23C891670040D993 /* PreChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreChatView.swift; sourceTree = "<group>"; };
+		CD2E67E223C892430040D993 /* ProfileCountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCountdownView.swift; sourceTree = "<group>"; };
 		CD3B85E4236860AC0007C0D4 /* SwipeableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableView.swift; sourceTree = "<group>"; };
 		CD472F4E2379A26B00DFCAB7 /* KingfisherBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherBridge.swift; sourceTree = "<group>"; };
 		CD472F512379F43D00DFCAB7 /* Extension+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Array.swift"; sourceTree = "<group>"; };
@@ -438,6 +442,15 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		CD2E67E123C892260040D993 /* PreChat */ = {
+			isa = PBXGroup;
+			children = (
+				CD2E67DF23C891670040D993 /* PreChatView.swift */,
+				CD2E67E223C892430040D993 /* ProfileCountdownView.swift */,
+			);
+			path = PreChat;
+			sourceTree = "<group>";
+		};
 		CD472F502379F40A00DFCAB7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -560,6 +573,7 @@
 		CD6554E02351D5BC00E6498A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CD2E67E123C892260040D993 /* PreChat */,
 				CD6554E32351D9CF00E6498A /* ProfilView.swift */,
 				CD6554E72352533F00E6498A /* MatchesView.swift */,
 				CD6554E9235256F900E6498A /* ConversationPreview.swift */,
@@ -1016,6 +1030,7 @@
 				CDD7BDA823551EE100F28C23 /* FirebaseDataService.swift in Sources */,
 				CD472F68237ED2A000DFCAB7 /* MediumType.swift in Sources */,
 				CDFA9C472360AA3A0069C341 /* ProfilInfoViewModel.swift in Sources */,
+				CD2E67E023C891670040D993 /* PreChatView.swift in Sources */,
 				CD4890BC23746BC400AD57CD /* LocationAction.swift in Sources */,
 				CDDD9759237F1BC200E462EF /* PickerWrapper.swift in Sources */,
 				CDFA9C4A2360C2150069C341 /* ViewBuilder.swift in Sources */,
@@ -1075,6 +1090,7 @@
 				CD472F522379F43D00DFCAB7 /* Extension+Array.swift in Sources */,
 				CD2442212354804700C357EE /* Message.swift in Sources */,
 				CD472F6A237ED2C700DFCAB7 /* DataServiceConfig.swift in Sources */,
+				CD2E67E323C892430040D993 /* ProfileCountdownView.swift in Sources */,
 				CDDD9755237EF93A00E462EF /* ImageProcessingStatus.swift in Sources */,
 				CDFA9C432360A2F60069C341 /* CardView.swift in Sources */,
 				CDFA9C452360A5DE0069C341 /* ProfilInfoView.swift in Sources */,
