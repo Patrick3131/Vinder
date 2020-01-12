@@ -16,11 +16,12 @@ struct MatchProfile: Identifiable {
     var conversation: Conversation?
     var status: Status = .new
     
+    
     enum Status {
         case new
-        case thisProfilLikesOwner
-        case likedByOwner
-        case match
+        case thisProfilLikesOwner(date: Date)
+        case likedByOwner(date: Date)
+        case match(date: Date)
     }
     
     static var preDataAccount: MatchProfile = MatchProfile(profile: Profile.preDataAccount)
