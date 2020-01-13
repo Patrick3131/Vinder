@@ -29,6 +29,8 @@
 		CD2A6DAA2364B2A700EEDDA5 /* SwipingActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2A6DA92364B2A700EEDDA5 /* SwipingActions.swift */; };
 		CD2E67E023C891670040D993 /* PreChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2E67DF23C891670040D993 /* PreChatView.swift */; };
 		CD2E67E323C892430040D993 /* ProfileCountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2E67E223C892430040D993 /* ProfileCountdownView.swift */; };
+		CD2E67E523CB5A050040D993 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2E67E423CB5A050040D993 /* BadgeView.swift */; };
+		CD2E67E723CCE9EB0040D993 /* OpenCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2E67E623CCE9EB0040D993 /* OpenCircle.swift */; };
 		CD3B85E5236860AC0007C0D4 /* SwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3B85E4236860AC0007C0D4 /* SwipeableView.swift */; };
 		CD472F4F2379A26B00DFCAB7 /* KingfisherBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F4E2379A26B00DFCAB7 /* KingfisherBridge.swift */; };
 		CD472F522379F43D00DFCAB7 /* Extension+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F512379F43D00DFCAB7 /* Extension+Array.swift */; };
@@ -160,6 +162,8 @@
 		CD2A6DA92364B2A700EEDDA5 /* SwipingActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingActions.swift; sourceTree = "<group>"; };
 		CD2E67DF23C891670040D993 /* PreChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreChatView.swift; sourceTree = "<group>"; };
 		CD2E67E223C892430040D993 /* ProfileCountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCountdownView.swift; sourceTree = "<group>"; };
+		CD2E67E423CB5A050040D993 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
+		CD2E67E623CCE9EB0040D993 /* OpenCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCircle.swift; sourceTree = "<group>"; };
 		CD3B85E4236860AC0007C0D4 /* SwipeableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableView.swift; sourceTree = "<group>"; };
 		CD472F4E2379A26B00DFCAB7 /* KingfisherBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherBridge.swift; sourceTree = "<group>"; };
 		CD472F512379F43D00DFCAB7 /* Extension+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Array.swift"; sourceTree = "<group>"; };
@@ -446,6 +450,8 @@
 			isa = PBXGroup;
 			children = (
 				CD2E67DF23C891670040D993 /* PreChatView.swift */,
+				CD2E67E623CCE9EB0040D993 /* OpenCircle.swift */,
+				CD2E67E423CB5A050040D993 /* BadgeView.swift */,
 				CD2E67E223C892430040D993 /* ProfileCountdownView.swift */,
 			);
 			path = PreChat;
@@ -1023,6 +1029,7 @@
 				CDBE2D9A2386BDB3006F0DCC /* TextFieldWrapper.swift in Sources */,
 				CD6554EC235258C900E6498A /* MatchesHome.swift in Sources */,
 				CD472F5F237D388700DFCAB7 /* ImagePickerWrapper.swift in Sources */,
+				CD2E67E723CCE9EB0040D993 /* OpenCircle.swift in Sources */,
 				CD87E02023703A4300F75568 /* ConversationState.swift in Sources */,
 				CD93AE75238DABE400CA5683 /* AddBioViewModel.swift in Sources */,
 				CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */,
@@ -1079,6 +1086,7 @@
 				CD7C6F8623A79C8F002AEC3E /* MatchesContainer.swift in Sources */,
 				CD6554E82352533F00E6498A /* MatchesView.swift in Sources */,
 				CD6554B32351B91900E6498A /* ContentView.swift in Sources */,
+				CD2E67E523CB5A050040D993 /* BadgeView.swift in Sources */,
 				CD2A6DA42364A64600EEDDA5 /* TabBarViewModel.swift in Sources */,
 				CD24421F2354803900C357EE /* Conversation.swift in Sources */,
 				CDFA9C3E235FA0AC0069C341 /* Draggable.swift in Sources */,
