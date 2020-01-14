@@ -22,7 +22,7 @@ struct ProfileCountDownHoursView: View {
             Text(viewModel.hours)
                 .frame(width: 60, height: 20, alignment: .center)
                 .padding(.horizontal)
-                .background(Color.gray)
+                .background(Color.lightBackground)
             .cornerRadius(25)
             
         }

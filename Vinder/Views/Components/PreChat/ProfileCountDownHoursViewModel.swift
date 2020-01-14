@@ -13,14 +13,13 @@ struct ProfileCountDownHoursViewModel {
     private var unit:LocalizedStringKey = "Hours"
     
     
-    
     var percentageFull: Double {
         return 50
     }
     
     var hours: String {
         
-        return "24 \(unit)"
+        return "24 Std"
     }
     
     var pictureUrl: URL {
