@@ -32,6 +32,6 @@ struct PreviewMessageContentView: View {
 }
 struct PreviewMessageContentView_Previews: PreviewProvider {
     static var previews: some View {
-        PreviewMessageContentView()
+        PreviewMessageContentView().frame(width: 300, height: 50, alignment: .center)
     }
 }

@@ -97,6 +97,7 @@
 		CDA1471723CE6373003BE3F8 /* PreviewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1471623CE6373003BE3F8 /* PreviewMessageView.swift */; };
 		CDA1471923CE6840003BE3F8 /* PreviewMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1471823CE6840003BE3F8 /* PreviewMessageViewModel.swift */; };
 		CDA1471B23CE685E003BE3F8 /* PreviewMessageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1471A23CE685E003BE3F8 /* PreviewMessageContentView.swift */; };
+		CDA1471E23CE698F003BE3F8 /* MessageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1471D23CE698F003BE3F8 /* MessageContainer.swift */; };
 		CDAC6D402371597200D68072 /* SwiftDux in Frameworks */ = {isa = PBXBuildFile; productRef = CDAC6D3F2371597200D68072 /* SwiftDux */; };
 		CDBE2D922382C888006F0DCC /* AddBiography.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBE2D912382C888006F0DCC /* AddBiography.swift */; };
 		CDBE2D9523841950006F0DCC /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBE2D9423841950006F0DCC /* RecordView.swift */; };
@@ -246,6 +247,7 @@
 		CDA1471623CE6373003BE3F8 /* PreviewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMessageView.swift; sourceTree = "<group>"; };
 		CDA1471823CE6840003BE3F8 /* PreviewMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMessageViewModel.swift; sourceTree = "<group>"; };
 		CDA1471A23CE685E003BE3F8 /* PreviewMessageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMessageContentView.swift; sourceTree = "<group>"; };
+		CDA1471D23CE698F003BE3F8 /* MessageContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageContainer.swift; sourceTree = "<group>"; };
 		CDBE2D912382C888006F0DCC /* AddBiography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBiography.swift; sourceTree = "<group>"; };
 		CDBE2D9423841950006F0DCC /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		CDBE2D972386BD98006F0DCC /* DatePickerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerWrapper.swift; sourceTree = "<group>"; };
@@ -729,9 +731,18 @@
 			path = PreviewMessageView;
 			sourceTree = "<group>";
 		};
+		CDA1471C23CE6931003BE3F8 /* MessageContainer */ = {
+			isa = PBXGroup;
+			children = (
+				CDA1471D23CE698F003BE3F8 /* MessageContainer.swift */,
+			);
+			path = MessageContainer;
+			sourceTree = "<group>";
+		};
 		CDAC6D4123718AE000D68072 /* Containers */ = {
 			isa = PBXGroup;
 			children = (
+				CDA1471C23CE6931003BE3F8 /* MessageContainer */,
 				CD93AE73238DABBB00CA5683 /* MatchesContainer */,
 				CD2432A623787352004C916F /* ProfilContainer */,
 				CDFA9C38235F9BD50069C341 /* ExplorerContainer */,
@@ -1131,6 +1142,7 @@
 				CD6554B32351B91900E6498A /* ContentView.swift in Sources */,
 				CD2A6DA42364A64600EEDDA5 /* TabBarViewModel.swift in Sources */,
 				CD24421F2354803900C357EE /* Conversation.swift in Sources */,
+				CDA1471E23CE698F003BE3F8 /* MessageContainer.swift in Sources */,
 				CDFA9C3E235FA0AC0069C341 /* Draggable.swift in Sources */,
 				CDDD9757237EFEE000E462EF /* SinglePictureViewModel.swift in Sources */,
 				CD3B85E5236860AC0007C0D4 /* SwipeableView.swift in Sources */,
