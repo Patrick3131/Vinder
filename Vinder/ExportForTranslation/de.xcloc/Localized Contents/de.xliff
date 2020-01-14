@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="Vinder/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="de">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.3" build-num="11C29"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>Vinder</source>
+        <note>Bundle name</note>
+      </trans-unit>
+      <trans-unit id="NSLocationWhenInUseUsageDescription" xml:space="preserve">
+        <source>Location tracking to find matches in your area</source>
+        <note>Privacy - Location When In Use Usage Description</note>
+      </trans-unit>
+      <trans-unit id="NSMicrophoneUsageDescription" xml:space="preserve">
+        <source>Microphone usage to record voice messages</source>
+        <note>Privacy - Microphone Usage Description</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="Vinder/Views/en.lproj/Localizable.strings" source-language="en" target-language="de" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="11.3" build-num="11C29"/>
+    </header>
+    <body>
+      <trans-unit id="%@" xml:space="preserve">
+        <source>%@</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id=", " xml:space="preserve">
+        <source>, </source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Choose awesome pictures for your profile" xml:space="preserve">
+        <source>Choose awesome pictures for your profile</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Curate your profile" xml:space="preserve">
+        <source>Curate your profile</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Done" xml:space="preserve">
+        <source>Done</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Hello World!" xml:space="preserve">
+        <source>Hello World!</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Hours" xml:space="preserve">
+        <source>hrs.</source>
+        <target>Std.</target>
+        <note>Localizable.strings
+  Vinder
+
+  Created by Patrick Fischer on 14.01.20.
+  Copyright © 2020 Patrick Fischer. All rights reserved.</note>
+      </trans-unit>
+      <trans-unit id="Jessy, 21" xml:space="preserve">
+        <source>Jessy, 21</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Log out" xml:space="preserve">
+        <source>Log out</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Matches" xml:space="preserve">
+        <source>Matches</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Tell something about yourself:" xml:space="preserve">
+        <source>Tell something about yourself:</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

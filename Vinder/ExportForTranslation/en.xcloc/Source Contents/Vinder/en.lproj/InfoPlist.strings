@@ -1,0 +1,6 @@
+/* Bundle name */
+"CFBundleName" = "Vinder";
+/* Privacy - Location When In Use Usage Description */
+"NSLocationWhenInUseUsageDescription" = "Location tracking to find matches in your area";
+/* Privacy - Microphone Usage Description */
+"NSMicrophoneUsageDescription" = "Microphone usage to record voice messages";
