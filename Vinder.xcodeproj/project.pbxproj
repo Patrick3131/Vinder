@@ -32,6 +32,9 @@
 		CD2E67E523CB5A050040D993 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2E67E423CB5A050040D993 /* BadgeView.swift */; };
 		CD2E67E723CCE9EB0040D993 /* OpenCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2E67E623CCE9EB0040D993 /* OpenCircle.swift */; };
 		CD2E67E923CD07170040D993 /* CircleProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2E67E823CD07170040D993 /* CircleProfileView.swift */; };
+		CD2E67EB23CD0F0F0040D993 /* ProfileCountDownHoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2E67EA23CD0F0F0040D993 /* ProfileCountDownHoursView.swift */; };
+		CD2E67EE23CE016A0040D993 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD2E67F023CE016A0040D993 /* Localizable.strings */; };
+		CD2E67F223CE0A3C0040D993 /* ProfileCountDownHoursViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2E67F123CE0A3C0040D993 /* ProfileCountDownHoursViewModel.swift */; };
 		CD3B85E5236860AC0007C0D4 /* SwipeableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3B85E4236860AC0007C0D4 /* SwipeableView.swift */; };
 		CD472F4F2379A26B00DFCAB7 /* KingfisherBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F4E2379A26B00DFCAB7 /* KingfisherBridge.swift */; };
 		CD472F522379F43D00DFCAB7 /* Extension+Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD472F512379F43D00DFCAB7 /* Extension+Array.swift */; };
@@ -166,6 +169,11 @@
 		CD2E67E423CB5A050040D993 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		CD2E67E623CCE9EB0040D993 /* OpenCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenCircle.swift; sourceTree = "<group>"; };
 		CD2E67E823CD07170040D993 /* CircleProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProfileView.swift; sourceTree = "<group>"; };
+		CD2E67EA23CD0F0F0040D993 /* ProfileCountDownHoursView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCountDownHoursView.swift; sourceTree = "<group>"; };
+		CD2E67EF23CE016A0040D993 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CD2E67F123CE0A3C0040D993 /* ProfileCountDownHoursViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCountDownHoursViewModel.swift; sourceTree = "<group>"; };
+		CD2E67F323CE0BB60040D993 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		CD2E67F423CE0BB60040D993 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CD3B85E4236860AC0007C0D4 /* SwipeableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeableView.swift; sourceTree = "<group>"; };
 		CD472F4E2379A26B00DFCAB7 /* KingfisherBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingfisherBridge.swift; sourceTree = "<group>"; };
 		CD472F512379F43D00DFCAB7 /* Extension+Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Array.swift"; sourceTree = "<group>"; };
@@ -455,6 +463,8 @@
 				CD2E67E623CCE9EB0040D993 /* OpenCircle.swift */,
 				CD2E67E423CB5A050040D993 /* BadgeView.swift */,
 				CD2E67E223C892430040D993 /* ProfileCountdownView.swift */,
+				CD2E67EA23CD0F0F0040D993 /* ProfileCountDownHoursView.swift */,
+				CD2E67F123CE0A3C0040D993 /* ProfileCountDownHoursViewModel.swift */,
 				CD2E67E823CD07170040D993 /* CircleProfileView.swift */,
 			);
 			path = PreChat;
@@ -575,6 +585,7 @@
 				CD6554E02351D5BC00E6498A /* Components */,
 				CD472F4E2379A26B00DFCAB7 /* KingfisherBridge.swift */,
 				CD7C6F8C23AA364C002AEC3E /* Color+Extensions.swift */,
+				CD2E67F023CE016A0040D993 /* Localizable.strings */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -862,6 +873,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = CD6554A22351B91900E6498A;
 			packageReferences = (
@@ -886,6 +898,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDD7BDAC2358610500F28C23 /* README.md in Resources */,
+				CD2E67EE23CE016A0040D993 /* Localizable.strings in Resources */,
 				CD6554BB2351B91B00E6498A /* LaunchScreen.storyboard in Resources */,
 				CDD7BDB6235891D300F28C23 /* GoogleService-Info.plist in Resources */,
 				CD6554B82351B91B00E6498A /* Preview Assets.xcassets in Resources */,
@@ -1031,7 +1044,9 @@
 				CD93AE7B238DAC7900CA5683 /* MatchView.swift in Sources */,
 				CDBE2D9A2386BDB3006F0DCC /* TextFieldWrapper.swift in Sources */,
 				CD6554EC235258C900E6498A /* MatchesHome.swift in Sources */,
+				CD2E67EB23CD0F0F0040D993 /* ProfileCountDownHoursView.swift in Sources */,
 				CD472F5F237D388700DFCAB7 /* ImagePickerWrapper.swift in Sources */,
+				CD2E67F223CE0A3C0040D993 /* ProfileCountDownHoursViewModel.swift in Sources */,
 				CD2E67E723CCE9EB0040D993 /* OpenCircle.swift in Sources */,
 				CD87E02023703A4300F75568 /* ConversationState.swift in Sources */,
 				CD93AE75238DABE400CA5683 /* AddBioViewModel.swift in Sources */,
@@ -1149,10 +1164,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		CD2E67F023CE016A0040D993 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD2E67EF23CE016A0040D993 /* en */,
+				CD2E67F423CE0BB60040D993 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		CD6554B92351B91B00E6498A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CD6554BA2351B91B00E6498A /* Base */,
+				CD2E67F323CE0BB60040D993 /* de */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1164,6 +1189,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1224,6 +1250,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
