@@ -19,7 +19,7 @@ struct ProfileCountDownHoursViewModel {
     
     var hours: String {
         
-        return "24 Std"
+        return "12 Std."
     }
     
     var pictureUrl: URL {

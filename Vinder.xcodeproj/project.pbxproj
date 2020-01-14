@@ -94,6 +94,9 @@
 		CD972D21236E204D0008F022 /* SinglePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD972D20236E204D0008F022 /* SinglePicture.swift */; };
 		CDA1471223CE5565003BE3F8 /* PreChatTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1471123CE5565003BE3F8 /* PreChatTextView.swift */; };
 		CDA1471423CE563D003BE3F8 /* BigRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1471323CE563D003BE3F8 /* BigRecordView.swift */; };
+		CDA1471723CE6373003BE3F8 /* PreviewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1471623CE6373003BE3F8 /* PreviewMessageView.swift */; };
+		CDA1471923CE6840003BE3F8 /* PreviewMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1471823CE6840003BE3F8 /* PreviewMessageViewModel.swift */; };
+		CDA1471B23CE685E003BE3F8 /* PreviewMessageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1471A23CE685E003BE3F8 /* PreviewMessageContentView.swift */; };
 		CDAC6D402371597200D68072 /* SwiftDux in Frameworks */ = {isa = PBXBuildFile; productRef = CDAC6D3F2371597200D68072 /* SwiftDux */; };
 		CDBE2D922382C888006F0DCC /* AddBiography.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBE2D912382C888006F0DCC /* AddBiography.swift */; };
 		CDBE2D9523841950006F0DCC /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBE2D9423841950006F0DCC /* RecordView.swift */; };
@@ -240,6 +243,9 @@
 		CD972F609C603009BA9AE251 /* Pods_VinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA1471123CE5565003BE3F8 /* PreChatTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreChatTextView.swift; sourceTree = "<group>"; };
 		CDA1471323CE563D003BE3F8 /* BigRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigRecordView.swift; sourceTree = "<group>"; };
+		CDA1471623CE6373003BE3F8 /* PreviewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMessageView.swift; sourceTree = "<group>"; };
+		CDA1471823CE6840003BE3F8 /* PreviewMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMessageViewModel.swift; sourceTree = "<group>"; };
+		CDA1471A23CE685E003BE3F8 /* PreviewMessageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMessageContentView.swift; sourceTree = "<group>"; };
 		CDBE2D912382C888006F0DCC /* AddBiography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBiography.swift; sourceTree = "<group>"; };
 		CDBE2D9423841950006F0DCC /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		CDBE2D972386BD98006F0DCC /* DatePickerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerWrapper.swift; sourceTree = "<group>"; };
@@ -596,6 +602,7 @@
 		CD6554E02351D5BC00E6498A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CDA1471523CE634A003BE3F8 /* PreviewMessageView */,
 				CD2E67E123C892260040D993 /* PreChat */,
 				CD6554E32351D9CF00E6498A /* ProfilView.swift */,
 				CD6554E72352533F00E6498A /* MatchesView.swift */,
@@ -710,6 +717,16 @@
 				CD972D16236C8ECD0008F022 /* FirebaseProfileReader.swift */,
 			);
 			path = ProfileReader;
+			sourceTree = "<group>";
+		};
+		CDA1471523CE634A003BE3F8 /* PreviewMessageView */ = {
+			isa = PBXGroup;
+			children = (
+				CDA1471623CE6373003BE3F8 /* PreviewMessageView.swift */,
+				CDA1471823CE6840003BE3F8 /* PreviewMessageViewModel.swift */,
+				CDA1471A23CE685E003BE3F8 /* PreviewMessageContentView.swift */,
+			);
+			path = PreviewMessageView;
 			sourceTree = "<group>";
 		};
 		CDAC6D4123718AE000D68072 /* Containers */ = {
@@ -1056,9 +1073,11 @@
 				CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */,
 				CD972D17236C8ECD0008F022 /* FirebaseProfileReader.swift in Sources */,
 				CDD7BDA823551EE100F28C23 /* FirebaseDataService.swift in Sources */,
+				CDA1471923CE6840003BE3F8 /* PreviewMessageViewModel.swift in Sources */,
 				CD472F68237ED2A000DFCAB7 /* MediumType.swift in Sources */,
 				CDFA9C472360AA3A0069C341 /* ProfilInfoViewModel.swift in Sources */,
 				CD2E67E023C891670040D993 /* PreChatView.swift in Sources */,
+				CDA1471723CE6373003BE3F8 /* PreviewMessageView.swift in Sources */,
 				CD4890BC23746BC400AD57CD /* LocationAction.swift in Sources */,
 				CDDD9759237F1BC200E462EF /* PickerWrapper.swift in Sources */,
 				CDFA9C4A2360C2150069C341 /* ViewBuilder.swift in Sources */,
@@ -1119,6 +1138,7 @@
 				CD972D10236C58230008F022 /* FirebaseProfilUpdater.swift in Sources */,
 				CD93AE79238DAC2800CA5683 /* BioView.swift in Sources */,
 				CD472F522379F43D00DFCAB7 /* Extension+Array.swift in Sources */,
+				CDA1471B23CE685E003BE3F8 /* PreviewMessageContentView.swift in Sources */,
 				CD2442212354804700C357EE /* Message.swift in Sources */,
 				CD472F6A237ED2C700DFCAB7 /* DataServiceConfig.swift in Sources */,
 				CD2E67E323C892430040D993 /* ProfileCountdownView.swift in Sources */,
