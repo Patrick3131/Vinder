@@ -50,6 +50,8 @@
 		CD4890BA23746B9700AD57CD /* MiddlewareProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890B923746B9700AD57CD /* MiddlewareProvider.swift */; };
 		CD4890BC23746BC400AD57CD /* LocationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890BB23746BC400AD57CD /* LocationAction.swift */; };
 		CD4890BE23746BFB00AD57CD /* VMiddlewareProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890BD23746BFB00AD57CD /* VMiddlewareProvider.swift */; };
+		CD4C554923CF52F4007A7383 /* PictureDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4C554823CF52F4007A7383 /* PictureDetailsView.swift */; };
+		CD4C554B23CF5708007A7383 /* PictureDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4C554A23CF5708007A7383 /* PictureDetailsViewModel.swift */; };
 		CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554AE2351B91900E6498A /* AppDelegate.swift */; };
 		CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B02351B91900E6498A /* SceneDelegate.swift */; };
 		CD6554B32351B91900E6498A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B22351B91900E6498A /* ContentView.swift */; };
@@ -194,6 +196,8 @@
 		CD4890B923746B9700AD57CD /* MiddlewareProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddlewareProvider.swift; sourceTree = "<group>"; };
 		CD4890BB23746BC400AD57CD /* LocationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAction.swift; sourceTree = "<group>"; };
 		CD4890BD23746BFB00AD57CD /* VMiddlewareProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMiddlewareProvider.swift; sourceTree = "<group>"; };
+		CD4C554823CF52F4007A7383 /* PictureDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDetailsView.swift; sourceTree = "<group>"; };
+		CD4C554A23CF5708007A7383 /* PictureDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDetailsViewModel.swift; sourceTree = "<group>"; };
 		CD6554AB2351B91900E6498A /* Vinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6554AE2351B91900E6498A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD6554B02351B91900E6498A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -508,6 +512,15 @@
 			path = CRUD;
 			sourceTree = "<group>";
 		};
+		CD4C554723CF511D007A7383 /* ProfilOverviewView */ = {
+			isa = PBXGroup;
+			children = (
+				CD4C554823CF52F4007A7383 /* PictureDetailsView.swift */,
+				CD4C554A23CF5708007A7383 /* PictureDetailsViewModel.swift */,
+			);
+			path = ProfilOverviewView;
+			sourceTree = "<group>";
+		};
 		CD6554A22351B91900E6498A = {
 			isa = PBXGroup;
 			children = (
@@ -604,6 +617,7 @@
 		CD6554E02351D5BC00E6498A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CD4C554723CF511D007A7383 /* ProfilOverviewView */,
 				CDA1471523CE634A003BE3F8 /* PreviewMessageView */,
 				CD2E67E123C892260040D993 /* PreChat */,
 				CD6554E32351D9CF00E6498A /* ProfilView.swift */,
@@ -1062,6 +1076,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDDD9753237EF4BD00E462EF /* ActivityIndicator.swift in Sources */,
+				CD4C554923CF52F4007A7383 /* PictureDetailsView.swift in Sources */,
 				CD93AE6E238D9FFB00CA5683 /* AudioPlaying.swift in Sources */,
 				CD7C6F8823A7A0E1002AEC3E /* MatchesRowView.swift in Sources */,
 				CDD7BDAA2355202000F28C23 /* AudioService.swift in Sources */,
@@ -1140,6 +1155,7 @@
 				CD7C6F8623A79C8F002AEC3E /* MatchesContainer.swift in Sources */,
 				CD6554E82352533F00E6498A /* MatchesView.swift in Sources */,
 				CD6554B32351B91900E6498A /* ContentView.swift in Sources */,
+				CD4C554B23CF5708007A7383 /* PictureDetailsViewModel.swift in Sources */,
 				CD2A6DA42364A64600EEDDA5 /* TabBarViewModel.swift in Sources */,
 				CD24421F2354803900C357EE /* Conversation.swift in Sources */,
 				CDA1471E23CE698F003BE3F8 /* MessageContainer.swift in Sources */,
