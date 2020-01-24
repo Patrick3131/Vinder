@@ -52,6 +52,7 @@
 		CD4890BE23746BFB00AD57CD /* VMiddlewareProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4890BD23746BFB00AD57CD /* VMiddlewareProvider.swift */; };
 		CD4C554923CF52F4007A7383 /* PictureDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4C554823CF52F4007A7383 /* PictureDetailsView.swift */; };
 		CD4C554B23CF5708007A7383 /* PictureDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4C554A23CF5708007A7383 /* PictureDetailsViewModel.swift */; };
+		CD4C554D23CF5988007A7383 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4C554C23CF5988007A7383 /* LocationView.swift */; };
 		CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554AE2351B91900E6498A /* AppDelegate.swift */; };
 		CD6554B12351B91900E6498A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B02351B91900E6498A /* SceneDelegate.swift */; };
 		CD6554B32351B91900E6498A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6554B22351B91900E6498A /* ContentView.swift */; };
@@ -107,6 +108,7 @@
 		CDBE2D9A2386BDB3006F0DCC /* TextFieldWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBE2D992386BDB3006F0DCC /* TextFieldWrapper.swift */; };
 		CDCA463F2370653E00E72C6C /* TrackLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCA463E2370653E00E72C6C /* TrackLocation.swift */; };
 		CDCF3EDF2369AC77005C876A /* AnimatedPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */; };
+		CDD1E2BE23DB99E800B2B4FB /* PinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD1E2BD23DB99E800B2B4FB /* PinView.swift */; };
 		CDD7BDA823551EE100F28C23 /* FirebaseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDA723551EE100F28C23 /* FirebaseDataService.swift */; };
 		CDD7BDAA2355202000F28C23 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD7BDA92355202000F28C23 /* AudioService.swift */; };
 		CDD7BDAC2358610500F28C23 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CDD7BDAB2358610500F28C23 /* README.md */; };
@@ -198,6 +200,7 @@
 		CD4890BD23746BFB00AD57CD /* VMiddlewareProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMiddlewareProvider.swift; sourceTree = "<group>"; };
 		CD4C554823CF52F4007A7383 /* PictureDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDetailsView.swift; sourceTree = "<group>"; };
 		CD4C554A23CF5708007A7383 /* PictureDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDetailsViewModel.swift; sourceTree = "<group>"; };
+		CD4C554C23CF5988007A7383 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		CD6554AB2351B91900E6498A /* Vinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6554AE2351B91900E6498A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD6554B02351B91900E6498A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -258,6 +261,7 @@
 		CDBE2D992386BDB3006F0DCC /* TextFieldWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWrapper.swift; sourceTree = "<group>"; };
 		CDCA463E2370653E00E72C6C /* TrackLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLocation.swift; sourceTree = "<group>"; };
 		CDCF3EDE2369AC77005C876A /* AnimatedPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedPlaceholder.swift; sourceTree = "<group>"; };
+		CDD1E2BD23DB99E800B2B4FB /* PinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinView.swift; sourceTree = "<group>"; };
 		CDD7BDA723551EE100F28C23 /* FirebaseDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDataService.swift; sourceTree = "<group>"; };
 		CDD7BDA92355202000F28C23 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
 		CDD7BDAB2358610500F28C23 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -517,6 +521,8 @@
 			children = (
 				CD4C554823CF52F4007A7383 /* PictureDetailsView.swift */,
 				CD4C554A23CF5708007A7383 /* PictureDetailsViewModel.swift */,
+				CD4C554C23CF5988007A7383 /* LocationView.swift */,
+				CDD1E2BD23DB99E800B2B4FB /* PinView.swift */,
 			);
 			path = ProfilOverviewView;
 			sourceTree = "<group>";
@@ -1156,10 +1162,12 @@
 				CD6554E82352533F00E6498A /* MatchesView.swift in Sources */,
 				CD6554B32351B91900E6498A /* ContentView.swift in Sources */,
 				CD4C554B23CF5708007A7383 /* PictureDetailsViewModel.swift in Sources */,
+				CD4C554D23CF5988007A7383 /* LocationView.swift in Sources */,
 				CD2A6DA42364A64600EEDDA5 /* TabBarViewModel.swift in Sources */,
 				CD24421F2354803900C357EE /* Conversation.swift in Sources */,
 				CDA1471E23CE698F003BE3F8 /* MessageContainer.swift in Sources */,
 				CDFA9C3E235FA0AC0069C341 /* Draggable.swift in Sources */,
+				CDD1E2BE23DB99E800B2B4FB /* PinView.swift in Sources */,
 				CDDD9757237EFEE000E462EF /* SinglePictureViewModel.swift in Sources */,
 				CD3B85E5236860AC0007C0D4 /* SwipeableView.swift in Sources */,
 				CD93AE70238DA02300CA5683 /* AudioPlayer.swift in Sources */,
