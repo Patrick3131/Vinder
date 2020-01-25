@@ -9,20 +9,32 @@
 import SwiftUI
 
 struct LocationView: View {
+    
+    var locationName: String
     var body: some View {
-        HStack {
-            PinView()
-            
-                .frame(width: 25, height: 25, alignment: .center)
+        VStack {
+            HStack {
+                PinView()
                 
-            Text("Location")
+                    .frame(width: 25, height: 25, alignment: .center)
+                    
+                Text("Location")
+            }
+            Spacer()
+            Text(locationName).bold()
         }
+        
     }
 }
 
 
 struct LocationView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationView().frame(width: 100, height: 50, alignment: .center)
+        GeometryReader { geometry in
+            LocationView(locationName: "Buenos Aires")
+            .padding()
+                .frame(width: geometry.size.width, height: 100, alignment: .leading)
+        }
+        
     }
 }

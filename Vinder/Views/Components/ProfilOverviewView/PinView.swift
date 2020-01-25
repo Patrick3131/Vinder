@@ -29,6 +29,6 @@ struct PinView: View {
 
 struct PinView_Previews: PreviewProvider {
     static var previews: some View {
-        PinView()
+        PinView().frame(width: 50, height: 50, alignment: .center)
     }
 }
