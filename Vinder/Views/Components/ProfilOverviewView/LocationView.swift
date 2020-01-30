@@ -12,7 +12,7 @@ struct LocationView: View {
     
     var locationName: String
     var body: some View {
-        VStack {
+        VStack(alignment:.leading) {
             HStack {
                 PinView()
                 
@@ -31,7 +31,7 @@ struct LocationView: View {
 struct LocationView_Previews: PreviewProvider {
     static var previews: some View {
         GeometryReader { geometry in
-            LocationView(locationName: "Buenos Aires")
+            LocationView(locationName: "Buenos Aires, Argentina")
             .padding()
                 .frame(width: geometry.size.width, height: 100, alignment: .leading)
         }

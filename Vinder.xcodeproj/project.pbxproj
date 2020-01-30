@@ -71,6 +71,8 @@
 		CD7C6F8823A7A0E1002AEC3E /* MatchesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C6F8723A7A0E1002AEC3E /* MatchesRowView.swift */; };
 		CD7C6F8B23A901F6002AEC3E /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = CD7C6F8A23A901F6002AEC3E /* ASCollectionView */; };
 		CD7C6F8D23AA364C002AEC3E /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C6F8C23AA364C002AEC3E /* Color+Extensions.swift */; };
+		CD7CEA1523E3439C0054EB03 /* VoiceMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CEA1423E3439C0054EB03 /* VoiceMessageView.swift */; };
+		CD7CEA1823E344200054EB03 /* TimeRegelerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CEA1723E344200054EB03 /* TimeRegelerView.swift */; };
 		CD87E02023703A4300F75568 /* ConversationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87E01F23703A4300F75568 /* ConversationState.swift */; };
 		CD92B2F1236209A8006F0190 /* SwipingIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92B2F0236209A8006F0190 /* SwipingIconView.swift */; };
 		CD92B2F523621CF1006F0190 /* Swiping.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD92B2F423621CF1006F0190 /* Swiping.swift */; };
@@ -224,6 +226,8 @@
 		CD7C6F8523A79C8F002AEC3E /* MatchesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesContainer.swift; sourceTree = "<group>"; };
 		CD7C6F8723A7A0E1002AEC3E /* MatchesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesRowView.swift; sourceTree = "<group>"; };
 		CD7C6F8C23AA364C002AEC3E /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		CD7CEA1423E3439C0054EB03 /* VoiceMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceMessageView.swift; sourceTree = "<group>"; };
+		CD7CEA1723E344200054EB03 /* TimeRegelerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRegelerView.swift; sourceTree = "<group>"; };
 		CD87E01F23703A4300F75568 /* ConversationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationState.swift; sourceTree = "<group>"; };
 		CD92B2F0236209A8006F0190 /* SwipingIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingIconView.swift; sourceTree = "<group>"; };
 		CD92B2F423621CF1006F0190 /* Swiping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swiping.swift; sourceTree = "<group>"; };
@@ -632,6 +636,7 @@
 				CD6554EB235258C900E6498A /* MatchesHome.swift */,
 				CD2A6DA02364A5BC00EEDDA5 /* TabBar */,
 				CDD7BDB72358960500F28C23 /* LoginView.swift */,
+				CD7CEA1623E343B80054EB03 /* VoiceMessage */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -655,6 +660,15 @@
 				CDBE2D9623855781006F0DCC /* Callback Wrapper */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		CD7CEA1623E343B80054EB03 /* VoiceMessage */ = {
+			isa = PBXGroup;
+			children = (
+				CD7CEA1423E3439C0054EB03 /* VoiceMessageView.swift */,
+				CD7CEA1723E344200054EB03 /* TimeRegelerView.swift */,
+			);
+			path = VoiceMessage;
 			sourceTree = "<group>";
 		};
 		CD87E01E236EDE3700F75568 /* AddPicture */ = {
@@ -1085,6 +1099,7 @@
 				CD4C554923CF52F4007A7383 /* PictureDetailsView.swift in Sources */,
 				CD93AE6E238D9FFB00CA5683 /* AudioPlaying.swift in Sources */,
 				CD7C6F8823A7A0E1002AEC3E /* MatchesRowView.swift in Sources */,
+				CD7CEA1823E344200054EB03 /* TimeRegelerView.swift in Sources */,
 				CDD7BDAA2355202000F28C23 /* AudioService.swift in Sources */,
 				CDFA9C40235FA0ED0069C341 /* View+Draggable.swift in Sources */,
 				CD6554AF2351B91900E6498A /* AppDelegate.swift in Sources */,
@@ -1186,6 +1201,7 @@
 				CD472F5C237C86F600DFCAB7 /* ProfileUpdateActions.swift in Sources */,
 				CD2442232354976300C357EE /* MatchProfile.swift in Sources */,
 				CD93AE77238DAC0400CA5683 /* RecordBioAudio.swift in Sources */,
+				CD7CEA1523E3439C0054EB03 /* VoiceMessageView.swift in Sources */,
 				CD2A6DA82364B25B00EEDDA5 /* SwipingReducer.swift in Sources */,
 				CD92B2FD23630986006F0190 /* AccountState.swift in Sources */,
 				CD472F542379F89B00DFCAB7 /* ProfilContainer.swift in Sources */,
