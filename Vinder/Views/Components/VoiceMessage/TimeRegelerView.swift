@@ -27,12 +27,17 @@ struct TimeRegelerView: View {
                 Path { path in
                     path.move(to: CGPoint(x: 0, y: geometry.size.height / 2))
                     path.addLine(to: CGPoint(x: geometry.size.width, y: geometry.size.height / 2))
-                    }
+                }
                 .stroke(Color.gray, lineWidth: 3)
                 Circle()
                     .fill(Color.blue)
-                .frame(width: 10, height: 10)
-                    .position(CGPoint(x: geometry.size.width * self.circlePercentage , y: geometry.size.height / 2))
+                    //                .draggable()
+                   
+                    .frame(width: 10, height: 10)
+                .draggableX(CGPoint(x: 0, y: 0))
+                .position(CGPoint(x: 0, y: geometry.size.height / 2))
+                    
+
             }
         }
     }

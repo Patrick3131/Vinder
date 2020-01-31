@@ -20,3 +20,6 @@ struct DraggableView: ViewModifier {
             .offset(x: self.offset.x, y: self.offset.y)
     }
 }
+
+
+

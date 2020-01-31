@@ -103,6 +103,8 @@
 		CDA1471923CE6840003BE3F8 /* PreviewMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1471823CE6840003BE3F8 /* PreviewMessageViewModel.swift */; };
 		CDA1471B23CE685E003BE3F8 /* PreviewMessageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1471A23CE685E003BE3F8 /* PreviewMessageContentView.swift */; };
 		CDA1471E23CE698F003BE3F8 /* MessageContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA1471D23CE698F003BE3F8 /* MessageContainer.swift */; };
+		CDA5373B23E4A6170061B21A /* DraggableX.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5373A23E4A6170061B21A /* DraggableX.swift */; };
+		CDA5373D23E4A6440061B21A /* View+DraggableX.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA5373C23E4A6440061B21A /* View+DraggableX.swift */; };
 		CDAC6D402371597200D68072 /* SwiftDux in Frameworks */ = {isa = PBXBuildFile; productRef = CDAC6D3F2371597200D68072 /* SwiftDux */; };
 		CDBE2D922382C888006F0DCC /* AddBiography.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBE2D912382C888006F0DCC /* AddBiography.swift */; };
 		CDBE2D9523841950006F0DCC /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBE2D9423841950006F0DCC /* RecordView.swift */; };
@@ -259,6 +261,8 @@
 		CDA1471823CE6840003BE3F8 /* PreviewMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMessageViewModel.swift; sourceTree = "<group>"; };
 		CDA1471A23CE685E003BE3F8 /* PreviewMessageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewMessageContentView.swift; sourceTree = "<group>"; };
 		CDA1471D23CE698F003BE3F8 /* MessageContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageContainer.swift; sourceTree = "<group>"; };
+		CDA5373A23E4A6170061B21A /* DraggableX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableX.swift; sourceTree = "<group>"; };
+		CDA5373C23E4A6440061B21A /* View+DraggableX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+DraggableX.swift"; sourceTree = "<group>"; };
 		CDBE2D912382C888006F0DCC /* AddBiography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBiography.swift; sourceTree = "<group>"; };
 		CDBE2D9423841950006F0DCC /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		CDBE2D972386BD98006F0DCC /* DatePickerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerWrapper.swift; sourceTree = "<group>"; };
@@ -829,6 +833,8 @@
 			children = (
 				CDFA9C3D235FA0AC0069C341 /* Draggable.swift */,
 				CDFA9C3F235FA0ED0069C341 /* View+Draggable.swift */,
+				CDA5373A23E4A6170061B21A /* DraggableX.swift */,
+				CDA5373C23E4A6440061B21A /* View+DraggableX.swift */,
 			);
 			path = Draggable;
 			sourceTree = "<group>";
@@ -1150,6 +1156,7 @@
 				CD92B2F523621CF1006F0190 /* Swiping.swift in Sources */,
 				CD472F61237D3C3500DFCAB7 /* ProfileUpdateReducer.swift in Sources */,
 				CD972D13236C8DBB0008F022 /* FirebaseConstants.swift in Sources */,
+				CDA5373D23E4A6440061B21A /* View+DraggableX.swift in Sources */,
 				CDD7BDB82358960500F28C23 /* LoginView.swift in Sources */,
 				CD972D15236C8EB20008F022 /* ProfileReading.swift in Sources */,
 				CD972D1F236DE85A0008F022 /* FirebaseMiddleware.swift in Sources */,
@@ -1198,6 +1205,7 @@
 				CDFA9C452360A5DE0069C341 /* ProfilInfoView.swift in Sources */,
 				CD972D0C236C57E90008F022 /* ProfileUpdate.swift in Sources */,
 				CD93AE72238DA04C00CA5683 /* AudioRecording.swift in Sources */,
+				CDA5373B23E4A6170061B21A /* DraggableX.swift in Sources */,
 				CD472F5C237C86F600DFCAB7 /* ProfileUpdateActions.swift in Sources */,
 				CD2442232354976300C357EE /* MatchProfile.swift in Sources */,
 				CD93AE77238DAC0400CA5683 /* RecordBioAudio.swift in Sources */,
