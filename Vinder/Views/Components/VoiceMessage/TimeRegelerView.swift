@@ -15,23 +15,31 @@ import SwiftUI
  */
 struct TimeRegelerView: View {
     
+    @State var circlePercentage: CGFloat = 0.5
+    
+    func createCirle() -> some View {
+        return Circle().fill(Color.blue)
+    }
     
     var body: some View {
         GeometryReader { geometry in
-            Path { path in
-                path.move(to: CGPoint(x: 0, y: geometry.size.height / 2))
-                path.addLine(to: CGPoint(x: geometry.size.width, y: geometry.size.height / 2))
-                }
-            .stroke(Color.gray, lineWidth: 3)
-        
-
+            ZStack {
+                Path { path in
+                    path.move(to: CGPoint(x: 0, y: geometry.size.height / 2))
+                    path.addLine(to: CGPoint(x: geometry.size.width, y: geometry.size.height / 2))
+                    }
+                .stroke(Color.gray, lineWidth: 3)
+                Circle()
+                    .fill(Color.blue)
+                .frame(width: 10, height: 10)
+                    .position(CGPoint(x: geometry.size.width * self.circlePercentage , y: geometry.size.height / 2))
+            }
         }
-        
     }
 }
 
 struct TimeRegelerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimeRegelerView().frame(width: 100, height: 50, alignment: .center)
+        TimeRegelerView().frame(width: 200, height: 200, alignment: .center)
     }
 }
